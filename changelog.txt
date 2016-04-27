@@ -1,3 +1,6 @@
+V.3.1.1
+- Add more cops to spawn
+
 V.3.1
 - Slightly increased assault duration
 - Disable captain spawning due to glitching spawn
