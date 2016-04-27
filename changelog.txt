@@ -1,3 +1,6 @@
+V.3.1.2
+- Reverted assault duration to 6 mins
+
 V.3.1.1
 - Add more cops to spawn
 
