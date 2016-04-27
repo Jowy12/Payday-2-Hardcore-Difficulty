@@ -80,14 +80,14 @@ function GroupAITweakData:_init_task_data(difficulty_index, difficulty)
 	self.besiege.assault.build_duration = 0
 	if difficulty_index == 6 then
 		self.besiege.assault.sustain_duration_min = {
-			400,
-			400,
-			400
+			360,
+			360,
+			360
 		}
 		self.besiege.assault.sustain_duration_max = {
-			400,
-			400,
-			400
+			360,
+			360,
+			360
 		}
 		self.besiege.assault.sustain_duration_balance_mul = {
 			1,
@@ -97,14 +97,14 @@ function GroupAITweakData:_init_task_data(difficulty_index, difficulty)
 		}
 	else
 		self.besiege.assault.sustain_duration_min = {
-			400,
-			400,
-			400
+			360,
+			360,
+			360
 		}
 		self.besiege.assault.sustain_duration_max = {
-			400,
-			400,
-			400
+			360,
+			360,
+			360
 		}
 		self.besiege.assault.sustain_duration_balance_mul = {
 			1,
@@ -776,50 +776,50 @@ function GroupAITweakData:_init_unit_categories(difficulty_index)
 	local access_type_all = {walk = true, acrobatic = true}
 	if difficulty_index <= 2 then
 		self.special_unit_spawn_limits = {
-			tank = 5,
-			taser = 5,
-			spooc = 5,
-			shield = 5,
-			phalanx_minion = 3
+			tank = 6,
+			taser = 6,
+			spooc = 6,
+			shield = 6,
+			phalanx_minion = 2
 		}
 	elseif difficulty_index == 3 then
 		self.special_unit_spawn_limits = {
-			tank = 5,
-			taser = 5,
-			spooc = 5,
-			shield = 5,
-			phalanx_minion = 3
+			tank = 6,
+			taser = 6,
+			spooc = 6,
+			shield = 6,
+			phalanx_minion = 2
 		}
 	elseif difficulty_index == 4 then
 		self.special_unit_spawn_limits = {
-			tank = 5,
-			taser = 5,
-			spooc = 5,
-			shield = 5,
-			phalanx_minion = 3
+			tank = 6,
+			taser = 6,
+			spooc = 6,
+			shield = 6,
+			phalanx_minion = 2
 		}
 	elseif difficulty_index == 5 then
 		self.special_unit_spawn_limits = {
-			tank = 5,
-			taser = 5,
-			spooc = 5,
-			shield = 5,
-			phalanx_minion = 3
+			tank = 6,
+			taser = 6,
+			spooc = 6,
+			shield = 6,
+			phalanx_minion = 2
 		}
 	elseif difficulty_index == 6 then
 		self.special_unit_spawn_limits = {
-			tank = 5,
-			taser = 5,
-			spooc = 5,
-			shield = 5,
+			tank = 7,
+			taser = 7,
+			spooc = 7,
+			shield = 7,
 			phalanx_minion = 3
 		}
 	else
 		self.special_unit_spawn_limits = {
-			tank = 5,
-			taser = 5,
-			spooc = 5,
-			shield = 5,
+			tank = 7,
+			taser = 7,
+			spooc = 7,
+			shield = 7,
 			phalanx_minion = 3
 		}
 	end
