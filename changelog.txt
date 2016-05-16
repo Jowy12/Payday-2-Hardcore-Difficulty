@@ -1,3 +1,6 @@
+V.3.1.5
+- Updated to U98.1
+
 V.3.1.4
 - Fixed fade glitch
 
