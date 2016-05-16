@@ -129,10 +129,11 @@ function CharacterTweakData:_init_phalanx_minion(presets)
 	self.phalanx_minion.damage.explosion_damage_mul = 4.5
 	self.phalanx_minion.damage.hurt_severity = presets.hurt_severities.no_hurts_no_tase
 	self.phalanx_minion.damage.shield_knocked = false
+	self.phalanx_minion.damage.immune_to_knockback = true
 	self.phalanx_minion.move_speed = presets.move_speed.very_slow
 	self.phalanx_minion.ecm_vulnerability = nil
 	self.phalanx_minion.ecm_hurts = {}
-	self.phalanx_minion.priority_shout = "f31"
+	self.phalanx_minion.priority_shout = "f45"
 	self.phalanx_minion.weapon.mp9 = {}
 	self.phalanx_minion.weapon.mp9.aim_delay = {0, 0}
 	self.phalanx_minion.weapon.mp9.focus_delay = 0
@@ -383,7 +384,7 @@ function CharacterTweakData:_init_tank(presets)
 	self:_process_weapon_usage_table(self.tank.weapon)
 	self.tank.detection = presets.detection.normal
 	self.tank.HEALTH_INIT = 900
-	self.tank.headshot_dmg_mul = self.tank.HEALTH_INIT / 24
+	self.tank.headshot_dmg_mul = self.tank.HEALTH_INIT /40
 	self.tank.damage.explosion_damage_mul = 1
 	self.tank.move_speed = presets.move_speed.slow
 	self.tank.allowed_stances = {cbt = true}
@@ -487,7 +488,7 @@ function CharacterTweakData:_init_tank(presets)
 		}
 	}
 	self.tank_hw.HEALTH_INIT = 1800
-	self.tank_hw.headshot_dmg_mul = self.tank.HEALTH_INIT / 24
+	self.tank_hw.headshot_dmg_mul = self.tank.HEALTH_INIT / 40
 	self.tank_hw.damage.explosion_damage_mul = 1
 	self.tank_hw.use_animation_on_fire_damage = false
 	self.tank_hw.flammable = true
