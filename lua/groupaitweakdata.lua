@@ -780,7 +780,7 @@ function GroupAITweakData:_init_unit_categories(difficulty_index)
 			taser = 7,
 			spooc = 7,
 			shield = 7,
-			phalanx_minion = 3
+			phalanx_minion = 5
 		}
 	elseif difficulty_index == 3 then
 		self.special_unit_spawn_limits = {
@@ -788,7 +788,7 @@ function GroupAITweakData:_init_unit_categories(difficulty_index)
 			taser = 7,
 			spooc = 7,
 			shield = 7,
-			phalanx_minion = 3
+			phalanx_minion = 5
 		}
 	elseif difficulty_index == 4 then
 		self.special_unit_spawn_limits = {
@@ -796,7 +796,7 @@ function GroupAITweakData:_init_unit_categories(difficulty_index)
 			taser = 7,
 			spooc = 7,
 			shield = 7,
-			phalanx_minion = 3
+			phalanx_minion = 5
 		}
 	elseif difficulty_index == 5 then
 		self.special_unit_spawn_limits = {
@@ -804,7 +804,7 @@ function GroupAITweakData:_init_unit_categories(difficulty_index)
 			taser = 7,
 			spooc = 7,
 			shield = 7,
-			phalanx_minion = 3
+			phalanx_minion = 5
 		}
 	elseif difficulty_index == 6 then
 		self.special_unit_spawn_limits = {
@@ -812,7 +812,7 @@ function GroupAITweakData:_init_unit_categories(difficulty_index)
 			taser = 7,
 			spooc = 7,
 			shield = 7,
-			phalanx_minion = 3
+			phalanx_minion = 5
 		}
 	else
 		self.special_unit_spawn_limits = {
@@ -820,7 +820,7 @@ function GroupAITweakData:_init_unit_categories(difficulty_index)
 			taser = 7,
 			spooc = 7,
 			shield = 7,
-			phalanx_minion = 3
+			phalanx_minion = 5
 		}
 	end
 	self.unit_categories = {}
