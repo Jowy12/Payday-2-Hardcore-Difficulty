@@ -154,7 +154,7 @@ function CharacterTweakData:_init_phalanx_minion(presets)
 		{
 			r = 0,
 			acc = {1, 1},
-			dmg_mul = 4,
+			dmg_mul = 3.5,
 			recoil = {0.35, 0.35},
 			mode = {
 				0.2,
@@ -166,7 +166,7 @@ function CharacterTweakData:_init_phalanx_minion(presets)
 		{
 			r = 700,
 			acc = {1, 1},
-			dmg_mul = 4,
+			dmg_mul = 3.5,
 			recoil = {0.35, 0.55},
 			mode = {
 				0.2,
@@ -178,7 +178,7 @@ function CharacterTweakData:_init_phalanx_minion(presets)
 		{
 			r = 1000,
 			acc = {0.8, 0.8},
-			dmg_mul = 4,
+			dmg_mul = 3.5,
 			recoil = {0.35, 0.55},
 			mode = {
 				0.2,
@@ -190,7 +190,7 @@ function CharacterTweakData:_init_phalanx_minion(presets)
 		{
 			r = 2000,
 			acc = {0.7, 0.7},
-			dmg_mul = 4,
+			dmg_mul = 3.5,
 			recoil = {0.35, 1},
 			mode = {
 				2,
@@ -202,7 +202,7 @@ function CharacterTweakData:_init_phalanx_minion(presets)
 		{
 			r = 3000,
 			acc = {0.6, 0.6},
-			dmg_mul = 4,
+			dmg_mul = 3.5,
 			recoil = {0.5, 1.2},
 			mode = {
 				6,
