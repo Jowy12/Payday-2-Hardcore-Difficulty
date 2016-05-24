@@ -147,15 +147,15 @@ function GroupAITweakData:_init_task_data(difficulty_index, difficulty)
 	end
 	if difficulty_index <= 5 then
 		self.besiege.assault.hostage_hesitation_delay = {
-			30,
-			30,
-			30
-		}
-	else
-		self.besiege.assault.hostage_hesitation_delay = {
 			10,
 			10,
 			10
+		}
+	else
+		self.besiege.assault.hostage_hesitation_delay = {
+			5,
+			5,
+			5
 		}
 	end
 	if is_console then
@@ -501,9 +501,9 @@ function GroupAITweakData:_init_task_data(difficulty_index, difficulty)
 		0
 	}
 	self.besiege.reenforce.interval = {
-		1,
-		1,
-		1
+		10,
+		20,
+		30
 	}
 	if difficulty_index <= 2 then
 		self.besiege.reenforce.groups = {
