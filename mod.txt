@@ -3,7 +3,7 @@
 	"description" : "A custom difficulty made for all hardcore heisters out there! Enjoy the game!",
 	"author" : "Jowy",
 	"contact" : "http://steamcommunity.com/profiles/76561198117046737 or http://steamcommunity.com/id/pertetoes",
-	"version" : "3.1.7",
+	"version" : "3.1.8",
 	"priority" : 125,
 	"hooks" : [
 		{	"hook_id" : "lib/tweak_data/charactertweakdata",
