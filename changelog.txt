@@ -1,3 +1,6 @@
+V.3.1.9
+- Tweaked cops damage and accuracy
+
 V.3.1.8
 - Rebalanced cops damage by their range
 
