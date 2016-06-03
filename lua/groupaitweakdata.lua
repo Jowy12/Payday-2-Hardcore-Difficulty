@@ -116,33 +116,33 @@ function GroupAITweakData:_init_task_data(difficulty_index, difficulty)
 	self.besiege.assault.fade_duration = 5
 	if difficulty_index <= 2 then
 		self.besiege.assault.delay = {
-			20,
-			20,
-			20
+			5,
+			5,
+			5
 		}
 	elseif difficulty_index == 3 then
 		self.besiege.assault.delay = {
-			20,
-			20,
-			20
+			5,
+			5,
+			5
 		}
 	elseif difficulty_index == 4 then
 		self.besiege.assault.delay = {
-			20,
-			20,
-			20
+			5,
+			5,
+			5
 		}
 	elseif difficulty_index == 5 then
 		self.besiege.assault.delay = {
-			20,
-			20,
-			20
+			5,
+			5,
+			5
 		}
 	else
 		self.besiege.assault.delay = {
-			20,
-			20,
-			20
+			5,
+			5,
+			5
 		}
 	end
 	if difficulty_index <= 5 then
@@ -160,9 +160,9 @@ function GroupAITweakData:_init_task_data(difficulty_index, difficulty)
 	end
 	if is_console then
 		self.besiege.assault.force = {
-			1000,
-			1000,
-			1000
+			10000,
+			10000,
+			10000
 		}
 		self.besiege.assault.force_pool = {
 			50,
@@ -171,9 +171,9 @@ function GroupAITweakData:_init_task_data(difficulty_index, difficulty)
 		}
 	else
 			self.besiege.assault.force = {
-			1000,
-			1000,
-			1000
+			10000,
+			10000,
+			10000
 		}
 			self.besiege.assault.force_pool = {
 			50,
@@ -184,134 +184,134 @@ function GroupAITweakData:_init_task_data(difficulty_index, difficulty)
 	if is_console then
 		if difficulty_index <= 2 then
 			self.besiege.assault.force_balance_mul = {
-				20,
-				20,
-				20,
-				20
+				200,
+				200,
+				200,
+				200
 			}
 			self.besiege.assault.force_pool_balance_mul = {
-				20,
-				20,
-				20,
-				20
+				200,
+				200,
+				200,
+				200
 			}
 		elseif difficulty_index == 3 then
 			self.besiege.assault.force_balance_mul = {
-				20,
-				20,
-				20,
-				20
+				200,
+				200,
+				200,
+				200
 			}
 			self.besiege.assault.force_pool_balance_mul = {
-				20,
-				20,
-				20,
-				20
+				200,
+				200,
+				200,
+				200
 			}
 		elseif difficulty_index == 4 then
 			self.besiege.assault.force_balance_mul = {
-				20,
-				20,
-				20,
-				20
+				200,
+				200,
+				200,
+				200
 			}
 			self.besiege.assault.force_pool_balance_mul = {
-				20,
-				20,
-				20,
-				20
+				200,
+				200,
+				200,
+				200
 			}
 		elseif difficulty_index == 5 then
 			self.besiege.assault.force_balance_mul = {
-				20,
-				20,
-				20,
-				20
+				200,
+				200,
+				200,
+				200
 			}
 			self.besiege.assault.force_pool_balance_mul = {
-				20,
-				20,
-				20,
-				20
+				200,
+				200,
+				200,
+				200
 			}
 		else
 			self.besiege.assault.force_balance_mul = {
-				20,
-				20,
-				20,
-				20
+				200,
+				200,
+				200,
+				200
 			}
 			self.besiege.assault.force_pool_balance_mul = {
-				20,
-				20,
-				20,
-				20
+				200,
+				200,
+				200,
+				200
 			}
 		end
 	elseif difficulty_index <= 2 then
 		self.besiege.assault.force_balance_mul = {
-			20,
-			20,
-			20,
-			20
+			200,
+			200,
+			200,
+			200
 		}
 		self.besiege.assault.force_pool_balance_mul = {
-			20,
-			20,
-			20,
-			20
+			200,
+			200,
+			200,
+			200
 		}
 	elseif difficulty_index == 3 then
 		self.besiege.assault.force_balance_mul = {
-			20,
-			20,
-			20,
-			20
+			200,
+			200,
+			200,
+			200
 		}
 		self.besiege.assault.force_pool_balance_mul = {
-			20,
-			20,
-			20,
-			20
+			200,
+			200,
+			200,
+			200
 		}
 	elseif difficulty_index == 4 then
 		self.besiege.assault.force_balance_mul = {
-			20,
-			20,
-			20,
-			20
+			200,
+			200,
+			200,
+			200
 		}
 		self.besiege.assault.force_pool_balance_mul = {
-			20,
-			20,
-			20,
-			20
+			200,
+			200,
+			200,
+			200
 		}
 	elseif difficulty_index == 5 then
 		self.besiege.assault.force_balance_mul = {
-			20,
-			20,
-			20,
-			20
+			200,
+			200,
+			200,
+			200
 		}
 		self.besiege.assault.force_pool_balance_mul = {
-			20,
-			20,
-			20,
-			20
+			200,
+			200,
+			200,
+			200
 		}
 	else
 	self.besiege.assault.force_balance_mul = {
-			20,
-			20,
-			20,
-			20
+			200,
+			200,
+			200,
+			200
 		}
 	self.besiege.assault.force_pool_balance_mul = {
-			20,
-			20,
-			20,
-			20
+			200,
+			200,
+			200,
+			200
 		}
 
 
