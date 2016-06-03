@@ -1,3 +1,6 @@
+V3.2.1
+- Fixed cops damage being too much (lol)
+
 V.3.2
 - More tweaking to cops damage
 - Faster assault and spawn rate
