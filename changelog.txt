@@ -1,5 +1,5 @@
 V3.2.2
-- Fixed some codes
+- Fixed codes
 
 V3.2.1
 - Fixed cops damage being too much (lol)
