@@ -4,7 +4,7 @@
 	"author" : "Jowy",
 	"contact" : "http://steamcommunity.com/profiles/76561198117046737 or http://steamcommunity.com/id/pertetoes",
 	"version" : "3.2.2",
-	"priority" : 125,
+	"priority" : 250,
 	"hooks" : [
 		{	"hook_id" : "lib/tweak_data/charactertweakdata",
 			"script_path" : "lua/charactertweakdata.lua"
