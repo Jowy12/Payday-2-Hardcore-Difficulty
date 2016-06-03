@@ -220,7 +220,7 @@ function CharacterTweakData:_init_tank(presets)
 		light = {tased_time = 1, down_time = 0},
 		heavy = {tased_time = 2, down_time = 0}
 	}
-	self.tank.weapon = deep_clone(presets.weapon.expert)
+	self.tank.weapon = deep_clone(presets.weapon.good)
 	self.tank.weapon.r870.FALLOFF[1].dmg_mul = 6.5
 	self.tank.weapon.r870.FALLOFF[2].dmg_mul = 4.5
 	self.tank.weapon.r870.FALLOFF[3].dmg_mul = 2
