@@ -499,7 +499,7 @@ end
 function CharacterTweakData:_init_security(presets)
 	self.security = deep_clone(presets.base)
 	self.security.experience = {}
-	self.security.weapon = presets.weapon.expert
+	self.security.weapon = presets.weapon.good
 	self.security.detection = presets.detection.guard
 	self.security.HEALTH_INIT = 5
 	self.security.headshot_dmg_mul = self.security.HEALTH_INIT / 1
@@ -531,7 +531,7 @@ end
 function CharacterTweakData:_init_gensec(presets)
 	self.gensec = deep_clone(presets.base)
 	self.gensec.experience = {}
-	self.gensec.weapon = presets.weapon.expert
+	self.gensec.weapon = presets.weapon.good
 	self.gensec.detection = presets.detection.guard
 	self.gensec.HEALTH_INIT = 7.5
 	self.gensec.headshot_dmg_mul = self.gensec.HEALTH_INIT / 1
@@ -563,7 +563,7 @@ end
 function CharacterTweakData:_init_cop(presets)
 	self.cop = deep_clone(presets.base)
 	self.cop.experience = {}
-	self.cop.weapon = presets.weapon.expert
+	self.cop.weapon = presets.weapon.good
 	self.cop.detection = presets.detection.normal
 	self.cop.HEALTH_INIT = 5
 	self.cop.headshot_dmg_mul = self.cop.HEALTH_INIT / 1
@@ -591,7 +591,7 @@ end
 function CharacterTweakData:_init_fbi(presets)
 	self.fbi = deep_clone(presets.base)
 	self.fbi.experience = {}
-	self.fbi.weapon = presets.weapon.expert
+	self.fbi.weapon = presets.weapon.good
 	self.fbi.detection = presets.detection.normal
 	self.fbi.HEALTH_INIT = 7.5
 	self.fbi.headshot_dmg_mul = self.fbi.HEALTH_INIT / 1
@@ -618,7 +618,7 @@ end
 function CharacterTweakData:_init_swat(presets)
 	self.swat = deep_clone(presets.base)
 	self.swat.experience = {}
-	self.swat.weapon = presets.weapon.expert
+	self.swat.weapon = presets.weapon.good
 	self.swat.detection = presets.detection.normal
 	self.swat.HEALTH_INIT = 10
 	self.swat.headshot_dmg_mul = self.swat.HEALTH_INIT / 2
@@ -646,7 +646,7 @@ end
 function CharacterTweakData:_init_heavy_swat(presets)
 	self.heavy_swat = deep_clone(presets.base)
 	self.heavy_swat.experience = {}
-	self.heavy_swat.weapon = presets.weapon.expert
+	self.heavy_swat.weapon = presets.weapon.good
 	self.heavy_swat.detection = presets.detection.normal
 	self.heavy_swat.HEALTH_INIT = 12.5
 	self.heavy_swat.headshot_dmg_mul = self.heavy_swat.HEALTH_INIT / 6
@@ -673,7 +673,7 @@ end
 function CharacterTweakData:_init_fbi_swat(presets)
 	self.fbi_swat = deep_clone(presets.base)
 	self.fbi_swat.experience = {}
-	self.fbi_swat.weapon = presets.weapon.expert
+	self.fbi_swat.weapon = presets.weapon.good
 	self.fbi_swat.detection = presets.detection.normal
 	self.fbi_swat.HEALTH_INIT = 15
 	self.fbi_swat.headshot_dmg_mul = self.fbi_swat.HEALTH_INIT / 4
@@ -700,7 +700,7 @@ end
 function CharacterTweakData:_init_fbi_heavy_swat(presets)
 	self.fbi_heavy_swat = deep_clone(presets.base)
 	self.fbi_heavy_swat.experience = {}
-	self.fbi_heavy_swat.weapon = presets.weapon.expert
+	self.fbi_heavy_swat.weapon = presets.weapon.good
 	self.fbi_heavy_swat.detection = presets.detection.normal
 	self.fbi_heavy_swat.HEALTH_INIT = 17.5
 	self.fbi_heavy_swat.headshot_dmg_mul = self.fbi_heavy_swat.HEALTH_INIT / 10
@@ -727,7 +727,7 @@ end
 function CharacterTweakData:_init_city_swat(presets)
 	self.city_swat = deep_clone(presets.base)
 	self.city_swat.experience = {}
-	self.city_swat.weapon = presets.weapon.expert
+	self.city_swat.weapon = presets.weapon.good
 	self.city_swat.detection = presets.detection.normal
 	self.city_swat.HEALTH_INIT = 15
 	self.city_swat.headshot_dmg_mul = self.city_swat.HEALTH_INIT / 4
