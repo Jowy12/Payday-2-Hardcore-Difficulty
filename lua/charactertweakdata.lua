@@ -10,10 +10,10 @@ function CharacterTweakData:_init_taser(presets)
 			miss_dis = 1000000000000000000000000000000,
 			RELOAD_SPEED = 0.66,
 			melee_speed = 0.5,
-			melee_dmg = 40,
+			melee_dmg = 30,
 			melee_retry_delay = {1, 2},
 			tase_distance = 1500,
-			aim_delay_tase = {1, 2},
+			aim_delay_tase = {0, 0},
 			range = {
 				close = 1000,
 				optimal = 2000,
@@ -24,7 +24,7 @@ function CharacterTweakData:_init_taser(presets)
 				{
 					r = 100,
 					acc = {1, 1},
-					dmg_mul = 3.5,
+					dmg_mul = 2.75,
 					recoil = {0.4, 0.7},
 					mode = {
 						0,
@@ -36,7 +36,7 @@ function CharacterTweakData:_init_taser(presets)
 				{
 					r = 500,
 					acc = {0.9, 0.9},
-					dmg_mul = 3,
+					dmg_mul = 2.25,
 					recoil = {0.35, 0.7},
 					mode = {
 						0,
@@ -48,7 +48,7 @@ function CharacterTweakData:_init_taser(presets)
 				{
 					r = 1000,
 					acc = {0.8, 0.8},
-					dmg_mul = 2.5,
+					dmg_mul = 1.75,
 					recoil = {0.35, 0.75},
 					mode = {
 						1,
@@ -60,7 +60,7 @@ function CharacterTweakData:_init_taser(presets)
 				{
 					r = 2000,
 					acc = {0.7, 0.7},
-					dmg_mul = 1.75,
+					dmg_mul = 1,
 					recoil = {0.4, 1.2},
 					mode = {
 						3,
@@ -72,7 +72,7 @@ function CharacterTweakData:_init_taser(presets)
 				{
 					r = 3000,
 					acc = {0.6, .6},
-					dmg_mul = 1.5,
+					dmg_mul = 1,
 					recoil = {1.5, 3},
 					mode = {
 						3,
@@ -116,6 +116,15 @@ function CharacterTweakData:_init_taser(presets)
 	}
 	self.taser.announce_incomming = "incomming_taser"
 	self.taser.steal_loot = true
+	self.taser.special_deaths = {}
+	self.taser.special_deaths.bullet = {
+		[("head"):id():key()] = {
+			character_name = "bodhi",
+			weapon_id = "model70",
+			sequence = "kill_tazer_headshot",
+			special_comment = "x01"
+		}
+	}
 end
 function CharacterTweakData:_init_phalanx_minion(presets)
 	self.phalanx_minion = deep_clone(self.shield)
@@ -233,7 +242,7 @@ function CharacterTweakData:_init_tank(presets)
 	self.tank.weapon.saiga.miss_dis = 1000000000000000000000000000000
 	self.tank.weapon.saiga.RELOAD_SPEED = 0.5
 	self.tank.weapon.saiga.melee_speed = 1
-	self.tank.weapon.saiga.melee_dmg = 40
+	self.tank.weapon.saiga.melee_dmg = 45
 	self.tank.weapon.saiga.melee_retry_delay = {1, 2}
 	self.tank.weapon.saiga.range = {
 		close = 1000,
@@ -245,7 +254,7 @@ function CharacterTweakData:_init_tank(presets)
 		{
 			r = 100,
 			acc = {1, 1},
-			dmg_mul = 2.5,
+			dmg_mul = 1.75,
 			recoil = {0.4, 0.7},
 			mode = {
 				0,
@@ -257,7 +266,7 @@ function CharacterTweakData:_init_tank(presets)
 		{
 			r = 500,
 			acc = {0.9, 0.9},
-			dmg_mul = 2.25,
+			dmg_mul = 1.5,
 			recoil = {0.4, 0.7},
 			mode = {
 				0,
@@ -269,7 +278,7 @@ function CharacterTweakData:_init_tank(presets)
 		{
 			r = 1000,
 			acc = {0.8, 0.8},
-			dmg_mul = 2,
+			dmg_mul = 1.25,
 			recoil = {0.45, 0.8},
 			mode = {
 				1,
@@ -281,7 +290,7 @@ function CharacterTweakData:_init_tank(presets)
 		{
 			r = 2000,
 			acc = {0.7, 0.7},
-			dmg_mul = 1.75,
+			dmg_mul = 1,
 			recoil = {0.45, 0.8},
 			mode = {
 				3,
@@ -293,7 +302,7 @@ function CharacterTweakData:_init_tank(presets)
 		{
 			r = 3000,
 			acc = {0.6, 0.6},
-			dmg_mul = 1.5,
+			dmg_mul = 1,
 			recoil = {1, 1.2},
 			mode = {
 				3,
@@ -311,7 +320,7 @@ function CharacterTweakData:_init_tank(presets)
 	self.tank.weapon.ak47.miss_dis = 1000000000000000000000000000000
 	self.tank.weapon.ak47.RELOAD_SPEED = 0.5
 	self.tank.weapon.ak47.melee_speed = 1
-	self.tank.weapon.ak47.melee_dmg = 50
+	self.tank.weapon.ak47.melee_dmg = 45
 	self.tank.weapon.ak47.melee_retry_delay = {1, 2}
 	self.tank.weapon.ak47.range = {
 		close = 1000,
@@ -323,7 +332,7 @@ function CharacterTweakData:_init_tank(presets)
 		{
 			r = 100,
 			acc = {1, 1},
-			dmg_mul = 5.5,
+			dmg_mul = 4.75,
 			recoil = {0.4, 0.7},
 			mode = {
 				0,
@@ -335,7 +344,7 @@ function CharacterTweakData:_init_tank(presets)
 		{
 			r = 500,
 			acc = {0.9, 0.9},
-			dmg_mul = 4.5,
+			dmg_mul = 3.75,
 			recoil = {0.4, 0.7},
 			mode = {
 				0,
@@ -347,7 +356,7 @@ function CharacterTweakData:_init_tank(presets)
 		{
 			r = 1000,
 			acc = {0.8, 0.8},
-			dmg_mul = 4,
+			dmg_mul = 3.25,
 			recoil = {0.45, 0.8},
 			mode = {
 				1,
@@ -359,7 +368,7 @@ function CharacterTweakData:_init_tank(presets)
 		{
 			r = 2000,
 			acc = {0.7, 0.7},
-			dmg_mul = 3.5,
+			dmg_mul = 3.25,
 			recoil = {0.45, 0.8},
 			mode = {
 				1,
@@ -371,7 +380,7 @@ function CharacterTweakData:_init_tank(presets)
 		{
 			r = 3000,
 			acc = {0.6, 0.6},
-			dmg_mul = 3.5,
+			dmg_mul = 3.25,
 			recoil = {1, 1.2},
 			mode = {
 				4,
@@ -1186,7 +1195,7 @@ function CharacterTweakData:_presets(tweak_data)
 		{
 			r = 100,
 			acc = {1, 1},
-			dmg_mul = 3.5,
+			dmg_mul = 2.75,
 			recoil = {0.1, 0.25},
 			mode = {
 				1,
@@ -1198,7 +1207,7 @@ function CharacterTweakData:_presets(tweak_data)
 		{
 			r = 500,
 			acc = {0.9, 0.9},
-			dmg_mul = 2,
+			dmg_mul = 1.25,
 			recoil = {0.1, 0.25},
 			mode = {
 				1,
@@ -1210,7 +1219,7 @@ function CharacterTweakData:_presets(tweak_data)
 		{
 			r = 1000,
 			acc = {0.8, 0.8},
-			dmg_mul = 1.5,
+			dmg_mul = 1,
 			recoil = {0.15, 0.3},
 			mode = {
 				1,
@@ -1222,7 +1231,7 @@ function CharacterTweakData:_presets(tweak_data)
 		{
 			r = 2000,
 			acc = {0.7, 0.7},
-			dmg_mul = 1.5,
+			dmg_mul = 1,
 			recoil = {0.3, 0.7},
 			mode = {
 				1,
@@ -1234,7 +1243,7 @@ function CharacterTweakData:_presets(tweak_data)
 		{
 			r = 3000,
 			acc = {0.6, 0.6},
-			dmg_mul = 1.5,
+			dmg_mul = 1,
 			recoil = {0.4, 1},
 			mode = {
 				1,
@@ -1262,7 +1271,7 @@ function CharacterTweakData:_presets(tweak_data)
 		{
 			r = 100,
 			acc = {1, 1},
-			dmg_mul = 3.5,
+			dmg_mul = 2.75,
 			recoil = {0.15, 0.25},
 			mode = {
 				1,
@@ -1274,7 +1283,7 @@ function CharacterTweakData:_presets(tweak_data)
 		{
 			r = 500,
 			acc = {0.9, 0.9},
-			dmg_mul = 2,
+			dmg_mul = 1.25,
 			recoil = {0.15, 0.25},
 			mode = {
 				1,
@@ -1286,7 +1295,7 @@ function CharacterTweakData:_presets(tweak_data)
 		{
 			r = 1000,
 			acc = {0.8, 0.8},
-			dmg_mul = 1.5,
+			dmg_mul = 1,
 			recoil = {1, 1},
 			mode = {
 				1,
@@ -1298,7 +1307,7 @@ function CharacterTweakData:_presets(tweak_data)
 		{
 			r = 2000,
 			acc = {0.7, 0.7},
-			dmg_mul = 1.5,
+			dmg_mul = 1,
 			recoil = {0.3, 0.7},
 			mode = {
 				1,
@@ -1310,7 +1319,7 @@ function CharacterTweakData:_presets(tweak_data)
 		{
 			r = 3000,
 			acc = {0.6, 0.6},
-			dmg_mul = 1.5,
+			dmg_mul = 1,
 			recoil = {0.4, 1},
 			mode = {
 				1,
@@ -1327,7 +1336,7 @@ function CharacterTweakData:_presets(tweak_data)
 	presets.weapon.normal.m4.miss_dis = 1000000000000000000000000000000
 	presets.weapon.normal.m4.RELOAD_SPEED = 0.9
 	presets.weapon.normal.m4.melee_speed = 1
-	presets.weapon.normal.m4.melee_dmg = 15
+	presets.weapon.normal.m4.melee_dmg = 30
 	presets.weapon.normal.m4.melee_retry_delay = {1, 2}
 	presets.weapon.normal.m4.range = {
 		close = 1000,
@@ -1339,7 +1348,7 @@ function CharacterTweakData:_presets(tweak_data)
 		{
 			r = 100,
 			acc = {1, 1},
-			dmg_mul = 3.5,
+			dmg_mul = 2.75,
 			recoil = {0.45, 0.8},
 			mode = {
 				0,
@@ -1351,7 +1360,7 @@ function CharacterTweakData:_presets(tweak_data)
 		{
 			r = 500,
 			acc = {0.9, 0.9},
-			dmg_mul = 2.5,
+			dmg_mul = 1.75,
 			recoil = {0.45, 0.8},
 			mode = {
 				0,
@@ -1363,7 +1372,7 @@ function CharacterTweakData:_presets(tweak_data)
 		{
 			r = 1000,
 			acc = {0.8, 0.8},
-			dmg_mul = 1.5,
+			dmg_mul = 1,
 			recoil = {0.35, 0.75},
 			mode = {
 				1,
@@ -1375,7 +1384,7 @@ function CharacterTweakData:_presets(tweak_data)
 		{
 			r = 2000,
 			acc = {0.7, 0.7},
-			dmg_mul = 1.5,
+			dmg_mul = 1,
 			recoil = {0.4, 1.2},
 			mode = {
 				3,
@@ -1387,7 +1396,7 @@ function CharacterTweakData:_presets(tweak_data)
 		{
 			r = 3000,
 			acc = {0.6, 0.6},
-			dmg_mul = 1.5,
+			dmg_mul = 1,
 			recoil = {1.5, 3},
 			mode = {
 				3,
@@ -1404,7 +1413,7 @@ function CharacterTweakData:_presets(tweak_data)
 	presets.weapon.normal.r870.miss_dis = 1000000000000000000000000000000
 	presets.weapon.normal.r870.RELOAD_SPEED = 0.9
 	presets.weapon.normal.r870.melee_speed = 1
-	presets.weapon.normal.r870.melee_dmg = 15
+	presets.weapon.normal.r870.melee_dmg = 30
 	presets.weapon.normal.r870.melee_retry_delay = {1, 2}
 	presets.weapon.normal.r870.range = {
 		close = 1000,
@@ -1415,7 +1424,7 @@ function CharacterTweakData:_presets(tweak_data)
 		{
 			r = 100,
 			acc = {1, 1},
-			dmg_mul = 3.5,
+			dmg_mul = 2.75,
 			recoil = {1.5, 2},
 			mode = {
 				1,
@@ -1427,7 +1436,7 @@ function CharacterTweakData:_presets(tweak_data)
 		{
 			r = 500,
 			acc = {0.9, 0.9},
-			dmg_mul = 2.5,
+			dmg_mul = 1.75,
 			recoil = {1.5, 2},
 			mode = {
 				1,
@@ -1480,7 +1489,7 @@ function CharacterTweakData:_presets(tweak_data)
 	presets.weapon.normal.mp5.miss_dis = 1000000000000000000000000000000
 	presets.weapon.normal.mp5.RELOAD_SPEED = 0.9
 	presets.weapon.normal.mp5.melee_speed = 1
-	presets.weapon.normal.mp5.melee_dmg = 15
+	presets.weapon.normal.mp5.melee_dmg = 30
 	presets.weapon.normal.mp5.melee_retry_delay = {1, 2}
 	presets.weapon.normal.mp5.range = {
 		close = 1000,
@@ -1492,7 +1501,7 @@ function CharacterTweakData:_presets(tweak_data)
 		{
 			r = 100,
 			acc = {1, 1},
-			dmg_mul = 3.5,
+			dmg_mul = 2.75,
 			recoil = {0.1, 0.3},
 			mode = {
 				0,
@@ -1504,7 +1513,7 @@ function CharacterTweakData:_presets(tweak_data)
 		{
 			r = 500,
 			acc = {0.9, 0.9},
-			dmg_mul = 2.5,
+			dmg_mul = 1.75,
 			recoil = {0.1, 0.3},
 			mode = {
 				0,
@@ -1516,7 +1525,7 @@ function CharacterTweakData:_presets(tweak_data)
 		{
 			r = 1000,
 			acc = {0.8, 0.8},
-			dmg_mul = 1.5,
+			dmg_mul = 1,
 			recoil = {0.3, 0.4},
 			mode = {
 				0,
@@ -1528,7 +1537,7 @@ function CharacterTweakData:_presets(tweak_data)
 		{
 			r = 2000,
 			acc = {0.7, 0.7},
-			dmg_mul = 1.5,
+			dmg_mul = 1,
 			recoil = {0.3, 0.4},
 			mode = {
 				0,
@@ -1540,7 +1549,7 @@ function CharacterTweakData:_presets(tweak_data)
 		{
 			r = 3000,
 			acc = {0.6, 0.6},
-			dmg_mul = 1.5,
+			dmg_mul = 1,
 			recoil = {0.5, 0.6},
 			mode = {
 				1,
@@ -1557,7 +1566,7 @@ function CharacterTweakData:_presets(tweak_data)
 	presets.weapon.normal.mac11.miss_dis = 1000000000000000000000000000000
 	presets.weapon.normal.mac11.RELOAD_SPEED = 0.9
 	presets.weapon.normal.mac11.melee_speed = 1
-	presets.weapon.normal.mac11.melee_dmg = 15
+	presets.weapon.normal.mac11.melee_dmg = 30
 	presets.weapon.normal.mac11.melee_retry_delay = {1, 2}
 	presets.weapon.normal.mac11.range = {
 		close = 1000,
@@ -1569,7 +1578,7 @@ function CharacterTweakData:_presets(tweak_data)
 		{
 			r = 100,
 			acc = {1, 1},
-			dmg_mul = 3.5,
+			dmg_mul = 2.75,
 			recoil = {0.5, 0.65},
 			mode = {
 				0,
@@ -1581,7 +1590,7 @@ function CharacterTweakData:_presets(tweak_data)
 		{
 			r = 500,
 			acc = {0.9, 0.9},
-			dmg_mul = 2.5,
+			dmg_mul = 1.75,
 			recoil = {0.5, 0.65},
 			mode = {
 				0,
@@ -1593,7 +1602,7 @@ function CharacterTweakData:_presets(tweak_data)
 		{
 			r = 1000,
 			acc = {0.8, 0.8},
-			dmg_mul = 1.5,
+			dmg_mul = 1,
 			recoil = {0.55, 0.85},
 			mode = {
 				2,
@@ -1605,7 +1614,7 @@ function CharacterTweakData:_presets(tweak_data)
 		{
 			r = 2000,
 			acc = {0.7, 0.7},
-			dmg_mul = 1.5,
+			dmg_mul = 1,
 			recoil = {0.65, 1},
 			mode = {
 				2,
@@ -1617,7 +1626,7 @@ function CharacterTweakData:_presets(tweak_data)
 		{
 			r = 3000,
 			acc = {0.6, 0.6},
-			dmg_mul = 1.5,
+			dmg_mul = 1,
 			recoil = {0.65, 1},
 			mode = {
 				2,
@@ -1634,7 +1643,7 @@ function CharacterTweakData:_presets(tweak_data)
 	presets.weapon.normal.raging_bull.miss_dis = 1000000000000000000000000000000
 	presets.weapon.normal.raging_bull.RELOAD_SPEED = 0.9
 	presets.weapon.normal.raging_bull.melee_speed = 1
-	presets.weapon.normal.raging_bull.melee_dmg = 15
+	presets.weapon.normal.raging_bull.melee_dmg = 30
 	presets.weapon.normal.raging_bull.melee_retry_delay = {1, 2}
 	presets.weapon.normal.raging_bull.range = {
 		close = 1000,
@@ -1645,7 +1654,7 @@ function CharacterTweakData:_presets(tweak_data)
 		{
 			r = 100,
 			acc = {1, 1},
-			dmg_mul = 3.5,
+			dmg_mul = 2.75,
 			recoil = {0.8, 1},
 			mode = {
 				1,
@@ -1657,7 +1666,7 @@ function CharacterTweakData:_presets(tweak_data)
 		{
 			r = 500,
 			acc = {0.9, 0.9},
-			dmg_mul = 2,
+			dmg_mul = 1.25,
 			recoil = {0.8, 1.1},
 			mode = {
 				1,
@@ -1669,7 +1678,7 @@ function CharacterTweakData:_presets(tweak_data)
 		{
 			r = 1000,
 			acc = {0.8, 0.8},
-			dmg_mul = 1.5,
+			dmg_mul = 1,
 			recoil = {0.8, 1.1},
 			mode = {
 				1,
@@ -1681,7 +1690,7 @@ function CharacterTweakData:_presets(tweak_data)
 		{
 			r = 2000,
 			acc = {0.7, 0.7},
-			dmg_mul = 1.25,
+			dmg_mul = 1,
 			recoil = {1, 1.3},
 			mode = {
 				1,
@@ -1730,7 +1739,7 @@ function CharacterTweakData:_presets(tweak_data)
 		{
 			r = 100,
 			acc = {1, 1},
-			dmg_mul = 3.5,
+			dmg_mul = 2.75,
 			recoil = {0.1, 0.25},
 			mode = {
 				0,
@@ -1742,7 +1751,7 @@ function CharacterTweakData:_presets(tweak_data)
 		{
 			r = 500,
 			acc = {0.9, 0.9},
-			dmg_mul = 2.5,
+			dmg_mul = 1.75,
 			recoil = {0.1, 0.25},
 			mode = {
 				1,
@@ -1754,7 +1763,7 @@ function CharacterTweakData:_presets(tweak_data)
 		{
 			r = 1000,
 			acc = {0.8, 0.8},
-			dmg_mul = 1.5,
+			dmg_mul = 1,
 			recoil = {0.15, 0.3},
 			mode = {
 				1,
@@ -1766,7 +1775,7 @@ function CharacterTweakData:_presets(tweak_data)
 		{
 			r = 2000,
 			acc = {0.7, 0.7},
-			dmg_mul = 1.5,
+			dmg_mul = 1,
 			recoil = {0.3, 0.7},
 			mode = {
 				1,
@@ -1778,7 +1787,7 @@ function CharacterTweakData:_presets(tweak_data)
 		{
 			r = 3000,
 			acc = {0.6, 0.6},
-			dmg_mul = 1.5,
+			dmg_mul = 1,
 			recoil = {0.4, 1},
 			mode = {
 				1,
@@ -1802,7 +1811,7 @@ function CharacterTweakData:_presets(tweak_data)
 		{
 			r = 100,
 			acc = {1, 1},
-			dmg_mul = 4.5,
+			dmg_mul = 3.75,
 			recoil = {0.15, 0.25},
 			mode = {
 				1,
@@ -1814,7 +1823,7 @@ function CharacterTweakData:_presets(tweak_data)
 		{
 			r = 500,
 			acc = {0.9, 0.9},
-			dmg_mul = 2.5,
+			dmg_mul = 1.75,
 			recoil = {0.15, 0.25},
 			mode = {
 				1,
@@ -1826,7 +1835,7 @@ function CharacterTweakData:_presets(tweak_data)
 		{
 			r = 1000,
 			acc = {0.8, 0.8},
-			dmg_mul = 2,
+			dmg_mul = 1.25,
 			recoil = {0.15, 0.4},
 			mode = {
 				1,
@@ -1838,7 +1847,7 @@ function CharacterTweakData:_presets(tweak_data)
 		{
 			r = 2000,
 			acc = {0.7, 0.7},
-			dmg_mul = 1.75,
+			dmg_mul = 1,
 			recoil = {0.4, 0.9},
 			mode = {
 				1,
@@ -1850,7 +1859,7 @@ function CharacterTweakData:_presets(tweak_data)
 		{
 			r = 3000,
 			acc = {0.6, 0.6},
-			dmg_mul = 1.5,
+			dmg_mul = 1,
 			recoil = {0.4, 1},
 			mode = {
 				1,
@@ -1867,7 +1876,7 @@ function CharacterTweakData:_presets(tweak_data)
 	presets.weapon.good.m4.miss_dis = 1000000000000000000000000000000
 	presets.weapon.good.m4.RELOAD_SPEED = 1
 	presets.weapon.good.m4.melee_speed = 1
-	presets.weapon.good.m4.melee_dmg = 30
+	presets.weapon.good.m4.melee_dmg = 35
 	presets.weapon.good.m4.melee_retry_delay = presets.weapon.normal.m4.melee_retry_delay
 	presets.weapon.good.m4.range = {
 		close = 1000,
@@ -1879,7 +1888,7 @@ function CharacterTweakData:_presets(tweak_data)
 		{
 			r = 100,
 			acc = {1, 1},
-			dmg_mul = 3.5,
+			dmg_mul = 2.75,
 			recoil = {0.4, 0.8},
 			mode = {
 				0,
@@ -1891,7 +1900,7 @@ function CharacterTweakData:_presets(tweak_data)
 		{
 			r = 500,
 			acc = {0.9, 0.9},
-			dmg_mul = 2.5,
+			dmg_mul = 1.75,
 			recoil = {0.45, 0.8},
 			mode = {
 				0,
@@ -1903,7 +1912,7 @@ function CharacterTweakData:_presets(tweak_data)
 		{
 			r = 1000,
 			acc = {0.8, 0.8},
-			dmg_mul = 2,
+			dmg_mul = 1.25,
 			recoil = {0.35, 0.75},
 			mode = {
 				1,
@@ -1915,7 +1924,7 @@ function CharacterTweakData:_presets(tweak_data)
 		{
 			r = 2000,
 			acc = {0.7, 0.7},
-			dmg_mul = 1.75,
+			dmg_mul = 1,
 			recoil = {0.4, 1.2},
 			mode = {
 				3,
@@ -1927,7 +1936,7 @@ function CharacterTweakData:_presets(tweak_data)
 		{
 			r = 3000,
 			acc = {0.6, 0.6},
-			dmg_mul = 1.5,
+			dmg_mul = 1,
 			recoil = {1.5, 3},
 			mode = {
 				3,
@@ -1944,7 +1953,7 @@ function CharacterTweakData:_presets(tweak_data)
 	presets.weapon.good.r870.miss_dis = 1000000000000000000000000000000
 	presets.weapon.good.r870.RELOAD_SPEED = 1
 	presets.weapon.good.r870.melee_speed = 1
-	presets.weapon.good.r870.melee_dmg = 30
+	presets.weapon.good.r870.melee_dmg = 35
 	presets.weapon.good.r870.melee_retry_delay = presets.weapon.normal.r870.melee_retry_delay
 	presets.weapon.good.r870.range = {
 		close = 1000,
@@ -1955,7 +1964,7 @@ function CharacterTweakData:_presets(tweak_data)
 		{
 			r = 100,
 			acc = {1, 1},
-			dmg_mul = 3.5,
+			dmg_mul = 2.75,
 			recoil = {1, 1.5},
 			mode = {
 				1,
@@ -1967,7 +1976,7 @@ function CharacterTweakData:_presets(tweak_data)
 		{
 			r = 500,
 			acc = {0.9, 0.9},
-			dmg_mul = 2.5,
+			dmg_mul = 1.75,
 			recoil = {1.5, 2},
 			mode = {
 				1,
@@ -1979,7 +1988,7 @@ function CharacterTweakData:_presets(tweak_data)
 		{
 			r = 1000,
 			acc = {0.8, 0.8},
-			dmg_mul = 2,
+			dmg_mul = 1.25,
 			recoil = {1.5, 2},
 			mode = {
 				1,
@@ -1991,7 +2000,7 @@ function CharacterTweakData:_presets(tweak_data)
 		{
 			r = 2000,
 			acc = {0.7, 0.7},
-			dmg_mul = 1.5,
+			dmg_mul = 1,
 			recoil = {1.5, 2},
 			mode = {
 				1,
@@ -2020,7 +2029,7 @@ function CharacterTweakData:_presets(tweak_data)
 	presets.weapon.good.mp5.miss_dis = 1000000000000000000000000000000
 	presets.weapon.good.mp5.RELOAD_SPEED = 1
 	presets.weapon.good.mp5.melee_speed = presets.weapon.normal.mp5.melee_speed
-	presets.weapon.good.mp5.melee_dmg = 30
+	presets.weapon.good.mp5.melee_dmg = 35
 	presets.weapon.good.mp5.melee_retry_delay = presets.weapon.normal.mp5.melee_retry_delay
 	presets.weapon.good.mp5.range = presets.weapon.normal.mp5.range
 	presets.weapon.good.mp5.autofire_rounds = presets.weapon.normal.mp5.autofire_rounds
@@ -2028,7 +2037,7 @@ function CharacterTweakData:_presets(tweak_data)
 		{
 			r = 100,
 			acc = {1, 1},
-			dmg_mul = 3.5,
+			dmg_mul = 2.75,
 			recoil = {0.1, 0.25},
 			mode = {
 				0,
@@ -2040,7 +2049,7 @@ function CharacterTweakData:_presets(tweak_data)
 		{
 			r = 500,
 			acc = {0.9, 0.9},
-			dmg_mul = 2.5,
+			dmg_mul = 1.75,
 			recoil = {0.1, 0.3},
 			mode = {
 				0,
@@ -2052,7 +2061,7 @@ function CharacterTweakData:_presets(tweak_data)
 		{
 			r = 1000,
 			acc = {0.8, 0.8},
-			dmg_mul = 2.25,
+			dmg_mul = 1.5,
 			recoil = {0.35, 0.5},
 			mode = {
 				0,
@@ -2064,7 +2073,7 @@ function CharacterTweakData:_presets(tweak_data)
 		{
 			r = 2000,
 			acc = {0.7, 0.7},
-			dmg_mul = 1.75,
+			dmg_mul = 1,
 			recoil = {0.35, 0.6},
 			mode = {
 				0,
@@ -2076,7 +2085,7 @@ function CharacterTweakData:_presets(tweak_data)
 		{
 			r = 3000,
 			acc = {0.6, 0.6},
-			dmg_mul = 1.5,
+			dmg_mul = 1,
 			recoil = {0.5, 0.6},
 			mode = {
 				1,
@@ -2093,7 +2102,7 @@ function CharacterTweakData:_presets(tweak_data)
 	presets.weapon.good.mac11.miss_dis = 1000000000000000000000000000000
 	presets.weapon.good.mac11.RELOAD_SPEED = 1
 	presets.weapon.good.mac11.melee_speed = presets.weapon.normal.mac11.melee_speed
-	presets.weapon.good.mac11.melee_dmg = 30
+	presets.weapon.good.mac11.melee_dmg = 35
 	presets.weapon.good.mac11.melee_retry_delay = presets.weapon.normal.mac11.melee_retry_delay
 	presets.weapon.good.mac11.range = presets.weapon.normal.mac11.range
 	presets.weapon.good.mac11.autofire_rounds = presets.weapon.normal.mac11.autofire_rounds
@@ -2101,7 +2110,7 @@ function CharacterTweakData:_presets(tweak_data)
 		{
 			r = 100,
 			acc = {1, 1},
-			dmg_mul = 3.5,
+			dmg_mul = 2.75,
 			recoil = {0.3, 0.35},
 			mode = {
 				0,
@@ -2113,7 +2122,7 @@ function CharacterTweakData:_presets(tweak_data)
 		{
 			r = 500,
 			acc = {0.9, 0.9},
-			dmg_mul = 2.5,
+			dmg_mul = 1.75,
 			recoil = {0.5, 0.65},
 			mode = {
 				0,
@@ -2125,7 +2134,7 @@ function CharacterTweakData:_presets(tweak_data)
 		{
 			r = 1000,
 			acc = {0.8, 0.8},
-			dmg_mul = 1.75,
+			dmg_mul = 1,
 			recoil = {0.55, 0.85},
 			mode = {
 				2,
@@ -2137,7 +2146,7 @@ function CharacterTweakData:_presets(tweak_data)
 		{
 			r = 2000,
 			acc = {0.7, 0.7},
-			dmg_mul = 1.5,
+			dmg_mul = 1,
 			recoil = {0.65, 1},
 			mode = {
 				2,
@@ -2149,7 +2158,7 @@ function CharacterTweakData:_presets(tweak_data)
 		{
 			r = 3000,
 			acc = {0.6, 0.6},
-			dmg_mul = 1.5,
+			dmg_mul = 1,
 			recoil = {0.65, 1.2},
 			mode = {
 				4,
@@ -2166,7 +2175,7 @@ function CharacterTweakData:_presets(tweak_data)
 	presets.weapon.good.raging_bull.miss_dis = 1000000000000000000000000000000
 	presets.weapon.good.raging_bull.RELOAD_SPEED = 0.9
 	presets.weapon.good.raging_bull.melee_speed = 1
-	presets.weapon.good.raging_bull.melee_dmg = 15
+	presets.weapon.good.raging_bull.melee_dmg = 30
 	presets.weapon.good.raging_bull.melee_retry_delay = {1, 2}
 	presets.weapon.good.raging_bull.range = {
 		close = 1000,
@@ -2177,7 +2186,7 @@ function CharacterTweakData:_presets(tweak_data)
 		{
 			r = 100,
 			acc = {1, 1},
-			dmg_mul = 4.5,
+			dmg_mul = 3.75,
 			recoil = {0.8, 1},
 			mode = {
 				1,
@@ -2189,7 +2198,7 @@ function CharacterTweakData:_presets(tweak_data)
 		{
 			r = 500,
 			acc = {0.9, 0.9},
-			dmg_mul = 2.5,
+			dmg_mul = 1.75,
 			recoil = {0.8, 1.1},
 			mode = {
 				1,
@@ -2201,7 +2210,7 @@ function CharacterTweakData:_presets(tweak_data)
 		{
 			r = 1000,
 			acc = {0.8, 0.8},
-			dmg_mul = 2,
+			dmg_mul = 1.25,
 			recoil = {0.8, 1.1},
 			mode = {
 				1,
@@ -2213,7 +2222,7 @@ function CharacterTweakData:_presets(tweak_data)
 		{
 			r = 2000,
 			acc = {0.7, 0.7},
-			dmg_mul = 1.5,
+			dmg_mul = 1,
 			recoil = {1, 1.3},
 			mode = {
 				1,
@@ -2262,7 +2271,7 @@ function CharacterTweakData:_presets(tweak_data)
 		{
 			r = 0,
 			acc = {1, 1},
-			dmg_mul = 4.5,
+			dmg_mul = 3.75,
 			recoil = {0.1, 0.25},
 			mode = {
 				1,
@@ -2274,7 +2283,7 @@ function CharacterTweakData:_presets(tweak_data)
 		{
 			r = 1000,
 			acc = {0.9, 0.9},
-			dmg_mul = 2.5,
+			dmg_mul = 1.75,
 			recoil = {0.15, 0.3},
 			mode = {
 				1,
@@ -2286,7 +2295,7 @@ function CharacterTweakData:_presets(tweak_data)
 		{
 			r = 2000,
 			acc = {0.8, 0.8},
-			dmg_mul = 2.5,
+			dmg_mul = 1.75,
 			recoil = {0.3, 0.7},
 			mode = {
 				1,
@@ -2298,7 +2307,7 @@ function CharacterTweakData:_presets(tweak_data)
 		{
 			r = 3000,
 			acc = {0.7, 0.7},
-			dmg_mul = 2.5,
+			dmg_mul = 1.75,
 			recoil = {0.4, 1},
 			mode = {
 				1,
@@ -2315,14 +2324,14 @@ function CharacterTweakData:_presets(tweak_data)
 	presets.weapon.expert.c45.miss_dis = 1000000000000000000000000000000
 	presets.weapon.expert.c45.RELOAD_SPEED = 1.2
 	presets.weapon.expert.c45.melee_speed = presets.weapon.normal.c45.melee_speed
-	presets.weapon.expert.c45.melee_dmg = 30
+	presets.weapon.expert.c45.melee_dmg = 40
 	presets.weapon.expert.c45.melee_retry_delay = presets.weapon.normal.c45.melee_retry_delay
 	presets.weapon.expert.c45.range = presets.weapon.normal.c45.range
 	presets.weapon.expert.c45.FALLOFF = {
 		{
 			r = 100,
 			acc = {1, 1},
-			dmg_mul = 5.5,
+			dmg_mul = 4.75,
 			recoil = {0.15, 0.25},
 			mode = {
 				0,
@@ -2334,7 +2343,7 @@ function CharacterTweakData:_presets(tweak_data)
 		{
 			r = 500,
 			acc = {0.9, 0.9},
-			dmg_mul = 4.5,
+			dmg_mul = 3.75,
 			recoil = {0.15, 0.3},
 			mode = {
 				1,
@@ -2346,7 +2355,7 @@ function CharacterTweakData:_presets(tweak_data)
 		{
 			r = 1000,
 			acc = {0.8, 0.8},
-			dmg_mul = 4,
+			dmg_mul = 3.25,
 			recoil = {0.15, 0.3},
 			mode = {
 				1,
@@ -2358,7 +2367,7 @@ function CharacterTweakData:_presets(tweak_data)
 		{
 			r = 2000,
 			acc = {0.7, 0.7},
-			dmg_mul = 3.5,
+			dmg_mul = 3.25,
 			recoil = {0.4, 0.9},
 			mode = {
 				1,
@@ -2370,7 +2379,7 @@ function CharacterTweakData:_presets(tweak_data)
 		{
 			r = 3000,
 			acc = {0.6, 0.6},
-			dmg_mul = 3,
+			dmg_mul = 2.25,
 			recoil = {0.4, 1.4},
 			mode = {
 				1,
@@ -2387,7 +2396,7 @@ function CharacterTweakData:_presets(tweak_data)
 	presets.weapon.expert.m4.miss_dis = 1000000000000000000000000000000
 	presets.weapon.expert.m4.RELOAD_SPEED = 1.2
 	presets.weapon.expert.m4.melee_speed = 1
-	presets.weapon.expert.m4.melee_dmg = 30
+	presets.weapon.expert.m4.melee_dmg = 40
 	presets.weapon.expert.m4.melee_retry_delay = presets.weapon.normal.m4.melee_retry_delay
 	presets.weapon.expert.m4.range = {
 		close = 1000,
@@ -2399,7 +2408,7 @@ function CharacterTweakData:_presets(tweak_data)
 		{
 			r = 100,
 			acc = {1, 1},
-			dmg_mul = 6.5,
+			dmg_mul = 5.75,
 			recoil = {0.4, 0.8},
 			mode = {
 				0,
@@ -2411,7 +2420,7 @@ function CharacterTweakData:_presets(tweak_data)
 		{
 			r = 500,
 			acc = {0.9, 0.9},
-			dmg_mul = 6.25,
+			dmg_mul = 5.5,
 			recoil = {0.45, 0.8},
 			mode = {
 				0,
@@ -2423,7 +2432,7 @@ function CharacterTweakData:_presets(tweak_data)
 		{
 			r = 1000,
 			acc = {0.8, 0.8},
-			dmg_mul = 6.25,
+			dmg_mul = 5.5,
 			recoil = {0.35, 0.75},
 			mode = {
 				1,
@@ -2435,7 +2444,7 @@ function CharacterTweakData:_presets(tweak_data)
 		{
 			r = 2000,
 			acc = {0.7, 0.7},
-			dmg_mul = 6,
+			dmg_mul = 5.25,
 			recoil = {0.4, 1.2},
 			mode = {
 				3,
@@ -2447,7 +2456,7 @@ function CharacterTweakData:_presets(tweak_data)
 		{
 			r = 3000,
 			acc = {0.6, 0.6},
-			dmg_mul = 5.75,
+			dmg_mul = 5,
 			recoil = {1.5, 3},
 			mode = {
 				3,
@@ -2464,7 +2473,7 @@ function CharacterTweakData:_presets(tweak_data)
 	presets.weapon.expert.r870.miss_dis = 1000000000000000000000000000000
 	presets.weapon.expert.r870.RELOAD_SPEED = 1.2
 	presets.weapon.expert.r870.melee_speed = 1
-	presets.weapon.expert.r870.melee_dmg = 30
+	presets.weapon.expert.r870.melee_dmg = 40
 	presets.weapon.expert.r870.melee_retry_delay = presets.weapon.normal.r870.melee_retry_delay
 	presets.weapon.expert.r870.range = {
 		close = 1000,
@@ -2475,7 +2484,7 @@ function CharacterTweakData:_presets(tweak_data)
 		{
 			r = 100,
 			acc = {1, 1},
-			dmg_mul = 7,
+			dmg_mul = 6.25,
 			recoil = {1, 1.5},
 			mode = {
 				1,
@@ -2487,7 +2496,7 @@ function CharacterTweakData:_presets(tweak_data)
 		{
 			r = 500,
 			acc = {0.9, 0.9},
-			dmg_mul = 6,
+			dmg_mul = 5.25,
 			recoil = {1.5, 2},
 			mode = {
 				1,
@@ -2499,7 +2508,7 @@ function CharacterTweakData:_presets(tweak_data)
 		{
 			r = 1000,
 			acc = {0.8, 0.8},
-			dmg_mul = 4.5,
+			dmg_mul = 3.75,
 			recoil = {1.5, 2},
 			mode = {
 				1,
@@ -2511,7 +2520,7 @@ function CharacterTweakData:_presets(tweak_data)
 		{
 			r = 2000,
 			acc = {0.7, 0.7},
-			dmg_mul = 4,
+			dmg_mul = 3.25,
 			recoil = {1.5, 2},
 			mode = {
 				1,
@@ -2523,7 +2532,7 @@ function CharacterTweakData:_presets(tweak_data)
 		{
 			r = 3000,
 			acc = {0.6, 0.6},
-			dmg_mul = 3,
+			dmg_mul = 2.25,
 			recoil = {1.5, 2},
 			mode = {
 				1,
@@ -2548,7 +2557,7 @@ function CharacterTweakData:_presets(tweak_data)
 		{
 			r = 100,
 			acc = {1, 1},
-			dmg_mul = 5.5,
+			dmg_mul = 4.75,
 			recoil = {0.1, 0.25},
 			mode = {
 				0,
@@ -2560,7 +2569,7 @@ function CharacterTweakData:_presets(tweak_data)
 		{
 			r = 500,
 			acc = {0.9, 0.9},
-			dmg_mul = 5,
+			dmg_mul = 4.25,
 			recoil = {0.1, 0.3},
 			mode = {
 				0,
@@ -2572,7 +2581,7 @@ function CharacterTweakData:_presets(tweak_data)
 		{
 			r = 1000,
 			acc = {0.8, 0.8},
-			dmg_mul = 4.5,
+			dmg_mul = 3.75,
 			recoil = {0.35, 0.5},
 			mode = {
 				0,
@@ -2584,7 +2593,7 @@ function CharacterTweakData:_presets(tweak_data)
 		{
 			r = 2000,
 			acc = {0.7, 0.7},
-			dmg_mul = 3.5,
+			dmg_mul = 2.75,
 			recoil = {0.35, 0.7},
 			mode = {
 				0,
@@ -2596,7 +2605,7 @@ function CharacterTweakData:_presets(tweak_data)
 		{
 			r = 3000,
 			acc = {0.6, 0.6},
-			dmg_mul = 2.5,
+			dmg_mul = 1.75,
 			recoil = {0.5, 1.5},
 			mode = {
 				1,
@@ -2621,7 +2630,7 @@ function CharacterTweakData:_presets(tweak_data)
 		{
 			r = 100,
 			acc = {1, 1},
-			dmg_mul = 5.5,
+			dmg_mul = 4.75,
 			recoil = {0.5, 0.6},
 			mode = {
 				0,
@@ -2633,7 +2642,7 @@ function CharacterTweakData:_presets(tweak_data)
 		{
 			r = 500,
 			acc = {0.9, 0.9},
-			dmg_mul = 4.5,
+			dmg_mul = 3.75,
 			recoil = {0.5, 0.65},
 			mode = {
 				0,
@@ -2645,7 +2654,7 @@ function CharacterTweakData:_presets(tweak_data)
 		{
 			r = 1000,
 			acc = {0.8, 0.8},
-			dmg_mul = 4,
+			dmg_mul = 3.25,
 			recoil = {0.55, 0.85},
 			mode = {
 				2,
@@ -2657,7 +2666,7 @@ function CharacterTweakData:_presets(tweak_data)
 		{
 			r = 2000,
 			acc = {0.7, 0.7},
-			dmg_mul = 3.5,
+			dmg_mul = 2.75,
 			recoil = {0.65, 1},
 			mode = {
 				2,
@@ -2669,7 +2678,7 @@ function CharacterTweakData:_presets(tweak_data)
 		{
 			r = 3000,
 			acc = {0.6, 0.6},
-			dmg_mul = 3,
+			dmg_mul = 2.25,
 			recoil = {0.65, 1.2},
 			mode = {
 				4,
@@ -2686,7 +2695,7 @@ function CharacterTweakData:_presets(tweak_data)
 	presets.weapon.expert.raging_bull.miss_dis = 1000000000000000000000000000000
 	presets.weapon.expert.raging_bull.RELOAD_SPEED = 0.9
 	presets.weapon.expert.raging_bull.melee_speed = 1
-	presets.weapon.expert.raging_bull.melee_dmg = 15
+	presets.weapon.expert.raging_bull.melee_dmg = 30
 	presets.weapon.expert.raging_bull.melee_retry_delay = {1, 2}
 	presets.weapon.expert.raging_bull.range = {
 		close = 1000,
@@ -2697,7 +2706,7 @@ function CharacterTweakData:_presets(tweak_data)
 		{
 			r = 100,
 			acc = {1, 1},
-			dmg_mul = 5.5,
+			dmg_mul = 4.75,
 			recoil = {0.8, 1},
 			mode = {
 				1,
@@ -2709,7 +2718,7 @@ function CharacterTweakData:_presets(tweak_data)
 		{
 			r = 500,
 			acc = {0.9, 0.9},
-			dmg_mul = 4.5,
+			dmg_mul = 3.75,
 			recoil = {0.8, 1.1},
 			mode = {
 				1,
@@ -2721,7 +2730,7 @@ function CharacterTweakData:_presets(tweak_data)
 		{
 			r = 1000,
 			acc = {0.8, 0.8},
-			dmg_mul = 3,
+			dmg_mul = 2.25,
 			recoil = {0.8, 1.1},
 			mode = {
 				1,
@@ -2733,7 +2742,7 @@ function CharacterTweakData:_presets(tweak_data)
 		{
 			r = 2000,
 			acc = {0.7, 0.7},
-			dmg_mul = 2.5,
+			dmg_mul = 1.75,
 			recoil = {1, 1.3},
 			mode = {
 				1,
@@ -2745,7 +2754,7 @@ function CharacterTweakData:_presets(tweak_data)
 		{
 			r = 3000,
 			acc = {0.6, 0.6},
-			dmg_mul = 2,
+			dmg_mul = 1.25,
 			recoil = {1, 1.5},
 			mode = {
 				1,
@@ -2780,7 +2789,7 @@ function CharacterTweakData:_presets(tweak_data)
 		{
 			r = 700,
 			acc = {1, 1},
-			dmg_mul = 5.5,
+			dmg_mul = 4.75,
 			recoil = {2, 4},
 			mode = {
 				1,
@@ -2792,7 +2801,7 @@ function CharacterTweakData:_presets(tweak_data)
 		{
 			r = 3500,
 			acc = {0.9, 0.9},
-			dmg_mul = 5.5,
+			dmg_mul = 4.75,
 			recoil = {3, 4},
 			mode = {
 				1,
@@ -2804,7 +2813,7 @@ function CharacterTweakData:_presets(tweak_data)
 		{
 			r = 10000,
 			acc = {0.8, 0.8},
-			dmg_mul = 3,
+			dmg_mul = 2.25,
 			recoil = {3, 5},
 			mode = {
 				1,
@@ -2832,7 +2841,7 @@ function CharacterTweakData:_presets(tweak_data)
 	presets.weapon.deathwish.raging_bull.miss_dis = 1000000000000000000000000000000
 	presets.weapon.deathwish.raging_bull.RELOAD_SPEED = 0.9
 	presets.weapon.deathwish.raging_bull.melee_speed = 1
-	presets.weapon.deathwish.raging_bull.melee_dmg = 15
+	presets.weapon.deathwish.raging_bull.melee_dmg = 30
 	presets.weapon.deathwish.raging_bull.melee_retry_delay = {1, 2}
 	presets.weapon.deathwish.raging_bull.range = {
 		close = 1000,
@@ -2843,7 +2852,7 @@ function CharacterTweakData:_presets(tweak_data)
 		{
 			r = 100,
 			acc = {1, 1},
-			dmg_mul = 5.5,
+			dmg_mul = 4.75,
 			recoil = {0.8, 1},
 			mode = {
 				1,
@@ -2855,7 +2864,7 @@ function CharacterTweakData:_presets(tweak_data)
 		{
 			r = 500,
 			acc = {0.9, 0.9},
-			dmg_mul = 4.5,
+			dmg_mul = 3.75,
 			recoil = {0.8, 1.1},
 			mode = {
 				1,
@@ -2867,7 +2876,7 @@ function CharacterTweakData:_presets(tweak_data)
 		{
 			r = 1000,
 			acc = {0.8, 0.8},
-			dmg_mul = 4,
+			dmg_mul = 3.25,
 			recoil = {0.8, 1.1},
 			mode = {
 				1,
@@ -2879,7 +2888,7 @@ function CharacterTweakData:_presets(tweak_data)
 		{
 			r = 2000,
 			acc = {0.7, 0.7},
-			dmg_mul = 3.5,
+			dmg_mul = 2.75,
 			recoil = {1, 1.3},
 			mode = {
 				1,
@@ -2891,7 +2900,7 @@ function CharacterTweakData:_presets(tweak_data)
 		{
 			r = 3000,
 			acc = {0.6, 0.6},
-			dmg_mul = 3,
+			dmg_mul = 2.25,
 			recoil = {1, 1.5},
 			mode = {
 				1,
@@ -2915,7 +2924,7 @@ function CharacterTweakData:_presets(tweak_data)
 		{
 			r = 0,
 			acc = {1, 1},
-			dmg_mul = 5.5,
+			dmg_mul = 4.75,
 			recoil = {0.1, 0.25},
 			mode = {
 				1,
@@ -2927,7 +2936,7 @@ function CharacterTweakData:_presets(tweak_data)
 		{
 			r = 1000,
 			acc = {0.9, 0.9},
-			dmg_mul = 3.5,
+			dmg_mul = 2.75,
 			recoil = {0.15, 0.3},
 			mode = {
 				1,
@@ -2939,7 +2948,7 @@ function CharacterTweakData:_presets(tweak_data)
 		{
 			r = 2000,
 			acc = {0.8, 0.8},
-			dmg_mul = 3.5,
+			dmg_mul = 2.75,
 			recoil = {0.3, 0.7},
 			mode = {
 				1,
@@ -2951,7 +2960,7 @@ function CharacterTweakData:_presets(tweak_data)
 		{
 			r = 3000,
 			acc = {0.7, 0.7},
-			dmg_mul = 2.5,
+			dmg_mul = 1.75,
 			recoil = {0.4, 1},
 			mode = {
 				1,
@@ -2963,7 +2972,7 @@ function CharacterTweakData:_presets(tweak_data)
 		{
 			r = 5000,
 			acc = {0.6, 0.6},
-			dmg_mul = 2.5,
+			dmg_mul = 1.75,
 			recoil = {0.4, 1},
 			mode = {
 				1,
@@ -2980,7 +2989,7 @@ function CharacterTweakData:_presets(tweak_data)
 	presets.weapon.deathwish.c45.miss_dis = 1000000000000000000000000000000
 	presets.weapon.deathwish.c45.RELOAD_SPEED = 1.4
 	presets.weapon.deathwish.c45.melee_speed = presets.weapon.expert.c45.melee_speed
-	presets.weapon.deathwish.c45.melee_dmg = 30
+	presets.weapon.deathwish.c45.melee_dmg = 40
 	presets.weapon.deathwish.c45.melee_retry_delay = presets.weapon.expert.c45.melee_retry_delay
 	presets.weapon.deathwish.c45.range = {
 		close = 2000,
@@ -2991,7 +3000,7 @@ function CharacterTweakData:_presets(tweak_data)
 		{
 			r = 100,
 			acc = {1, 1},
-			dmg_mul = 7,
+			dmg_mul = 6.25,
 			recoil = {0.15, 0.25},
 			mode = {
 				0,
@@ -3003,7 +3012,7 @@ function CharacterTweakData:_presets(tweak_data)
 		{
 			r = 500,
 			acc = {0.9, 0.9},
-			dmg_mul = 7,
+			dmg_mul = 6.25,
 			recoil = {0.15, 0.3},
 			mode = {
 				0,
@@ -3015,7 +3024,7 @@ function CharacterTweakData:_presets(tweak_data)
 		{
 			r = 1000,
 			acc = {0.8, 0.8},
-			dmg_mul = 7,
+			dmg_mul = 6.25,
 			recoil = {0.25, 0.3},
 			mode = {
 				1,
@@ -3027,7 +3036,7 @@ function CharacterTweakData:_presets(tweak_data)
 		{
 			r = 2000,
 			acc = {0.7, 0.7},
-			dmg_mul = 7,
+			dmg_mul = 6.25,
 			recoil = {0.4, 0.5},
 			mode = {
 				1,
@@ -3039,7 +3048,7 @@ function CharacterTweakData:_presets(tweak_data)
 		{
 			r = 3000,
 			acc = {0.6, 0.6},
-			dmg_mul = 6.5,
+			dmg_mul = 5.75,
 			recoil = {0.6, 0.8},
 			mode = {
 				1,
@@ -3051,7 +3060,7 @@ function CharacterTweakData:_presets(tweak_data)
 		{
 			r = 4000,
 			acc = {0.5, 0.5},
-			dmg_mul = 6.5,
+			dmg_mul = 5.75,
 			recoil = {1, 1.5},
 			mode = {
 				1,
@@ -3068,7 +3077,7 @@ function CharacterTweakData:_presets(tweak_data)
 	presets.weapon.deathwish.m4.miss_dis = 1000000000000000000000000000000
 	presets.weapon.deathwish.m4.RELOAD_SPEED = 1.4
 	presets.weapon.deathwish.m4.melee_speed = 1
-	presets.weapon.deathwish.m4.melee_dmg = 20
+	presets.weapon.deathwish.m4.melee_dmg = 40
 	presets.weapon.deathwish.m4.melee_retry_delay = presets.weapon.expert.m4.melee_retry_delay
 	presets.weapon.deathwish.m4.range = {
 		close = 2000,
@@ -3080,7 +3089,7 @@ function CharacterTweakData:_presets(tweak_data)
 		{
 			r = 100,
 			acc = {1, 1},
-			dmg_mul = 8,
+			dmg_mul = 7.25,
 			recoil = {0.25, 0.3},
 			mode = {
 				0,
@@ -3092,7 +3101,7 @@ function CharacterTweakData:_presets(tweak_data)
 		{
 			r = 500,
 			acc = {0.9, 0.9},
-			dmg_mul = 8,
+			dmg_mul = 7.25,
 			recoil = {0.25, 0.3},
 			mode = {
 				0,
@@ -3104,7 +3113,7 @@ function CharacterTweakData:_presets(tweak_data)
 		{
 			r = 1000,
 			acc = {0.8, 0.8},
-			dmg_mul = 8,
+			dmg_mul = 7.25,
 			recoil = {0.35, 0.55},
 			mode = {
 				0,
@@ -3116,7 +3125,7 @@ function CharacterTweakData:_presets(tweak_data)
 		{
 			r = 2000,
 			acc = {0.7, 0.7},
-			dmg_mul = 8,
+			dmg_mul = 7.25,
 			recoil = {0.4, 0.7},
 			mode = {
 				3,
@@ -3128,7 +3137,7 @@ function CharacterTweakData:_presets(tweak_data)
 		{
 			r = 3000,
 			acc = {0.6, 0.6},
-			dmg_mul = 8,
+			dmg_mul = 7.25,
 			recoil = {0.7, 1.1},
 			mode = {
 				3,
@@ -3140,7 +3149,7 @@ function CharacterTweakData:_presets(tweak_data)
 		{
 			r = 6000,
 			acc = {0.5, 0.5},
-			dmg_mul = 8,
+			dmg_mul = 7.25,
 			recoil = {1, 2},
 			mode = {
 				3,
@@ -3157,7 +3166,7 @@ function CharacterTweakData:_presets(tweak_data)
 	presets.weapon.deathwish.r870.miss_dis = 1000000000000000000000000000000
 	presets.weapon.deathwish.r870.RELOAD_SPEED = 1.4
 	presets.weapon.deathwish.r870.melee_speed = 1
-	presets.weapon.deathwish.r870.melee_dmg = 30
+	presets.weapon.deathwish.r870.melee_dmg = 40
 	presets.weapon.deathwish.r870.melee_retry_delay = presets.weapon.expert.r870.melee_retry_delay
 	presets.weapon.deathwish.r870.range = {
 		close = 2000,
@@ -3168,7 +3177,7 @@ function CharacterTweakData:_presets(tweak_data)
 		{
 			r = 100,
 			acc = {1, 1},
-			dmg_mul = 8.5,
+			dmg_mul = 7.75,
 			recoil = {1, 1.1},
 			mode = {
 				1,
@@ -3180,7 +3189,7 @@ function CharacterTweakData:_presets(tweak_data)
 		{
 			r = 500,
 			acc = {0.9, 0.9},
-			dmg_mul = 8,
+			dmg_mul = 7.25,
 			recoil = {1, 1.25},
 			mode = {
 				1,
@@ -3192,7 +3201,7 @@ function CharacterTweakData:_presets(tweak_data)
 		{
 			r = 1000,
 			acc = {0.8, 0.8},
-			dmg_mul = 7.5,
+			dmg_mul = 6.75,
 			recoil = {1, 1.5},
 			mode = {
 				1,
@@ -3204,7 +3213,7 @@ function CharacterTweakData:_presets(tweak_data)
 		{
 			r = 2000,
 			acc = {0.7, 0.7},
-			dmg_mul = 5.5,
+			dmg_mul = 4.75,
 			recoil = {1.25, 1.5},
 			mode = {
 				1,
@@ -3216,7 +3225,7 @@ function CharacterTweakData:_presets(tweak_data)
 		{
 			r = 3000,
 			acc = {0.6, 0.6},
-			dmg_mul = 3.5,
+			dmg_mul = 2.75,
 			recoil = {1.5, 1.75},
 			mode = {
 				1,
@@ -3245,7 +3254,7 @@ function CharacterTweakData:_presets(tweak_data)
 		{
 			r = 100,
 			acc = {1, 1},
-			dmg_mul = 7.25,
+			dmg_mul = 6.5,
 			recoil = {0.1, 0.25},
 			mode = {
 				0,
@@ -3257,7 +3266,7 @@ function CharacterTweakData:_presets(tweak_data)
 		{
 			r = 500,
 			acc = {0.9, 0.9},
-			dmg_mul = 7.25,
+			dmg_mul = 6.5,
 			recoil = {0.1, 0.3},
 			mode = {
 				0,
@@ -3269,7 +3278,7 @@ function CharacterTweakData:_presets(tweak_data)
 		{
 			r = 1000,
 			acc = {0.8, 0.8},
-			dmg_mul = 7.25,
+			dmg_mul = 6.5,
 			recoil = {0.35, 0.5},
 			mode = {
 				0,
@@ -3281,7 +3290,7 @@ function CharacterTweakData:_presets(tweak_data)
 		{
 			r = 2000,
 			acc = {0.7, 0.7},
-			dmg_mul = 7.25,
+			dmg_mul = 6.5,
 			recoil = {0.35, 0.5},
 			mode = {
 				0,
@@ -3293,7 +3302,7 @@ function CharacterTweakData:_presets(tweak_data)
 		{
 			r = 3000,
 			acc = {0.6, 0.6},
-			dmg_mul = 7.25,
+			dmg_mul = 6.5,
 			recoil = {0.5, 1.5},
 			mode = {
 				1,
@@ -3305,7 +3314,7 @@ function CharacterTweakData:_presets(tweak_data)
 		{
 			r = 4500,
 			acc = {0.5, 0.5},
-			dmg_mul = 7.25,
+			dmg_mul = 6.5,
 			recoil = {1, 1.5},
 			mode = {
 				1,
@@ -3334,7 +3343,7 @@ function CharacterTweakData:_presets(tweak_data)
 		{
 			r = 100,
 			acc = {1, 1},
-			dmg_mul = 7.5,
+			dmg_mul = 6.75,
 			recoil = {0.3, 0.4},
 			mode = {
 				0,
@@ -3346,7 +3355,7 @@ function CharacterTweakData:_presets(tweak_data)
 		{
 			r = 500,
 			acc = {0.9, 0.9},
-			dmg_mul = 7.5,
+			dmg_mul = 6.75,
 			recoil = {0.3, 0.4},
 			mode = {
 				0,
@@ -3358,7 +3367,7 @@ function CharacterTweakData:_presets(tweak_data)
 		{
 			r = 1000,
 			acc = {0.8, 0.8},
-			dmg_mul = 7.5,
+			dmg_mul = 6.75,
 			recoil = {0.3, 0.4},
 			mode = {
 				2,
@@ -3370,7 +3379,7 @@ function CharacterTweakData:_presets(tweak_data)
 		{
 			r = 2000,
 			acc = {0.7, 0.7},
-			dmg_mul = 7.5,
+			dmg_mul = 6.75,
 			recoil = {0.65, 8},
 			mode = {
 				2,
@@ -3382,7 +3391,7 @@ function CharacterTweakData:_presets(tweak_data)
 		{
 			r = 3000,
 			acc = {0.6, 0.6},
-			dmg_mul = 7.5,
+			dmg_mul = 6.75,
 			recoil = {0.65, 1.2},
 			mode = {
 				4,
@@ -3412,14 +3421,14 @@ function CharacterTweakData:_presets(tweak_data)
 	presets.weapon.gang_member.beretta92.miss_dis = 1000000000000000000000000000000
 	presets.weapon.gang_member.beretta92.RELOAD_SPEED = 1.5
 	presets.weapon.gang_member.beretta92.melee_speed = 3
-	presets.weapon.gang_member.beretta92.melee_dmg = 10
+	presets.weapon.gang_member.beretta92.melee_dmg = 25
 	presets.weapon.gang_member.beretta92.melee_retry_delay = presets.weapon.normal.beretta92.melee_retry_delay
 	presets.weapon.gang_member.beretta92.range = presets.weapon.normal.beretta92.range
 	presets.weapon.gang_member.beretta92.FALLOFF = {
 		{
 			r = 300,
 			acc = {1, 1},
-			dmg_mul = 4,
+			dmg_mul = 3.25,
 			recoil = {0.25, 0.45},
 			mode = {
 				1,
@@ -3431,7 +3440,7 @@ function CharacterTweakData:_presets(tweak_data)
 		{
 			r = 2000,
 			acc = {0.9, 0.9},
-			dmg_mul = 1.5,
+			dmg_mul = 1,
 			recoil = {0.25, 2},
 			mode = {
 				1,
@@ -3443,7 +3452,7 @@ function CharacterTweakData:_presets(tweak_data)
 		{
 			r = 10000,
 			acc = {0.8, 0.8},
-			dmg_mul = 1.5,
+			dmg_mul = 1,
 			recoil = {2, 3},
 			mode = {
 				1,
@@ -3460,7 +3469,7 @@ function CharacterTweakData:_presets(tweak_data)
 	presets.weapon.gang_member.m4.miss_dis = 1000000000000000000000000000000
 	presets.weapon.gang_member.m4.RELOAD_SPEED = 1
 	presets.weapon.gang_member.m4.melee_speed = 2
-	presets.weapon.gang_member.m4.melee_dmg = 10
+	presets.weapon.gang_member.m4.melee_dmg = 25
 	presets.weapon.gang_member.m4.melee_retry_delay = presets.weapon.normal.m4.melee_retry_delay
 	presets.weapon.gang_member.m4.range = {
 		close = 1500,
@@ -3472,7 +3481,7 @@ function CharacterTweakData:_presets(tweak_data)
 		{
 			r = 300,
 			acc = {1, 1},
-			dmg_mul = 4,
+			dmg_mul = 3.25,
 			recoil = {0.25, 0.45},
 			mode = {
 				0.1,
@@ -3513,14 +3522,14 @@ function CharacterTweakData:_presets(tweak_data)
 	presets.weapon.gang_member.r870.miss_dis = 1000000000000000000000000000000
 	presets.weapon.gang_member.r870.RELOAD_SPEED = 2
 	presets.weapon.gang_member.r870.melee_speed = 2
-	presets.weapon.gang_member.r870.melee_dmg = 10
+	presets.weapon.gang_member.r870.melee_dmg = 25
 	presets.weapon.gang_member.r870.melee_retry_delay = presets.weapon.normal.r870.melee_retry_delay
 	presets.weapon.gang_member.r870.range = presets.weapon.normal.r870.range
 	presets.weapon.gang_member.r870.FALLOFF = {
 		{
 			r = 300,
 			acc = {1, 1},
-			dmg_mul = 4,
+			dmg_mul = 3.25,
 			recoil = {2, 2},
 			mode = {
 				1,
@@ -3532,7 +3541,7 @@ function CharacterTweakData:_presets(tweak_data)
 		{
 			r = 1000,
 			acc = {0.9, 0.9},
-			dmg_mul = 1.5,
+			dmg_mul = 1,
 			recoil = {2, 2},
 			mode = {
 				1,
@@ -4514,7 +4523,7 @@ function CharacterTweakData:_set_overkill_290()
 		{
 			r = 200,
 			acc = {1, 1},
-			dmg_mul = 3.5,
+			dmg_mul = 3,
 			recoil = {0.4, 0.7},
 			mode = {
 				0,
@@ -4526,7 +4535,7 @@ function CharacterTweakData:_set_overkill_290()
 		{
 			r = 500,
 			acc = {0.9, 0.9},
-			dmg_mul = 3,
+			dmg_mul = 2.25,
 			recoil = {0.4, 0.7},
 			mode = {
 				0,
@@ -4538,7 +4547,7 @@ function CharacterTweakData:_set_overkill_290()
 		{
 			r = 1000,
 			acc = {0.8, 0.8},
-			dmg_mul = 2.5,
+			dmg_mul = 1.75,
 			recoil = {0.45, 0.8},
 			mode = {
 				1,
@@ -4550,7 +4559,7 @@ function CharacterTweakData:_set_overkill_290()
 		{
 			r = 2000,
 			acc = {0.7, 0.7},
-			dmg_mul = 2,
+			dmg_mul = 1.5,
 			recoil = {0.45, 0.8},
 			mode = {
 				3,
@@ -4562,7 +4571,7 @@ function CharacterTweakData:_set_overkill_290()
 		{
 			r = 3000,
 			acc = {0.6, 0.6},
-			dmg_mul = 2,
+			dmg_mul = 1.25,
 			recoil = {1, 1.2},
 			mode = {
 				3,
@@ -4593,7 +4602,7 @@ function CharacterTweakData:_set_overkill_290()
 		{
 			r = 700,
 			acc = {1, 1},
-			dmg_mul = 12.5,
+			dmg_mul = 11.75,
 			recoil = {3, 5},
 			mode = {
 				1,
@@ -4605,7 +4614,7 @@ function CharacterTweakData:_set_overkill_290()
 		{
 			r = 4000,
 			acc = {0.9, 0.9},
-			dmg_mul = 12.5,
+			dmg_mul = 11.75,
 			recoil = {3, 5},
 			mode = {
 				1,
@@ -4617,7 +4626,7 @@ function CharacterTweakData:_set_overkill_290()
 		{
 			r = 10000,
 			acc = {0.8, 0.8},
-			dmg_mul = 12.5,
+			dmg_mul = 11.75,
 			recoil = {3, 5},
 			mode = {
 				1,
@@ -4633,7 +4642,7 @@ function CharacterTweakData:_set_overkill_290()
 		{
 			r = 100,
 			acc = {1, 1},
-			dmg_mul = 8.5,
+			dmg_mul = 7.75,
 			recoil = {0.4, 0.7},
 			mode = {
 				0,
@@ -4645,7 +4654,7 @@ function CharacterTweakData:_set_overkill_290()
 		{
 			r = 500,
 			acc = {0.9, 0.9},
-			dmg_mul = 8,
+			dmg_mul = 7.25,
 			recoil = {0.4, 0.7},
 			mode = {
 				0,
@@ -4657,7 +4666,7 @@ function CharacterTweakData:_set_overkill_290()
 		{
 			r = 1000,
 			acc = {0.8, 0.8},
-			dmg_mul = 7.5,
+			dmg_mul = 6.75,
 			recoil = {0.45, 0.8},
 			mode = {
 				1,
@@ -4669,7 +4678,7 @@ function CharacterTweakData:_set_overkill_290()
 		{
 			r = 2000,
 			acc = {0.7, 0.7},
-			dmg_mul = 5.5,
+			dmg_mul = 4.75,
 			recoil = {0.45, 0.8},
 			mode = {
 				3,
@@ -4681,7 +4690,7 @@ function CharacterTweakData:_set_overkill_290()
 		{
 			r = 3000,
 			acc = {0.6, 0.6},
-			dmg_mul = 4,
+			dmg_mul = 3.25,
 			recoil = {1, 1.2},
 			mode = {
 				3,
@@ -4698,7 +4707,7 @@ function CharacterTweakData:_set_overkill_290()
 		{
 			r = 100,
 			acc = {1, 1},
-			dmg_mul = 5.5,
+			dmg_mul = 4.75,
 			recoil = {0, 0},
 			mode = {
 				0,
@@ -4710,7 +4719,7 @@ function CharacterTweakData:_set_overkill_290()
 		{
 			r = 500,
 			acc = {0.9, 0.9},
-			dmg_mul = 5.5,
+			dmg_mul = 4.75,
 			recoil = {0, 0},
 			mode = {
 				0,
@@ -4722,7 +4731,7 @@ function CharacterTweakData:_set_overkill_290()
 		{
 			r = 1000,
 			acc = {0.8, 0.8},
-			dmg_mul = 5.5,
+			dmg_mul = 4.75,
 			recoil = {0, 0},
 			mode = {
 				0,
@@ -4734,7 +4743,7 @@ function CharacterTweakData:_set_overkill_290()
 		{
 			r = 2000,
 			acc = {0.7, 0.7},
-			dmg_mul = 5.5,
+			dmg_mul = 4.75,
 			recoil = {0, 0},
 			mode = {
 				0,
@@ -4746,7 +4755,7 @@ function CharacterTweakData:_set_overkill_290()
 		{
 			r = 3000,
 			acc = {0.6, 0.6},
-			dmg_mul = 5.5,
+			dmg_mul = 4.75,
 			recoil = {0, 0},
 			mode = {
 				0,
@@ -4764,7 +4773,7 @@ function CharacterTweakData:_set_overkill_290()
 		{
 			r = 0,
 			acc = {1, 1},
-			dmg_mul = 7.5,
+			dmg_mul = 6.75,
 			recoil = {0.35, 0.35},
 			mode = {
 				0.2,
@@ -4776,7 +4785,7 @@ function CharacterTweakData:_set_overkill_290()
 		{
 			r = 700,
 			acc = {0.9, 0.9},
-			dmg_mul = 7.5,
+			dmg_mul = 6.75,
 			recoil = {0.35, 0.55},
 			mode = {
 				0.2,
@@ -4788,7 +4797,7 @@ function CharacterTweakData:_set_overkill_290()
 		{
 			r = 1000,
 			acc = {0.8, 0.8},
-			dmg_mul = 7.5,
+			dmg_mul = 6.75,
 			recoil = {0.35, 0.55},
 			mode = {
 				0.2,
@@ -4800,7 +4809,7 @@ function CharacterTweakData:_set_overkill_290()
 		{
 			r = 2000,
 			acc = {0.7, 0.7},
-			dmg_mul = 7.5,
+			dmg_mul = 6.75,
 			recoil = {0.35, 1},
 			mode = {
 				2,
@@ -4812,7 +4821,7 @@ function CharacterTweakData:_set_overkill_290()
 		{
 			r = 3000,
 			acc = {0.6, 0.6},
-			dmg_mul = 7.5,
+			dmg_mul = 6.75,
 			recoil = {0.5, 1.2},
 			mode = {
 				6,
@@ -4828,7 +4837,7 @@ function CharacterTweakData:_set_overkill_290()
 		{
 			r = 0,
 			acc = {1, 1},
-			dmg_mul = 8,
+			dmg_mul = 7.25,
 			recoil = {0.35, 0.45},
 			mode = {
 				1,
@@ -4840,7 +4849,7 @@ function CharacterTweakData:_set_overkill_290()
 		{
 			r = 700,
 			acc = {0.9, 0.9},
-			dmg_mul = 8,
+			dmg_mul = 7.25,
 			recoil = {0.35, 0.45},
 			mode = {
 				1,
@@ -4852,7 +4861,7 @@ function CharacterTweakData:_set_overkill_290()
 		{
 			r = 1000,
 			acc = {0.8, 0.8},
-			dmg_mul = 8,
+			dmg_mul = 7.25,
 			recoil = {0.35, 0.45},
 			mode = {
 				1,
@@ -4864,7 +4873,7 @@ function CharacterTweakData:_set_overkill_290()
 		{
 			r = 2000,
 			acc = {0.7, 0.7},
-			dmg_mul = 8,
+			dmg_mul = 7.25,
 			recoil = {0.35, 0.65},
 			mode = {
 				1,
@@ -4876,7 +4885,7 @@ function CharacterTweakData:_set_overkill_290()
 		{
 			r = 3000,
 			acc = {0.6, 0.6},
-			dmg_mul = 8,
+			dmg_mul = 7.25,
 			recoil = {0.35, 1.5},
 			mode = {
 				1,
@@ -4890,7 +4899,7 @@ function CharacterTweakData:_set_overkill_290()
 		{
 			r = 100,
 			acc = {1, 1},
-			dmg_mul = 7.5,
+			dmg_mul = 6.75,
 			recoil = {0.4, 0.4},
 			mode = {
 				0,
@@ -4902,7 +4911,7 @@ function CharacterTweakData:_set_overkill_290()
 		{
 			r = 500,
 			acc = {0.9, 0.9},
-			dmg_mul = 7.5,
+			dmg_mul = 6.75,
 			recoil = {0.4, 0.5},
 			mode = {
 				0,
@@ -4914,7 +4923,7 @@ function CharacterTweakData:_set_overkill_290()
 		{
 			r = 1000,
 			acc = {0.8, 0.8},
-			dmg_mul = 7.5,
+			dmg_mul = 6.75,
 			recoil = {0.4, 0.6},
 			mode = {
 				1,
@@ -4926,7 +4935,7 @@ function CharacterTweakData:_set_overkill_290()
 		{
 			r = 2000,
 			acc = {0.7, 0.7},
-			dmg_mul = 7.5,
+			dmg_mul = 6.75,
 			recoil = {0.5, 1},
 			mode = {
 				3,
@@ -4938,7 +4947,7 @@ function CharacterTweakData:_set_overkill_290()
 		{
 			r = 3000,
 			acc = {0.6, 0.6},
-			dmg_mul = 7.5,
+			dmg_mul = 6.75,
 			recoil = {1, 2},
 			mode = {
 				3,
