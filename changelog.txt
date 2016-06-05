@@ -1,3 +1,6 @@
+V3.2.3
+- Slightly scaled down cops damage
+
 V3.2.2
 - Fixed codes
 
