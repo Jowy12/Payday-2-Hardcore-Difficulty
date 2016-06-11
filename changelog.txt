@@ -1,10 +1,13 @@
-V3.2.3
+V.3.2.4
+- Updated codes
+
+V.3.2.3
 - Slightly scaled down cops damage
 
-V3.2.2
+V.3.2.2
 - Fixed codes
 
-V3.2.1
+V.3.2.1
 - Fixed cops damage being too much (lol)
 
 V.3.2
