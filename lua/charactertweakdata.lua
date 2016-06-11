@@ -596,6 +596,13 @@ function CharacterTweakData:_init_cop(presets)
 	self.cop.chatter = presets.enemy_chatter.cop
 	self.cop.melee_weapon = "baton"
 	self.cop.steal_loot = true
+	self.cop_scared = deep_clone(self.cop)
+	self.cop_scared.surrender = presets.surrender.always
+	self.cop_scared.surrender_break_time = nil
+	self.cop_female = deep_clone(self.cop)
+	self.cop_female.speech_prefix_p1 = "fl"
+	self.cop_female.speech_prefix_p2 = "n"
+	self.cop_female.speech_prefix_count = 1
 end
 function CharacterTweakData:_init_fbi(presets)
 	self.fbi = deep_clone(presets.base)
@@ -4375,6 +4382,7 @@ function CharacterTweakData:_presets(tweak_data)
 		poses.panic = poses.stand
 	end
 	presets.surrender = {}
+	presets.surrender.always = {base_chance = 1}
 	presets.surrender.easy = {
 		base_chance = 0.75,
 		significant_chance = 0.1,
