@@ -1,3 +1,6 @@
+V.3.2.6
+- Tweaked the ammo pickup rate
+
 V.3.2.5
 - Rebalancing ammo pickup rate to match the cop spawn
 
