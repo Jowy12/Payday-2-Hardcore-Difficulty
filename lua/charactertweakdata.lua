@@ -536,6 +536,9 @@ function CharacterTweakData:_init_security(presets)
 	self.security.has_alarm_pager = true
 	self.security.melee_weapon = "baton"
 	self.security.steal_loot = true
+	self.security_undominatable = deep_clone(self.security)
+	self.security_undominatable.suppression = nil
+	self.security_undominatable.surrender = nil
 end
 function CharacterTweakData:_init_gensec(presets)
 	self.gensec = deep_clone(presets.base)
@@ -740,6 +743,50 @@ function CharacterTweakData:_init_fbi_heavy_swat(presets)
 	self.fbi_heavy_swat.chatter = presets.enemy_chatter.swat
 	self.fbi_heavy_swat.steal_loot = true
 end
+function CharacterTweakData:_init_gangster(presets)
+	self.gangster = deep_clone(presets.base)
+	self.gangster.experience = {}
+	self.gangster.weapon = presets.weapon.good
+	self.gangster.detection = presets.detection.normal
+	self.gangster.HEALTH_INIT = 7.5
+	self.gangster.headshot_dmg_mul = self.gangster.HEALTH_INIT / 1
+	self.gangster.move_speed = presets.move_speed.fast
+	self.gangster.suspicious = nil
+	self.gangster.suppression = presets.suppression.hard
+	self.gangster.surrender = nil
+	self.gangster.ecm_vulnerability = 1
+	self.gangster.ecm_hurts = {
+		ears = {min_duration = 8, max_duration = 10}
+	}
+	self.gangster.no_arrest = true
+	self.gangster.no_retreat = true
+	self.gangster.weapon_voice = "3"
+	self.gangster.experience.cable_tie = "tie_swat"
+	self.gangster.speech_prefix_p1 = "l"
+	self.gangster.speech_prefix_p2 = "n"
+	self.gangster.speech_prefix_count = 4
+	self.gangster.silent_priority_shout = "f37"
+	self.gangster.access = "gangster"
+	self.gangster.rescue_hostages = false
+	self.gangster.use_radio = nil
+	self.gangster.dodge = presets.dodge.ninja
+	self.gangster.challenges = {type = "gangster"}
+	self.gangster.chatter = presets.enemy_chatter.no_chatter
+	self.gangster.melee_weapon = "fists"
+	self.gangster.steal_loot = nil
+end
+function CharacterTweakData:_init_biker(presets)
+	self.biker = deep_clone(self.gangster)
+	self.biker.calls_in = true
+end
+function CharacterTweakData:_init_biker_escape(presets)
+	self.biker_escape = deep_clone(self.gangster)
+	self.biker_escape.melee_weapon = "knife_1"
+	self.biker_escape.move_speed = presets.move_speed.very_fast
+	self.biker_escape.HEALTH_INIT = 10
+	self.biker_escape.suppression = nil
+end
+
 function CharacterTweakData:_init_city_swat(presets)
 	self.city_swat = deep_clone(presets.base)
 	self.city_swat.experience = {}
@@ -4383,6 +4430,7 @@ function CharacterTweakData:_presets(tweak_data)
 	end
 	presets.surrender = {}
 	presets.surrender.always = {base_chance = 1}
+	presets.surrender.never = {base_chance = 0}
 	presets.surrender.easy = {
 		base_chance = 0.75,
 		significant_chance = 0.1,
@@ -4589,8 +4637,71 @@ function CharacterTweakData:_set_overkill_290()
 			}
 		}
 	}
-	self.hector_boss.HEALTH_INIT = 900
-	self.mobster_boss.HEALTH_INIT = 900
+	self.biker_boss.weapon.ak47.FALLOFF = {
+		{
+			r = 100,
+			acc = {1, 1},
+			dmg_mul = 3,
+			recoil = {0.4, 0.7},
+			mode = {
+				0,
+				0,
+				0,
+				1
+			}
+		},
+		{
+			r = 500,
+			acc = {0.9, 0.9},
+			dmg_mul = 3,
+			recoil = {0.4, 0.7},
+			mode = {
+				0,
+				1,
+				2,
+				8
+			}
+		},
+		{
+			r = 1000,
+			acc = {0.8, 0.8},
+			dmg_mul = 1.5,
+			recoil = {0.45, 0.8},
+			mode = {
+				1,
+				3,
+				6,
+				6
+			}
+		},
+		{
+			r = 2000,
+			acc = {0.7, 0.7},
+			dmg_mul = 1,
+			recoil = {0.45, 0.8},
+			mode = {
+				1,
+				2,
+				2,
+				1
+			}
+		},
+		{
+			r = 3000,
+			acc = {0.6, 0.6},
+			dmg_mul = 1,
+			recoil = {1, 1.2},
+			mode = {
+				4,
+				2,
+				1,
+				0
+			}
+		}
+	}
+	self.hector_boss.HEALTH_INIT = 2500
+	self.mobster_boss.HEALTH_INIT = 2500
+	self.biker_boss.HEALTH_INIT = 2500
 	self:_multiply_all_speeds(1.05, 1.1)
 	self.tank.no_retreat = true
 	self.tank.flammable = true
