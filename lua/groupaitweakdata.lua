@@ -776,51 +776,51 @@ function GroupAITweakData:_init_unit_categories(difficulty_index)
 	local access_type_all = {walk = true, acrobatic = true}
 	if difficulty_index <= 2 then
 		self.special_unit_spawn_limits = {
-			tank = 8,
-			taser = 8,
-			spooc = 8,
-			shield = 8,
-			phalanx_minion = 5
+			tank = 6,
+			taser = 6,
+			spooc = 6,
+			shield = 6,
+			phalanx_minion = 3
 		}
 	elseif difficulty_index == 3 then
 		self.special_unit_spawn_limits = {
-			tank = 8,
-			taser = 8,
-			spooc = 8,
-			shield = 8,
-			phalanx_minion = 5
+			tank = 6,
+			taser = 6,
+			spooc = 6,
+			shield = 6,
+			phalanx_minion = 3
 		}
 	elseif difficulty_index == 4 then
 		self.special_unit_spawn_limits = {
-			tank = 8,
-			taser = 8,
-			spooc = 8,
-			shield = 8,
-			phalanx_minion = 5
+			tank = 6,
+			taser = 6,
+			spooc = 6,
+			shield = 6,
+			phalanx_minion = 3
 		}
 	elseif difficulty_index == 5 then
 		self.special_unit_spawn_limits = {
-			tank = 8,
-			taser = 8,
-			spooc = 8,
-			shield = 8,
-			phalanx_minion = 5
+			tank = 6,
+			taser = 6,
+			spooc = 6,
+			shield = 6,
+			phalanx_minion = 3
 		}
 	elseif difficulty_index == 6 then
 		self.special_unit_spawn_limits = {
-			tank = 8,
-			taser = 8,
-			spooc = 8,
-			shield = 8,
-			phalanx_minion = 5
+			tank = 6,
+			taser = 6,
+			spooc = 6,
+			shield = 6,
+			phalanx_minion = 3
 		}
 	else
 		self.special_unit_spawn_limits = {
-			tank = 8,
-			taser = 8,
-			spooc = 8,
-			shield = 8,
-			phalanx_minion = 5
+			tank = 6,
+			taser = 6,
+			spooc = 6,
+			shield = 6,
+			phalanx_minion = 3
 		}
 	end
 	self.unit_categories = {}
