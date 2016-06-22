@@ -776,51 +776,51 @@ function GroupAITweakData:_init_unit_categories(difficulty_index)
 	local access_type_all = {walk = true, acrobatic = true}
 	if difficulty_index <= 2 then
 		self.special_unit_spawn_limits = {
-			tank = 6,
-			taser = 6,
-			spooc = 6,
-			shield = 6,
-			phalanx_minion = 3
+			tank = 10,
+			taser = 8,
+			spooc = 8,
+			shield = 10,
+			phalanx_minion = 2
 		}
 	elseif difficulty_index == 3 then
 		self.special_unit_spawn_limits = {
-			tank = 6,
-			taser = 6,
-			spooc = 6,
-			shield = 6,
-			phalanx_minion = 3
+			tank = 10,
+			taser = 8,
+			spooc = 8,
+			shield = 10,
+			phalanx_minion = 2
 		}
 	elseif difficulty_index == 4 then
 		self.special_unit_spawn_limits = {
-			tank = 6,
-			taser = 6,
-			spooc = 6,
-			shield = 6,
-			phalanx_minion = 3
+			tank = 10,
+			taser = 8,
+			spooc = 8,
+			shield = 10,
+			phalanx_minion = 2
 		}
 	elseif difficulty_index == 5 then
 		self.special_unit_spawn_limits = {
-			tank = 6,
-			taser = 6,
-			spooc = 6,
-			shield = 6,
-			phalanx_minion = 3
+			tank = 10,
+			taser = 8,
+			spooc = 8,
+			shield = 10,
+			phalanx_minion = 2
 		}
 	elseif difficulty_index == 6 then
 		self.special_unit_spawn_limits = {
-			tank = 6,
-			taser = 6,
-			spooc = 6,
-			shield = 6,
-			phalanx_minion = 3
+			tank = 10,
+			taser = 8,
+			spooc = 8,
+			shield = 10,
+			phalanx_minion = 2
 		}
 	else
 		self.special_unit_spawn_limits = {
-			tank = 6,
-			taser = 6,
-			spooc = 6,
-			shield = 6,
-			phalanx_minion = 3
+			tank = 10,
+			taser = 8,
+			spooc = 8,
+			shield = 10,
+			phalanx_minion = 2
 		}
 	end
 	self.unit_categories = {}
@@ -1313,7 +1313,7 @@ function GroupAITweakData:_init_enemy_spawn_groups(difficulty_index)
 	}
 	self.enemy_spawn_groups = {}
 	self.enemy_spawn_groups.CS_defend_a = {
-		amount = {3, 4},
+		amount = {6, 8},
 		spawn = {
 			{
 				unit = "CS_cop_C45_R870",
@@ -1324,7 +1324,7 @@ function GroupAITweakData:_init_enemy_spawn_groups(difficulty_index)
 		}
 	}
 	self.enemy_spawn_groups.CS_defend_b = {
-		amount = {3, 4},
+		amount = {6, 8},
 		spawn = {
 			{
 				unit = "CS_swat_MP5",
@@ -1336,7 +1336,7 @@ function GroupAITweakData:_init_enemy_spawn_groups(difficulty_index)
 		}
 	}
 	self.enemy_spawn_groups.CS_defend_c = {
-		amount = {3, 4},
+		amount = {6, 8},
 		spawn = {
 			{
 				unit = "CS_heavy_M4",
@@ -1348,7 +1348,7 @@ function GroupAITweakData:_init_enemy_spawn_groups(difficulty_index)
 		}
 	}
 	self.enemy_spawn_groups.CS_cops = {
-		amount = {3, 4},
+		amount = {6, 8},
 		spawn = {
 			{
 				unit = "CS_cop_C45_R870",
@@ -1360,7 +1360,7 @@ function GroupAITweakData:_init_enemy_spawn_groups(difficulty_index)
 		}
 	}
 	self.enemy_spawn_groups.CS_stealth_a = {
-		amount = {2, 3},
+		amount = {4, 6},
 		spawn = {
 			{
 				unit = "CS_cop_stealth_MP5",
@@ -1372,7 +1372,7 @@ function GroupAITweakData:_init_enemy_spawn_groups(difficulty_index)
 		}
 	}
 	self.enemy_spawn_groups.CS_swats = {
-		amount = {3, 4},
+		amount = {6, 8},
 		spawn = {
 			{
 				unit = "CS_swat_MP5",
@@ -1396,7 +1396,7 @@ function GroupAITweakData:_init_enemy_spawn_groups(difficulty_index)
 		}
 	}
 	self.enemy_spawn_groups.CS_heavys = {
-		amount = {3, 4},
+		amount = {6, 8},
 		spawn = {
 			{
 				unit = "CS_heavy_M4",
@@ -1413,7 +1413,7 @@ function GroupAITweakData:_init_enemy_spawn_groups(difficulty_index)
 		}
 	}
 	self.enemy_spawn_groups.CS_shields = {
-		amount = {3, 4},
+		amount = {6, 8},
 		spawn = {
 			{
 				unit = "CS_shield",
@@ -1441,7 +1441,7 @@ function GroupAITweakData:_init_enemy_spawn_groups(difficulty_index)
 	}
 	if difficulty_index < 6 then
 		self.enemy_spawn_groups.CS_tazers = {
-			amount = {1, 3},
+			amount = {4, 6},
 			spawn = {
 				{
 					unit = "CS_tazer",
@@ -1462,7 +1462,7 @@ function GroupAITweakData:_init_enemy_spawn_groups(difficulty_index)
 		}
 	else
 		self.enemy_spawn_groups.CS_tazers = {
-			amount = {4, 4},
+			amount = {8, 8},
 			spawn = {
 				{
 					unit = "CS_tazer",
@@ -1490,7 +1490,7 @@ function GroupAITweakData:_init_enemy_spawn_groups(difficulty_index)
 		}
 	end
 	self.enemy_spawn_groups.CS_tanks = {
-		amount = {1, 2},
+		amount = {4, 6},
 		spawn = {
 			{
 				unit = "FBI_tank",
@@ -1509,7 +1509,7 @@ function GroupAITweakData:_init_enemy_spawn_groups(difficulty_index)
 		}
 	}
 	self.enemy_spawn_groups.FBI_defend_a = {
-		amount = {3, 3},
+		amount = {6, 6},
 		spawn = {
 			{
 				unit = "FBI_suit_C45_M4",
@@ -1527,7 +1527,7 @@ function GroupAITweakData:_init_enemy_spawn_groups(difficulty_index)
 		}
 	}
 	self.enemy_spawn_groups.FBI_defend_b = {
-		amount = {3, 3},
+		amount = {6, 6},
 		spawn = {
 			{
 				unit = "FBI_suit_M4_MP5",
@@ -1545,7 +1545,7 @@ function GroupAITweakData:_init_enemy_spawn_groups(difficulty_index)
 		}
 	}
 	self.enemy_spawn_groups.FBI_defend_c = {
-		amount = {3, 3},
+		amount = {6, 6},
 		spawn = {
 			{
 				unit = "FBI_swat_M4",
@@ -1556,7 +1556,7 @@ function GroupAITweakData:_init_enemy_spawn_groups(difficulty_index)
 		}
 	}
 	self.enemy_spawn_groups.FBI_defend_d = {
-		amount = {2, 3},
+		amount = {4, 6},
 		spawn = {
 			{
 				unit = "FBI_heavy_G36",
@@ -1568,7 +1568,7 @@ function GroupAITweakData:_init_enemy_spawn_groups(difficulty_index)
 	}
 	if difficulty_index < 6 then
 		self.enemy_spawn_groups.FBI_stealth_a = {
-			amount = {2, 3},
+			amount = {4, 6},
 			spawn = {
 				{
 					unit = "FBI_suit_stealth_MP5",
@@ -1588,7 +1588,7 @@ function GroupAITweakData:_init_enemy_spawn_groups(difficulty_index)
 		}
 	else
 		self.enemy_spawn_groups.FBI_stealth_a = {
-			amount = {3, 4},
+			amount = {4, 6},
 			spawn = {
 				{
 					unit = "FBI_suit_stealth_MP5",
@@ -1609,7 +1609,7 @@ function GroupAITweakData:_init_enemy_spawn_groups(difficulty_index)
 	end
 	if difficulty_index < 6 then
 		self.enemy_spawn_groups.FBI_stealth_b = {
-			amount = {2, 3},
+			amount = {4, 6},
 			spawn = {
 				{
 					unit = "FBI_suit_stealth_MP5",
@@ -1628,7 +1628,7 @@ function GroupAITweakData:_init_enemy_spawn_groups(difficulty_index)
 		}
 	else
 		self.enemy_spawn_groups.FBI_stealth_b = {
-			amount = {4, 4},
+			amount = {8, 8},
 			spawn = {
 				{
 					unit = "FBI_suit_stealth_MP5",
@@ -1648,7 +1648,7 @@ function GroupAITweakData:_init_enemy_spawn_groups(difficulty_index)
 	end
 	if difficulty_index < 6 then
 		self.enemy_spawn_groups.FBI_swats = {
-			amount = {3, 4},
+			amount = {6, 8},
 			spawn = {
 				{
 					unit = "FBI_swat_M4",
@@ -1681,7 +1681,7 @@ function GroupAITweakData:_init_enemy_spawn_groups(difficulty_index)
 		}
 	else
 		self.enemy_spawn_groups.FBI_swats = {
-			amount = {3, 4},
+			amount = {6, 8},
 			spawn = {
 				{
 					unit = "FBI_swat_M4",
@@ -1708,7 +1708,7 @@ function GroupAITweakData:_init_enemy_spawn_groups(difficulty_index)
 	end
 	if difficulty_index < 6 then
 		self.enemy_spawn_groups.FBI_heavys = {
-			amount = {2, 3},
+			amount = {4, 6},
 			spawn = {
 				{
 					unit = "FBI_heavy_G36",
@@ -1733,7 +1733,7 @@ function GroupAITweakData:_init_enemy_spawn_groups(difficulty_index)
 		}
 	else
 		self.enemy_spawn_groups.FBI_heavys = {
-			amount = {3, 4},
+			amount = {6, 8},
 			spawn = {
 				{
 					unit = "FBI_heavy_G36_w",
@@ -1754,7 +1754,7 @@ function GroupAITweakData:_init_enemy_spawn_groups(difficulty_index)
 	end
 	if difficulty_index < 6 then
 		self.enemy_spawn_groups.FBI_shields = {
-			amount = {3, 4},
+			amount = {6, 8},
 			spawn = {
 				{
 					unit = "FBI_shield",
@@ -1782,7 +1782,7 @@ function GroupAITweakData:_init_enemy_spawn_groups(difficulty_index)
 		}
 	else
 		self.enemy_spawn_groups.FBI_shields = {
-			amount = {3, 4},
+			amount = {6, 8},
 			spawn = {
 				{
 					unit = "FBI_shield",
@@ -1826,7 +1826,7 @@ function GroupAITweakData:_init_enemy_spawn_groups(difficulty_index)
 	end
 	if difficulty_index < 6 then
 		self.enemy_spawn_groups.FBI_tanks = {
-			amount = {3, 4},
+			amount = {6, 8},
 			spawn = {
 				{
 					unit = "FBI_tank",
@@ -1854,7 +1854,7 @@ function GroupAITweakData:_init_enemy_spawn_groups(difficulty_index)
 		}
 	else
 		self.enemy_spawn_groups.FBI_tanks = {
-			amount = {4, 4},
+			amount = {8, 8},
 			spawn = {
 				{
 					unit = "FBI_tank",
