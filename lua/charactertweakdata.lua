@@ -103,7 +103,7 @@ function CharacterTweakData:_init_taser(presets)
 	self.taser.speech_prefix_p2 = nil
 	self.taser.speech_prefix_count = nil
 	self.taser.access = "taser"
-	self.taser.dodge = presets.dodge.ninja
+	self.taser.dodge = presets.dodge.poor
 	self.taser.priority_shout = "f32"
 	self.taser.rescue_hostages = true
 	self.taser.deathguard = true
@@ -530,7 +530,7 @@ function CharacterTweakData:_init_security(presets)
 	self.security.rescue_hostages = true
 	self.security.use_radio = nil
 	self.security.silent_priority_shout = "f37"
-	self.security.dodge = presets.dodge.ninja
+	self.security.dodge = presets.dodge.poor
 	self.security.deathguard = true
 	self.security.chatter = presets.enemy_chatter.cop
 	self.security.has_alarm_pager = true
@@ -565,7 +565,7 @@ function CharacterTweakData:_init_gensec(presets)
 	self.gensec.rescue_hostages = true
 	self.gensec.use_radio = nil
 	self.gensec.silent_priority_shout = "f37"
-	self.gensec.dodge = presets.dodge.ninja
+	self.gensec.dodge = presets.dodge.poor
 	self.gensec.deathguard = true
 	self.gensec.chatter = presets.enemy_chatter.cop
 	self.gensec.has_alarm_pager = true
@@ -594,7 +594,7 @@ function CharacterTweakData:_init_cop(presets)
 	self.cop.speech_prefix_count = 4
 	self.cop.access = "cop"
 	self.cop.silent_priority_shout = "f37"
-	self.cop.dodge = presets.dodge.ninja
+	self.cop.dodge = presets.dodge.poor
 	self.cop.deathguard = true
 	self.cop.chatter = presets.enemy_chatter.cop
 	self.cop.melee_weapon = "baton"
@@ -628,7 +628,7 @@ function CharacterTweakData:_init_fbi(presets)
 	self.fbi.speech_prefix_p2 = "n"
 	self.fbi.speech_prefix_count = 4
 	self.fbi.access = "fbi"
-	self.fbi.dodge = presets.dodge.ninja
+	self.fbi.dodge = presets.dodge.poor
 	self.fbi.deathguard = true
 	self.fbi.no_arrest = true
 	self.fbi.chatter = presets.enemy_chatter.cop
@@ -655,7 +655,7 @@ function CharacterTweakData:_init_swat(presets)
 	self.swat.speech_prefix_p2 = "n"
 	self.swat.speech_prefix_count = 4
 	self.swat.access = "swat"
-	self.swat.dodge = presets.dodge.ninja
+	self.swat.dodge = presets.dodge.poor
 	self.swat.no_arrest = true
 	self.swat.chatter = presets.enemy_chatter.swat
 	self.swat.melee_weapon = "knife_1"
@@ -684,7 +684,7 @@ function CharacterTweakData:_init_heavy_swat(presets)
 	self.heavy_swat.speech_prefix_p2 = "n"
 	self.heavy_swat.speech_prefix_count = 4
 	self.heavy_swat.access = "swat"
-	self.heavy_swat.dodge = presets.dodge.ninja
+	self.heavy_swat.dodge = presets.dodge.poor
 	self.heavy_swat.no_arrest = true
 	self.heavy_swat.chatter = presets.enemy_chatter.swat
 	self.heavy_swat.steal_loot = true
@@ -710,7 +710,7 @@ function CharacterTweakData:_init_fbi_swat(presets)
 	self.fbi_swat.speech_prefix_p2 = "n"
 	self.fbi_swat.speech_prefix_count = 4
 	self.fbi_swat.access = "swat"
-	self.fbi_swat.dodge = presets.dodge.ninja
+	self.fbi_swat.dodge = presets.dodge.poor
 	self.fbi_swat.no_arrest = true
 	self.fbi_swat.chatter = presets.enemy_chatter.swat
 	self.fbi_swat.melee_weapon = "knife_1"
@@ -738,7 +738,7 @@ function CharacterTweakData:_init_fbi_heavy_swat(presets)
 	self.fbi_heavy_swat.speech_prefix_p2 = "n"
 	self.fbi_heavy_swat.speech_prefix_count = 4
 	self.fbi_heavy_swat.access = "swat"
-	self.fbi_heavy_swat.dodge = presets.dodge.ninja
+	self.fbi_heavy_swat.dodge = presets.dodge.poor
 	self.fbi_heavy_swat.no_arrest = true
 	self.fbi_heavy_swat.chatter = presets.enemy_chatter.swat
 	self.fbi_heavy_swat.steal_loot = true
@@ -769,7 +769,7 @@ function CharacterTweakData:_init_gangster(presets)
 	self.gangster.access = "gangster"
 	self.gangster.rescue_hostages = false
 	self.gangster.use_radio = nil
-	self.gangster.dodge = presets.dodge.ninja
+	self.gangster.dodge = presets.dodge.poor
 	self.gangster.challenges = {type = "gangster"}
 	self.gangster.chatter = presets.enemy_chatter.no_chatter
 	self.gangster.melee_weapon = "fists"
@@ -809,7 +809,7 @@ function CharacterTweakData:_init_city_swat(presets)
 	self.city_swat.speech_prefix_p2 = "n"
 	self.city_swat.speech_prefix_count = 4
 	self.city_swat.access = "swat"
-	self.city_swat.dodge = presets.dodge.ninja
+	self.city_swat.dodge = presets.dodge.poor
 	self.city_swat.chatter = presets.enemy_chatter.swat
 	self.city_swat.melee_weapon = "knife_1"
 	self.city_swat.steal_loot = true
@@ -3762,25 +3762,25 @@ function CharacterTweakData:_presets(tweak_data)
 	presets.detection.blind.ntl.use_uncover_range = false
 	presets.dodge = {
 		poor = {
-			speed = 0.9,
+			speed = 0,
 			occasions = {
 				hit = {
-					chance = 0.9,
+					chance = 0,
 					check_timeout = {0, 0},
 					variations = {
 						side_step = {
-							chance = 1,
-							timeout = {2, 3}
+							chance = 0,
+							timeout = {0, 0}
 						}
 					}
 				},
 				scared = {
-					chance = 0.5,
-					check_timeout = {1, 2},
+					chance = 0,
+					check_timeout = {0, 0},
 					variations = {
 						side_step = {
-							chance = 1,
-							timeout = {2, 3}
+							chance = 0,
+							timeout = {0, 0}
 						}
 					}
 				}
