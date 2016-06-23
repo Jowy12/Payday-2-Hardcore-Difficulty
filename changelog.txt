@@ -1,3 +1,8 @@
+V.3.3.1
+- Removed ninja dodge for all cops (no use afterall)
+- Changed spawn for lower difficulties
+- Tweaked special units to spawn more on higher difficulty
+
 V.3.3
 - More cops!
 
