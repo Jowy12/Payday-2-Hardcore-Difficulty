@@ -1,3 +1,8 @@
+V.3.3.2
+- Removed Phalanx Minion during assault
+- Re-added Captain Winters and his Phalanx Minion. Beware though!
+- Tweaked cops stats
+
 V.3.3.1
 - Removed ninja dodge for all cops (no use afterall)
 - Changed spawn for lower difficulties
