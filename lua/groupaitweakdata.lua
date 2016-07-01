@@ -809,7 +809,7 @@ function GroupAITweakData:_init_task_data(difficulty_index, difficulty)
 		}
 	}
 	self.street = deep_clone(self.besiege)
-	self.phalanx.minions.min_count = 4
+	self.phalanx.minions.min_count = 0
 	self.phalanx.minions.amount = 10
 	self.phalanx.minions.distance = 100
 	self.phalanx.vip.health_ratio_flee = 0.2
@@ -819,31 +819,52 @@ function GroupAITweakData:_init_task_data(difficulty_index, difficulty)
 		max = 0.66,
 		increase_intervall = 5
 	}
-	self.phalanx.check_spawn_intervall = 1000000000000000000000000
-	self.phalanx.chance_increase_intervall = 1000000000000000000000000
-	if difficulty_index == 4 then
-		self.phalanx.spawn_chance = {
-			start = 0,
-			increase = 0.05,
-			decrease = 0.7,
+	if difficulty_index == 6 then
+		self.phalanx.check_spawn_intervall = 240
+		self.phalanx.chance_increase_intervall = 0
+	else
+		self.phalanx.check_spawn_intervall = 240
+		self.phalanx.chance_increase_intervall = 0
+	end
+	if difficulty_index == 2 then
+			self.phalanx.spawn_chance = {
+			start = 0.05,
+			increase = 0.5,
+			decrease = 0,
 			max = 1,
-			respawn_delay = 1000000000000000000000000
+			respawn_delay = 240
+		}
+	elseif difficulty_index == 3 then
+			self.phalanx.spawn_chance = {
+			start = 0.05,
+			increase = 0.5,
+			decrease = 0,
+			max = 1,
+			respawn_delay = 240
+		}
+	elseif difficulty_index == 4 then
+			self.phalanx.spawn_chance = {
+			start = 0.05,
+			increase = 0.5,
+			decrease = 0,
+			max = 1,
+			respawn_delay = 240
 		}
 	elseif difficulty_index == 5 then
-		self.phalanx.spawn_chance = {
-			start = 0.01,
-			increase = 0.09,
-			decrease = 0.7,
+			self.phalanx.spawn_chance = {
+			start = 0.05,
+			increase = 0.5,
+			decrease = 0,
 			max = 1,
-			respawn_delay = 1000000000000000000000000
+			respawn_delay = 240
 		}
 	elseif difficulty_index == 6 then
 			self.phalanx.spawn_chance = {
-			start = 0,
-			increase = .5,
+			start = 0.05,
+			increase = 0.5,
 			decrease = 0,
 			max = 1,
-			respawn_delay = 1000000000000000000000000
+			respawn_delay = 240
 		}
 	else
 		self.phalanx.spawn_chance = {
@@ -851,7 +872,7 @@ function GroupAITweakData:_init_task_data(difficulty_index, difficulty)
 			increase = 0,
 			decrease = 0,
 			max = 0,
-			respawn_delay = 10000000000000000000000000
+			respawn_delay = 240
 		}
 	end
 end
@@ -863,47 +884,43 @@ function GroupAITweakData:_init_unit_categories(difficulty_index)
 		self.special_unit_spawn_limits = {
 			tank = 4,
 			taser = 4,
-			spooc = 2,
+			spooc = 4,
 			shield = 4
 		}
 	elseif difficulty_index == 3 then
 		self.special_unit_spawn_limits = {
 			tank = 5,
 			taser = 5,
-			spooc = 3,
+			spooc = 5,
 			shield = 5
 		}
 	elseif difficulty_index == 4 then
 		self.special_unit_spawn_limits = {
 			tank = 6,
 			taser = 6,
-			spooc = 4,
-			shield = 6,
-			phalanx_minion = 1
+			spooc = 6,
+			shield = 6
 		}
 	elseif difficulty_index == 5 then
 		self.special_unit_spawn_limits = {
 			tank = 7,
 			taser = 7,
-			spooc = 5,
-			shield = 7,
-			phalanx_minion = 2
+			spooc = 7,
+			shield = 7
 		}
 	elseif difficulty_index == 6 then
 		self.special_unit_spawn_limits = {
 			tank = 9,
 			taser = 9,
-			spooc = 6,
-			shield = 9,
-			phalanx_minion = 3
+			spooc = 9,
+			shield = 9
 		}
 	else
 		self.special_unit_spawn_limits = {
 			tank = 10,
 			taser = 10,
-			spooc = 6,
-			shield = 10,
-			phalanx_minion = 3
+			spooc = 10,
+			shield = 10
 		}
 	end
 	self.unit_categories = {}
@@ -1165,18 +1182,6 @@ function GroupAITweakData:_init_unit_categories(difficulty_index)
 			special_type = "tank"
 		}
 	end
-	self.unit_categories.Phalanx_minion_assault = {
-		unit_types = {
-			america = {
-				Idstring("units/pd2_dlc_vip/characters/ene_phalanx_1/ene_phalanx_1")
-			},
-			russia = {
-				Idstring("units/pd2_dlc_vip/characters/ene_phalanx_1/ene_phalanx_1")
-			}
-		},
-		access = access_type_walk_only,
-		special_type = "phalanx_minion"
-	}
 	self.unit_categories.Phalanx_minion = {
 		unit_types = {
 			america = {
