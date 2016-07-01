@@ -1992,19 +1992,6 @@ function GroupAITweakData:_init_enemy_spawn_groups(difficulty_index)
 			}
 		}
 	}
-	self.enemy_spawn_groups.Phalanx_minion_assault = {
-		amount = {1, 1},
-		spawn = {
-			{	
-				unit = "Phalanx_minion_assault",
-				freq = 1,
-				amount_min = 1,
-				amount_max = 2,
-				tactics = self._tactics.Phalanx_minion,
-				rank = 1
-			}
-		}
-	}
 	self.enemy_spawn_groups.single_spooc = {
 		amount = {1, 1},
 		spawn = {
