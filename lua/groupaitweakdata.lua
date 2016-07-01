@@ -1860,14 +1860,6 @@ function GroupAITweakData:_init_enemy_spawn_groups(difficulty_index)
 					tactics = self._tactics.FBI_shield,
 					rank = 3
 				},
-				{	
-					unit = "Phalanx_minion",
-					freq = 1,
-					amount_min = 2,
-					amount_max = 2,
-					tactics = self._tactics.Phalanx_minion,
-					rank = 4
-				},
 				{
 					unit = "FBI_suit_stealth_MP5",
 					freq = 1,
