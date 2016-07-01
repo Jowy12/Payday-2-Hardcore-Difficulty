@@ -439,11 +439,6 @@ function GroupAITweakData:_init_task_data(difficulty_index, difficulty)
 				0.7,
 				0.6
 			},
-			Phalanx_minion_assault = {
-				3,
-				3,
-				3
-			},
 			FBI_tanks = {
 				0.3,
 				0.7,
@@ -476,11 +471,6 @@ function GroupAITweakData:_init_task_data(difficulty_index, difficulty)
 				0.3,
 				0.7,
 				0.6
-			},
-			Phalanx_minion_assault = {
-				3,
-				3,
-				3
 			},
 			FBI_tanks = {
 				0.3,
@@ -515,11 +505,6 @@ function GroupAITweakData:_init_task_data(difficulty_index, difficulty)
 				0.7,
 				0.6
 			},
-			Phalanx_minion_assault = {
-				3,
-				3,
-				3
-			},
 			FBI_tanks = {
 				0.3,
 				0.7,
@@ -552,11 +537,6 @@ function GroupAITweakData:_init_task_data(difficulty_index, difficulty)
 				0.3,
 				0.7,
 				0.6
-			},
-			Phalanx_minion_assault = {
-				3,
-				3,
-				3
 			},
 			FBI_tanks = {
 				0.3,
