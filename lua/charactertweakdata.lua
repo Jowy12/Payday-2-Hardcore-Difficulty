@@ -131,7 +131,7 @@ function CharacterTweakData:_init_phalanx_minion(presets)
 	self.phalanx_minion.experience = {}
 	self.phalanx_minion.weapon = deep_clone(presets.weapon.deathwish)
 	self.phalanx_minion.detection = presets.detection.normal
-	self.phalanx_minion.headshot_dmg_mul = 0
+	self.phalanx_minion.headshot_dmg_mul = 10
 	self.phalanx_minion.HEALTH_INIT = 250
 	self.phalanx_minion.DAMAGE_CLAMP_BULLET = 250
 	self.phalanx_minion.DAMAGE_CLAMP_EXPLOSION = self.phalanx_minion.DAMAGE_CLAMP_BULLET
