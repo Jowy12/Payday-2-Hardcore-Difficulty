@@ -1,3 +1,8 @@
+V.3.3.3
+- Tweaked cops HP
+- Changed the way to kill Captain Winters and His minion. They're immune to explosives but taking a high damage on headshot.
+- Increased ammo pickup a bit
+
 V.3.3.2
 - Removed Phalanx Minion during assault
 - Re-added Captain Winters and his Phalanx Minion. Beware though!
