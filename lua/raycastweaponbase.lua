@@ -12,8 +12,8 @@
     	local add_amount = add_amount_override
     	
     	if not add_amount then
-    		local multiplier_min = 1.525
-    		local multiplier_max = 1.525
+    		local multiplier_min = 1.625
+    		local multiplier_max = 1.625
     		local skill_multiplier = managers.player:upgrade_value("player", "pick_up_ammo_multiplier", 1) + managers.player:upgrade_value("player", "pick_up_ammo_multiplier_2", 1) - 1
     		
     		if self._ammo_data and self._ammo_data.ammo_pickup_min_mul then
