@@ -796,7 +796,7 @@ function GroupAITweakData:_init_task_data(difficulty_index, difficulty)
 	self.phalanx.vip.damage_reduction = {
 		start = 0.1,
 		increase = 0.05,
-		max = 0.66,
+		max = 0.5,
 		increase_intervall = 5
 	}
 	if difficulty_index == 6 then
