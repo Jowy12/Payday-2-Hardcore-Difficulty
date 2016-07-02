@@ -131,11 +131,11 @@ function CharacterTweakData:_init_phalanx_minion(presets)
 	self.phalanx_minion.experience = {}
 	self.phalanx_minion.weapon = deep_clone(presets.weapon.deathwish)
 	self.phalanx_minion.detection = presets.detection.normal
-	self.phalanx_minion.headshot_dmg_mul = 7
-	self.phalanx_minion.HEALTH_INIT = 750
-	self.phalanx_minion.DAMAGE_CLAMP_BULLET = 750
+	self.phalanx_minion.headshot_dmg_mul = 10
+	self.phalanx_minion.HEALTH_INIT = 250
+	self.phalanx_minion.DAMAGE_CLAMP_BULLET = 250
 	self.phalanx_minion.DAMAGE_CLAMP_EXPLOSION = self.phalanx_minion.DAMAGE_CLAMP_BULLET
-	self.phalanx_minion.damage.explosion_damage_mul = 4
+	self.phalanx_minion.damage.explosion_damage_mul = 0
 	self.phalanx_minion.damage.hurt_severity = presets.hurt_severities.no_hurts_no_tase
 	self.phalanx_minion.damage.shield_knocked = false
 	self.phalanx_minion.damage.immune_to_knockback = true
@@ -510,7 +510,7 @@ function CharacterTweakData:_init_security(presets)
 	self.security.experience = {}
 	self.security.weapon = presets.weapon.deathwish
 	self.security.detection = presets.detection.guard
-	self.security.HEALTH_INIT = 10
+	self.security.HEALTH_INIT = 9
 	self.security.headshot_dmg_mul = self.security.HEALTH_INIT / 1
 	self.security.move_speed = presets.move_speed.normal
 	self.security.crouch_move = true
@@ -545,7 +545,7 @@ function CharacterTweakData:_init_gensec(presets)
 	self.gensec.experience = {}
 	self.gensec.weapon = presets.weapon.deathwish
 	self.gensec.detection = presets.detection.guard
-	self.gensec.HEALTH_INIT = 12.5
+	self.gensec.HEALTH_INIT = 15
 	self.gensec.headshot_dmg_mul = self.gensec.HEALTH_INIT / 1
 	self.gensec.move_speed = presets.move_speed.normal
 	self.gensec.crouch_move = true
@@ -577,7 +577,7 @@ function CharacterTweakData:_init_cop(presets)
 	self.cop.experience = {}
 	self.cop.weapon = presets.weapon.deathwish
 	self.cop.detection = presets.detection.normal
-	self.cop.HEALTH_INIT = 10
+	self.cop.HEALTH_INIT = 9
 	self.cop.headshot_dmg_mul = self.cop.HEALTH_INIT / 1
 	self.cop.move_speed = presets.move_speed.normal
 	self.cop.surrender_break_time = {10, 15}
@@ -612,7 +612,7 @@ function CharacterTweakData:_init_fbi(presets)
 	self.fbi.experience = {}
 	self.fbi.weapon = presets.weapon.deathwish
 	self.fbi.detection = presets.detection.normal
-	self.fbi.HEALTH_INIT = 10
+	self.fbi.HEALTH_INIT = 9
 	self.fbi.headshot_dmg_mul = self.fbi.HEALTH_INIT / 1
 	self.fbi.move_speed = presets.move_speed.very_fast
 	self.fbi.surrender_break_time = {7, 12}
@@ -721,7 +721,7 @@ function CharacterTweakData:_init_fbi_heavy_swat(presets)
 	self.fbi_heavy_swat.experience = {}
 	self.fbi_heavy_swat.weapon = presets.weapon.deathwish
 	self.fbi_heavy_swat.detection = presets.detection.normal
-	self.fbi_heavy_swat.HEALTH_INIT = 20
+	self.fbi_heavy_swat.HEALTH_INIT = 17.5
 	self.fbi_heavy_swat.headshot_dmg_mul = self.fbi_heavy_swat.HEALTH_INIT / 10
 	self.fbi_heavy_swat.damage.explosion_damage_mul = 0.9
 	self.fbi_heavy_swat.move_speed = presets.move_speed.fast
@@ -748,7 +748,7 @@ function CharacterTweakData:_init_gangster(presets)
 	self.gangster.experience = {}
 	self.gangster.weapon = presets.weapon.deathwish
 	self.gangster.detection = presets.detection.normal
-	self.gangster.HEALTH_INIT = 10
+	self.gangster.HEALTH_INIT = 9
 	self.gangster.headshot_dmg_mul = self.gangster.HEALTH_INIT / 1
 	self.gangster.move_speed = presets.move_speed.fast
 	self.gangster.suspicious = nil
@@ -783,7 +783,7 @@ function CharacterTweakData:_init_biker_escape(presets)
 	self.biker_escape = deep_clone(self.gangster)
 	self.biker_escape.melee_weapon = "knife_1"
 	self.biker_escape.move_speed = presets.move_speed.very_fast
-	self.biker_escape.HEALTH_INIT = 10
+	self.biker_escape.HEALTH_INIT = 9
 	self.biker_escape.suppression = nil
 end
 
@@ -4714,8 +4714,8 @@ function CharacterTweakData:_set_overkill_290()
 	self.presets.gang_member_damage.REGENERATE_TIME_AWAY = 0.6
 	self.presets.gang_member_damage.HEALTH_INIT = 300
 	self:_set_characters_weapon_preset("deathwish")
-	self.shield.HEALTH_INIT = 30
-	self.spooc.HEALTH_INIT = 200
+	self.shield.HEALTH_INIT = 40
+	self.spooc.HEALTH_INIT = 150
 	self.spooc.spooc_attack_timeout = {0, 0}
 	self.sniper.weapon.m4.FALLOFF = {
 		{
@@ -5076,15 +5076,15 @@ function CharacterTweakData:_set_overkill_290()
 			}
 		}
 	}
-	self.city_swat.HEALTH_INIT = 50
+	self.city_swat.HEALTH_INIT = 45
 	self.city_swat.headshot_dmg_mul = 1.5
 	self.city_swat.damage.explosion_damage_mul = 1
 	self.city_swat.damage.hurt_severity = self.presets.hurt_severities.light_hurt_fire_poison
 	self.shield.weapon.mp9.focus_dis = 1000000000000000000000000000000
 	self.tank.weapon.saiga.focus_dis = 1000000000000000000000000000000
 	self.tank.weapon.r870.focus_dis = 1000000000000000000000000000000
-	self.phalanx_vip.HEALTH_INIT = 4000
-	self.phalanx_vip.DAMAGE_CLAMP_BULLET = 4000
+	self.phalanx_vip.HEALTH_INIT = 2500
+	self.phalanx_vip.DAMAGE_CLAMP_BULLET = 2500
 	self.phalanx_vip.DAMAGE_CLAMP_EXPLOSION = self.phalanx_vip.DAMAGE_CLAMP_BULLET
 	self.flashbang_multiplier = 2
 	self.phalanx_minion.critical_hits = {
