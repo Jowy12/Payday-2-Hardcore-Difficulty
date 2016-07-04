@@ -1,3 +1,10 @@
+V.3.3.5
+- Cops should retreat as they should be when assault ends
+- Captain Winters and his minion take lower explosives damage, higher headshot damage
+
+V.3.3.4
+- Lots of tweaks under charactertweak for balance purpose
+
 V.3.3.3
 - Tweaked cops HP
 - Changed the way to kill Captain Winters and His minion. They're immune to explosives but taking a high damage on headshot.
