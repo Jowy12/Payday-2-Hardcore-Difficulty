@@ -792,7 +792,7 @@ function GroupAITweakData:_init_task_data(difficulty_index, difficulty)
 	self.phalanx.minions.min_count = 0
 	self.phalanx.minions.amount = 10
 	self.phalanx.minions.distance = 100
-	self.phalanx.vip.health_ratio_flee = 0.2
+	self.phalanx.vip.health_ratio_flee = 0.225
 	self.phalanx.vip.damage_reduction = {
 		start = 0.1,
 		increase = 0.05,
@@ -800,10 +800,10 @@ function GroupAITweakData:_init_task_data(difficulty_index, difficulty)
 		increase_intervall = 5
 	}
 	if difficulty_index == 6 then
-		self.phalanx.check_spawn_intervall = 240
+		self.phalanx.check_spawn_intervall = 300
 		self.phalanx.chance_increase_intervall = 0
 	else
-		self.phalanx.check_spawn_intervall = 240
+		self.phalanx.check_spawn_intervall = 300
 		self.phalanx.chance_increase_intervall = 0
 	end
 	if difficulty_index == 2 then
@@ -812,7 +812,7 @@ function GroupAITweakData:_init_task_data(difficulty_index, difficulty)
 			increase = 0.5,
 			decrease = 0,
 			max = 1,
-			respawn_delay = 240
+			respawn_delay = 600
 		}
 	elseif difficulty_index == 3 then
 			self.phalanx.spawn_chance = {
@@ -820,7 +820,7 @@ function GroupAITweakData:_init_task_data(difficulty_index, difficulty)
 			increase = 0.5,
 			decrease = 0,
 			max = 1,
-			respawn_delay = 240
+			respawn_delay = 600
 		}
 	elseif difficulty_index == 4 then
 			self.phalanx.spawn_chance = {
@@ -828,7 +828,7 @@ function GroupAITweakData:_init_task_data(difficulty_index, difficulty)
 			increase = 0.5,
 			decrease = 0,
 			max = 1,
-			respawn_delay = 240
+			respawn_delay = 600
 		}
 	elseif difficulty_index == 5 then
 			self.phalanx.spawn_chance = {
@@ -836,7 +836,7 @@ function GroupAITweakData:_init_task_data(difficulty_index, difficulty)
 			increase = 0.5,
 			decrease = 0,
 			max = 1,
-			respawn_delay = 240
+			respawn_delay = 600
 		}
 	elseif difficulty_index == 6 then
 			self.phalanx.spawn_chance = {
@@ -844,7 +844,7 @@ function GroupAITweakData:_init_task_data(difficulty_index, difficulty)
 			increase = 0.5,
 			decrease = 0,
 			max = 1,
-			respawn_delay = 240
+			respawn_delay = 600
 		}
 	else
 		self.phalanx.spawn_chance = {
@@ -852,7 +852,7 @@ function GroupAITweakData:_init_task_data(difficulty_index, difficulty)
 			increase = 0,
 			decrease = 0,
 			max = 0,
-			respawn_delay = 240
+			respawn_delay = 600
 		}
 	end
 end
