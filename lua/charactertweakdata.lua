@@ -111,7 +111,7 @@ function CharacterTweakData:_init_security(presets)
 	self.security.experience = {}
 	self.security.weapon = presets.weapon.good
 	self.security.detection = presets.detection.guard
-	self.security.HEALTH_INIT = 5
+	self.security.HEALTH_INIT = 3
 	self.security.headshot_dmg_mul = self.security.HEALTH_INIT / 1
 	self.security.move_speed = presets.move_speed.normal
 	self.security.crouch_move = true
@@ -146,7 +146,7 @@ function CharacterTweakData:_init_gensec(presets)
 	self.gensec.experience = {}
 	self.gensec.weapon = presets.weapon.good
 	self.gensec.detection = presets.detection.guard
-	self.gensec.HEALTH_INIT = 7.5
+	self.gensec.HEALTH_INIT = 6
 	self.gensec.headshot_dmg_mul = self.gensec.HEALTH_INIT / 1
 	self.gensec.move_speed = presets.move_speed.normal
 	self.gensec.crouch_move = true
@@ -178,7 +178,7 @@ function CharacterTweakData:_init_cop(presets)
 	self.cop.experience = {}
 	self.cop.weapon = presets.weapon.good
 	self.cop.detection = presets.detection.normal
-	self.cop.HEALTH_INIT = 5
+	self.cop.HEALTH_INIT = 3
 	self.cop.headshot_dmg_mul = self.cop.HEALTH_INIT / 1
 	self.cop.move_speed = presets.move_speed.normal
 	self.cop.surrender_break_time = {10, 15}
@@ -240,7 +240,7 @@ function CharacterTweakData:_init_swat(presets)
 	self.swat.experience = {}
 	self.swat.weapon = presets.weapon.good
 	self.swat.detection = presets.detection.normal
-	self.swat.HEALTH_INIT = 7.5
+	self.swat.HEALTH_INIT = 8
 	self.swat.headshot_dmg_mul = self.swat.HEALTH_INIT / 2
 	self.swat.move_speed = presets.move_speed.fast
 	self.swat.surrender_break_time = {6, 10}
@@ -295,7 +295,7 @@ function CharacterTweakData:_init_fbi_swat(presets)
 	self.fbi_swat.experience = {}
 	self.fbi_swat.weapon = presets.weapon.good
 	self.fbi_swat.detection = presets.detection.normal
-	self.fbi_swat.HEALTH_INIT = 12.5
+	self.fbi_swat.HEALTH_INIT = 13
 	self.fbi_swat.headshot_dmg_mul = self.fbi_swat.HEALTH_INIT / 4
 	self.fbi_swat.move_speed = presets.move_speed.very_fast
 	self.fbi_swat.surrender_break_time = {6, 10}
@@ -322,7 +322,7 @@ function CharacterTweakData:_init_fbi_heavy_swat(presets)
 	self.fbi_heavy_swat.experience = {}
 	self.fbi_heavy_swat.weapon = presets.weapon.good
 	self.fbi_heavy_swat.detection = presets.detection.normal
-	self.fbi_heavy_swat.HEALTH_INIT = 17.5
+	self.fbi_heavy_swat.HEALTH_INIT = 20
 	self.fbi_heavy_swat.headshot_dmg_mul = self.fbi_heavy_swat.HEALTH_INIT / 10
 	self.fbi_heavy_swat.damage.explosion_damage_mul = 0.9
 	self.fbi_heavy_swat.move_speed = presets.move_speed.fast
@@ -349,7 +349,7 @@ function CharacterTweakData:_init_city_swat(presets)
 	self.city_swat.experience = {}
 	self.city_swat.weapon = presets.weapon.good
 	self.city_swat.detection = presets.detection.normal
-	self.city_swat.HEALTH_INIT = 12.5
+	self.city_swat.HEALTH_INIT = 13
 	self.city_swat.headshot_dmg_mul = self.city_swat.HEALTH_INIT / 4
 	self.city_swat.move_speed = presets.move_speed.very_fast
 	self.city_swat.surrender_break_time = {6, 10}
@@ -377,7 +377,7 @@ function CharacterTweakData:_init_sniper(presets)
 	self.sniper.experience = {}
 	self.sniper.weapon = presets.weapon.sniper
 	self.sniper.detection = presets.detection.sniper
-	self.sniper.HEALTH_INIT = 5
+	self.sniper.HEALTH_INIT = 4
 	self.sniper.headshot_dmg_mul = self.sniper.HEALTH_INIT / 2
 	self.sniper.move_speed = presets.move_speed.normal
 	self.sniper.shooting_death = false
@@ -404,7 +404,7 @@ function CharacterTweakData:_init_gangster(presets)
 	self.gangster.experience = {}
 	self.gangster.weapon = presets.weapon.good
 	self.gangster.detection = presets.detection.normal
-	self.gangster.HEALTH_INIT = 5
+	self.gangster.HEALTH_INIT = 4
 	self.gangster.headshot_dmg_mul = self.gangster.HEALTH_INIT / 1
 	self.gangster.move_speed = presets.move_speed.fast
 	self.gangster.suspicious = nil
@@ -530,7 +530,7 @@ function CharacterTweakData:_init_mobster_boss(presets)
 	}
 	self:_process_weapon_usage_table(self.mobster_boss.weapon)
 	self.mobster_boss.detection = presets.detection.normal
-	self.mobster_boss.HEALTH_INIT = 400
+	self.mobster_boss.HEALTH_INIT = 350
 	self.mobster_boss.headshot_dmg_mul = 2
 	self.mobster_boss.damage.explosion_damage_mul = 1
 	self.mobster_boss.damage.hurt_severity = presets.hurt_severities.base_no_poison
@@ -642,7 +642,7 @@ function CharacterTweakData:_init_biker_boss(presets)
 	}
 	self:_process_weapon_usage_table(self.biker_boss.weapon)
 	self.biker_boss.detection = presets.detection.normal
-	self.biker_boss.HEALTH_INIT = 400
+	self.biker_boss.HEALTH_INIT = 350
 	self.biker_boss.headshot_dmg_mul = 2
 	self.biker_boss.damage.explosion_damage_mul = 1
 	self.biker_boss.damage.hurt_severity = presets.hurt_severities.no_hurts
@@ -681,7 +681,7 @@ function CharacterTweakData:_init_hector_boss(presets)
 	self.hector_boss.DAMAGE_CLAMP_BULLET = 320
 	self.hector_boss.DAMAGE_CLAMP_EXPLOSION = 550
 	self.hector_boss.melee_weapon_dmg_multiplier = 2.5
-	self.hector_boss.HEALTH_INIT = 1200
+	self.hector_boss.HEALTH_INIT = 900
 	self.hector_boss.weapon.saiga = {}
 	self.hector_boss.weapon.saiga.aim_delay = {0, 0}
 	self.hector_boss.weapon.saiga.focus_delay = 1
@@ -947,10 +947,10 @@ function CharacterTweakData:_init_tank(presets)
 	}
 	self:_process_weapon_usage_table(self.tank.weapon)
 	self.tank.detection = presets.detection.normal
-	self.tank.HEALTH_INIT = 750
+	self.tank.HEALTH_INIT = 550
 	self.tank.headshot_dmg_mul = self.tank.HEALTH_INIT / 40
 	self.tank.damage.explosion_damage_mul = 1
-	self.tank.move_speed = presets.move_speed.slow
+	self.tank.move_speed = presets.move_speed.very_slow
 	self.tank.allowed_stances = {cbt = true}
 	self.tank.allowed_poses = {stand = true}
 	self.tank.crouch_move = false
@@ -1052,7 +1052,7 @@ function CharacterTweakData:_init_tank(presets)
 			}
 		}
 	}
-	self.tank_hw.HEALTH_INIT = 1400
+	self.tank_hw.HEALTH_INIT = 1100
 	self.tank_hw.headshot_dmg_mul = self.tank.HEALTH_INIT / 40
 	self.tank_hw.damage.explosion_damage_mul = 1
 	self.tank_hw.use_animation_on_fire_damage = false
@@ -1064,7 +1064,7 @@ function CharacterTweakData:_init_spooc(presets)
 	self.spooc.experience = {}
 	self.spooc.weapon = deep_clone(presets.weapon.good)
 	self.spooc.detection = presets.detection.normal
-	self.spooc.HEALTH_INIT = 55
+	self.spooc.HEALTH_INIT = 60
 	self.spooc.headshot_dmg_mul = self.spooc.HEALTH_INIT / 14
 	self.spooc.move_speed = presets.move_speed.lightning
 	self.spooc.no_retreat = true
@@ -1416,7 +1416,7 @@ function CharacterTweakData:_init_taser(presets)
 		}
 	}
 	self.taser.detection = presets.detection.normal
-	self.taser.HEALTH_INIT = 32.5
+	self.taser.HEALTH_INIT = 36
 	self.taser.headshot_dmg_mul = self.taser.HEALTH_INIT / 20
 	self.taser.move_speed = presets.move_speed.fast
 	self.taser.no_retreat = true
@@ -6168,9 +6168,9 @@ function CharacterTweakData:_set_overkill_145()
 end
 function CharacterTweakData:_set_overkill_290()
 	if SystemInfo:platform() == Idstring("PS3") then
-		self:_multiply_all_hp(2, 0.75)
+		self:_multiply_all_hp(1.7, 0.75)
 	else
-		self:_multiply_all_hp(2, 0.75)
+		self:_multiply_all_hp(1.7, 0.75)
 	end
 	self.hector_boss.weapon.saiga.FALLOFF = {
 		{
@@ -6607,7 +6607,7 @@ function CharacterTweakData:_set_overkill_290()
 			}
 		}
 	}
-	self.city_swat.HEALTH_INIT = 25
+	self.city_swat.HEALTH_INIT = 24
 	self.city_swat.headshot_dmg_mul = self.fbi_swat.HEALTH_INIT / 8
 	self.city_swat.damage.explosion_damage_mul = 0.8
 	self.city_swat.damage.hurt_severity = self.presets.hurt_severities.light_hurt_fire_poison
