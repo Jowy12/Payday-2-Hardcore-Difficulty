@@ -1,3 +1,7 @@
+V.3.3.6
+- Reverted cops HP back to default value (Some weapons are having a hard time taking down cops in the previous version)
+- Disabled running dozers (Causing kill desync to people who don't have the mod installed)
+
 V.3.3.5
 - Cops should retreat as they should be when assault ends
 - Captain Winters and his minion take lower explosives damage, higher headshot damage
