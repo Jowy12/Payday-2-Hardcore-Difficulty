@@ -1,5 +1,7 @@
 V.3.3.8
 - Added limit to numbers of cop during assault
+- Captain now instantly reduce damage by 50% to all cops
+- Phalanx minions now have a tighter formation
 
 V.3.3.7
 - Experiment update
