@@ -1,3 +1,9 @@
+V.3.3.7
+- Experiment update
+- More phalanx minions during captain siege
+- Re-added running dozers and they aren't stunable now
+- Increased enemies damage
+
 V.3.3.6
 - Reverted cops HP back to default value (Some weapons are having a hard time taking down cops in the previous version)
 - Disabled running dozers (Causing kill desync to people who don't have the mod installed)
