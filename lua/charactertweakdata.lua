@@ -1309,8 +1309,8 @@ function CharacterTweakData:_init_phalanx_minion(presets)
 	self.phalanx_minion.weapon = deep_clone(presets.weapon.deathwish)
 	self.phalanx_minion.detection = presets.detection.normal
 	self.phalanx_minion.headshot_dmg_mul = 6
-	self.phalanx_minion.HEALTH_INIT = 350
-	self.phalanx_minion.DAMAGE_CLAMP_BULLET = 35
+	self.phalanx_minion.HEALTH_INIT = 500
+	self.phalanx_minion.DAMAGE_CLAMP_BULLET = 25
 	self.phalanx_minion.DAMAGE_CLAMP_EXPLOSION = self.phalanx_minion.DAMAGE_CLAMP_BULLET
 	self.phalanx_minion.damage.explosion_damage_mul = 3
 	self.phalanx_minion.damage.hurt_severity = presets.hurt_severities.no_hurts_no_tase
@@ -1323,9 +1323,9 @@ end
 function CharacterTweakData:_init_phalanx_vip(presets)
 	self.phalanx_vip = deep_clone(self.phalanx_minion)
 	self.phalanx_vip.LOWER_HEALTH_PERCENTAGE_LIMIT = 1
-	self.phalanx_vip.FINAL_LOWER_HEALTH_PERCENTAGE_LIMIT = 0.2
-	self.phalanx_vip.HEALTH_INIT = 1250
-	self.phalanx_vip.DAMAGE_CLAMP_BULLET = 125
+	self.phalanx_vip.FINAL_LOWER_HEALTH_PERCENTAGE_LIMIT = 0.225
+	self.phalanx_vip.HEALTH_INIT = 1500
+	self.phalanx_vip.DAMAGE_CLAMP_BULLET = 150
 	self.phalanx_vip.DAMAGE_CLAMP_EXPLOSION = self.phalanx_vip.DAMAGE_CLAMP_BULLET
 	self.phalanx_vip.can_be_tased = false
 end
@@ -6615,10 +6615,10 @@ function CharacterTweakData:_set_overkill_290()
 	self.tank.weapon.saiga.focus_dis = 1000000000000
 	self.tank.weapon.r870.focus_dis = 1000000000000
 	self.phalanx_minion.HEALTH_INIT = 1000
-	self.phalanx_minion.DAMAGE_CLAMP_BULLET = 100
+	self.phalanx_minion.DAMAGE_CLAMP_BULLET = 50
 	self.phalanx_minion.DAMAGE_CLAMP_EXPLOSION = self.phalanx_minion.DAMAGE_CLAMP_BULLET
 	self.phalanx_vip.HEALTH_INIT = 2000
-	self.phalanx_vip.DAMAGE_CLAMP_BULLET = 200
+	self.phalanx_vip.DAMAGE_CLAMP_BULLET = 100
 	self.phalanx_vip.DAMAGE_CLAMP_EXPLOSION = self.phalanx_vip.DAMAGE_CLAMP_BULLET
 	self.phalanx_minion.critical_hits = {
 		damage_mul = 1.25
