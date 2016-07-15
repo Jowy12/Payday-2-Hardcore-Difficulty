@@ -1899,13 +1899,13 @@ function GroupAITweakData:_init_task_data(difficulty_index, difficulty)
 	self.street = deep_clone(self.besiege)
 	self.phalanx.minions.min_count = 0
 	self.phalanx.minions.amount = 20
-	self.phalanx.minions.distance = 80
+	self.phalanx.minions.distance = 50
 	self.phalanx.vip.health_ratio_flee = 0.225
 	self.phalanx.vip.damage_reduction = {
-		start = 0.1,
-		increase = 0.05,
+		start = 0.5,
+		increase = 0,
 		max = 0.5,
-		increase_intervall = 5
+		increase_intervall = 0
 	}
 	self.phalanx.check_spawn_intervall = 300
 	self.phalanx.chance_increase_intervall = 0
