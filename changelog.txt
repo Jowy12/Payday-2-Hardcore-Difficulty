@@ -1,3 +1,7 @@
+V.3.4
+- Another damage rebalance
+- Loosen up phalanx formation
+
 V.3.3.9
 - Tweaked cop damage (again, rebalancing is hard)
 - Increased cops limit during assault
