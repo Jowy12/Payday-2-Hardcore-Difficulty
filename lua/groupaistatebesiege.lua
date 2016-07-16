@@ -1,5 +1,5 @@
 GroupAIStateBesiege = GroupAIStateBesiege or class(GroupAIStateBase)
-GroupAIStateBesiege._MAX_SIMULTANEOUS_SPAWNS = 2000
+GroupAIStateBesiege._MAX_SIMULTANEOUS_SPAWNS = 1000
 function GroupAIStateBesiege:_upd_assault_task()
 	local task_data = self._task_data.assault
 	if not task_data.active then
@@ -126,7 +126,7 @@ function GroupAIStateBesiege:_upd_assault_task()
 	if task_data.phase == "anticipation" then
 		nr_wanted = nr_wanted - 5
 	end
-	if self:_count_police_force("assault") >= 45 then
+	if self:_count_police_force("assault") >= 80 then
 		nr_wanted = nr_wanted - 10000
 	end
 	if nr_wanted > 0 and task_data.phase ~= "fade" then
