@@ -3,7 +3,7 @@
 	"description" : "A custom difficulty made for all hardcore heisters out there! Enjoy the game!",
 	"author" : "Jowy",
 	"contact" : "http://steamcommunity.com/id/jowyyy/ or http://steamcommunity.com/id/pertetoes",
-	"version" : "3.3.8",
+	"version" : "3.3.9",
 	"priority" : 250,
 	"hooks" : [
 		{	"hook_id" : "lib/tweak_data/charactertweakdata",
@@ -27,6 +27,9 @@
         	{	"hook_id" : "lib/managers/mission/elementmissionend",
         		"script_path" : "lua/lobbymessage.lua"
     		},
+		{	"hook_id" : "lib/tweak_data/playertweakdata",
+			"script_path" : "lua/playertweakdata.lua"
+		},
 		{	"hook_id" : "lib/units/weapons/raycastweaponbase",
 			"script_path" : "lua/raycastweaponbase.lua"
 		}
