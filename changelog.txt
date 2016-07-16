@@ -1,3 +1,10 @@
+V.3.3.9
+- Tweaked cop damage (again, rebalancing is hard)
+- Increased cops limit during assault
+- Increased special units spawn
+- Halved downed time (stay close to your teamates!)
+- Settings are applied to all difficulty
+
 V.3.3.8
 - Added limit to numbers of cop during assault
 - Captain now instantly reduce damage by 50% to all cops
@@ -107,7 +114,7 @@ V.3.1
 - Disable captain spawning due to glitching spawn
 
 V.3 
-- Incrased spawn rate
+- Increased spawn rate
 
 V.2.9.9 
 - Increased spawn rate even more
