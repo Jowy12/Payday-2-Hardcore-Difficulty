@@ -3450,7 +3450,7 @@ function CharacterTweakData:_presets(tweak_data)
 		{
 			r = 100,
 			acc = {1, 1},
-			dmg_mul = 4,
+			dmg_mul = 5,
 			recoil = {0.15, 0.25},
 			mode = {
 				0,
@@ -3539,7 +3539,7 @@ function CharacterTweakData:_presets(tweak_data)
 		{
 			r = 500,
 			acc = {0.9, 0.9},
-			dmg_mul = 4.75,
+			dmg_mul = 3.75,
 			recoil = {0.45, 0.8},
 			mode = {
 				0,
@@ -3551,7 +3551,7 @@ function CharacterTweakData:_presets(tweak_data)
 		{
 			r = 1000,
 			acc = {0.8, 0.8},
-			dmg_mul = 4.75,
+			dmg_mul = 3.75,
 			recoil = {0.35, 0.75},
 			mode = {
 				0,
@@ -3563,7 +3563,7 @@ function CharacterTweakData:_presets(tweak_data)
 		{
 			r = 2000,
 			acc = {0.7, 0.7},
-			dmg_mul = 4.5,
+			dmg_mul = 3,
 			recoil = {0.4, 1.2},
 			mode = {
 				0,
@@ -3575,7 +3575,7 @@ function CharacterTweakData:_presets(tweak_data)
 		{
 			r = 3000,
 			acc = {0.6, 0.6},
-			dmg_mul = 4.25,
+			dmg_mul = 3,
 			recoil = {1.5, 3},
 			mode = {
 				0,
@@ -3603,7 +3603,7 @@ function CharacterTweakData:_presets(tweak_data)
 		{
 			r = 100,
 			acc = {1, 1},
-			dmg_mul = 5.5,
+			dmg_mul = 4.5,
 			recoil = {1, 1.5},
 			mode = {
 				1,
@@ -3615,7 +3615,7 @@ function CharacterTweakData:_presets(tweak_data)
 		{
 			r = 500,
 			acc = {0.9, 0.9},
-			dmg_mul = 4.5,
+			dmg_mul = 3.5,
 			recoil = {1.5, 2},
 			mode = {
 				1,
@@ -3700,7 +3700,7 @@ function CharacterTweakData:_presets(tweak_data)
 		{
 			r = 1000,
 			acc = {0.8, 0.8},
-			dmg_mul = 3,
+			dmg_mul = 2.5,
 			recoil = {0.35, 0.5},
 			mode = {
 				0,
@@ -3724,7 +3724,7 @@ function CharacterTweakData:_presets(tweak_data)
 		{
 			r = 3000,
 			acc = {0.6, 0.6},
-			dmg_mul = 1,
+			dmg_mul = 1.5,
 			recoil = {0.5, 1.5},
 			mode = {
 				0,
@@ -3825,7 +3825,7 @@ function CharacterTweakData:_presets(tweak_data)
 		{
 			r = 100,
 			acc = {1, 1},
-			dmg_mul = 4,
+			dmg_mul = 4.5,
 			recoil = {0.8, 1},
 			mode = {
 				1,
@@ -3849,7 +3849,7 @@ function CharacterTweakData:_presets(tweak_data)
 		{
 			r = 1000,
 			acc = {0.8, 0.8},
-			dmg_mul = 1.5,
+			dmg_mul = 2,
 			recoil = {0.8, 1.1},
 			mode = {
 				1,
@@ -3861,7 +3861,7 @@ function CharacterTweakData:_presets(tweak_data)
 		{
 			r = 2000,
 			acc = {0.7, 0.7},
-			dmg_mul = 1,
+			dmg_mul = 1.5,
 			recoil = {1, 1.3},
 			mode = {
 				1,
