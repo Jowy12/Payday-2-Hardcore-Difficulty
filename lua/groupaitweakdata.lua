@@ -114,45 +114,45 @@ function GroupAITweakData:_init_unit_categories(difficulty_index)
 	local access_type_all = {walk = true, acrobatic = true}
 	if difficulty_index <= 2 then
 		self.special_unit_spawn_limits = {
-			tank = 2,
-			taser = 2,
-			spooc = 2,
-			shield = 2
-		}
-	elseif difficulty_index == 3 then
-		self.special_unit_spawn_limits = {
-			tank = 3,
-			taser = 3,
-			spooc = 3,
-			shield = 3
-		}
-	elseif difficulty_index == 4 then
-		self.special_unit_spawn_limits = {
 			tank = 4,
 			taser = 4,
 			spooc = 4,
 			shield = 4
 		}
-	elseif difficulty_index == 5 then
+	elseif difficulty_index == 3 then
 		self.special_unit_spawn_limits = {
 			tank = 5,
 			taser = 5,
 			spooc = 5,
 			shield = 5
 		}
-	elseif difficulty_index == 6 then
+	elseif difficulty_index == 4 then
 		self.special_unit_spawn_limits = {
 			tank = 6,
 			taser = 6,
 			spooc = 6,
 			shield = 6
 		}
+	elseif difficulty_index == 5 then
+		self.special_unit_spawn_limits = {
+			tank = 7,
+			taser = 7,
+			spooc = 7,
+			shield = 7
+		}
+	elseif difficulty_index == 6 then
+		self.special_unit_spawn_limits = {
+			tank = 8,
+			taser = 8,
+			spooc = 8,
+			shield = 8
+		}
 	else
 		self.special_unit_spawn_limits = {
-			tank = 6,
-			taser = 6,
-			spooc = 6,
-			shield = 6
+			tank = 8,
+			taser = 8,
+			spooc = 8,
+			shield = 8
 		}
 	end
 	self.unit_categories = {}
