@@ -1,5 +1,5 @@
 GroupAIStateBesiege = GroupAIStateBesiege or class(GroupAIStateBase)
-GroupAIStateBesiege._MAX_SIMULTANEOUS_SPAWNS = 1000
+GroupAIStateBesiege._MAX_SIMULTANEOUS_SPAWNS = 10000
 function GroupAIStateBesiege:_upd_assault_task()
 	local task_data = self._task_data.assault
 	if not task_data.active then
