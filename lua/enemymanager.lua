@@ -262,7 +262,7 @@ function EnemyManager:_init_enemy_data()
 	enemy_data.nr_active_units = 0
 	enemy_data.nr_inactive_units = 0
 	enemy_data.inactive_units = {}
-	enemy_data.max_nr_active_units = 1000
+	enemy_data.max_nr_active_units = 10000
 	enemy_data.corpses = {}
 	enemy_data.nr_corpses = 0
 	self._civilian_data = {
