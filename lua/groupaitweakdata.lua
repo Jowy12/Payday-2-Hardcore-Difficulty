@@ -1785,12 +1785,12 @@ function GroupAITweakData:_init_task_data(difficulty_index, difficulty)
 		}
 	end
 	self.besiege.recon.interval = {
-		5,
-		5,
-		5
+		1,
+		1,
+		1
 	}
-	self.besiege.recon.interval_variation = 40
-	if difficulty_index < 6 then
+	self.besiege.recon.interval_variation = 1
+	if difficulty_index < 2 then
 		self.besiege.recon.force = {
 			2,
 			4,
