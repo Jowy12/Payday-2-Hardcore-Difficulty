@@ -1,3 +1,7 @@
+V.3.4.1
+- Just another damage rebalance
+- Lowered Invinsibilty Frame
+
 V.3.4
 - Another damage rebalance
 - Loosen up phalanx formation
