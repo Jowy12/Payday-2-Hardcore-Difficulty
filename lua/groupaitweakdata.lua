@@ -1674,9 +1674,9 @@ function GroupAITweakData:_init_task_data(difficulty_index, difficulty)
 		0
 	}
 	self.besiege.reenforce.interval = {
-		1,
-		1,
-		1
+		0.01,
+		0.01,
+		0.01
 	}
 	if difficulty_index <= 2 then
 		self.besiege.reenforce.groups = {
@@ -1785,22 +1785,22 @@ function GroupAITweakData:_init_task_data(difficulty_index, difficulty)
 		}
 	end
 	self.besiege.recon.interval = {
-		1,
-		1,
-		1
+		0.01,
+		0.01,
+		0.01
 	}
-	self.besiege.recon.interval_variation = 1
+	self.besiege.recon.interval_variation = 0.01
 	if difficulty_index < 2 then
 		self.besiege.recon.force = {
-			2,
-			4,
-			6
+			100,
+			100,
+			100
 		}
 	else
 		self.besiege.recon.force = {
-			3,
-			4,
-			6
+			100,
+			100,
+			100
 		}
 	end
 	if difficulty_index <= 2 then
@@ -1899,7 +1899,7 @@ function GroupAITweakData:_init_task_data(difficulty_index, difficulty)
 	self.street = deep_clone(self.besiege)
 	self.phalanx.minions.min_count = 0
 	self.phalanx.minions.amount = 20
-	self.phalanx.minions.distance = 100
+	self.phalanx.minions.distance = 80
 	self.phalanx.vip.health_ratio_flee = 0.225
 	self.phalanx.vip.damage_reduction = {
 		start = 0.5,
