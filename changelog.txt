@@ -1,3 +1,6 @@
+V.3.4.2
+- Tweaked some codes and did some cleaning up
+
 V.3.4.1
 - Just another damage rebalance
 - Lowered Invinsibilty Frame
