@@ -633,100 +633,100 @@ function GroupAITweakData:_init_enemy_spawn_groups(difficulty_index)
 	}
 	self.enemy_spawn_groups = {}
 	self.enemy_spawn_groups.CS_defend_a = {
-		amount = {3, 4},
+		amount = {6, 8},
 		spawn = {
 			{
 				unit = "CS_cop_C45_R870",
-				freq = 1,
+				freq = 2,
 				tactics = self._tactics.CS_cop,
 				rank = 1
 			}
 		}
 	}
 	self.enemy_spawn_groups.CS_defend_b = {
-		amount = {3, 4},
+		amount = {6, 8},
 		spawn = {
 			{
 				unit = "CS_swat_MP5",
-				freq = 1,
-				amount_min = 1,
+				freq = 2,
+				amount_min = 2,
 				tactics = self._tactics.CS_cop,
 				rank = 1
 			}
 		}
 	}
 	self.enemy_spawn_groups.CS_defend_c = {
-		amount = {3, 4},
+		amount = {6, 8},
 		spawn = {
 			{
 				unit = "CS_heavy_M4",
-				freq = 1,
-				amount_min = 1,
+				freq = 2,
+				amount_min = 2,
 				tactics = self._tactics.CS_cop,
 				rank = 1
 			}
 		}
 	}
 	self.enemy_spawn_groups.CS_cops = {
-		amount = {3, 4},
+		amount = {6, 8},
 		spawn = {
 			{
 				unit = "CS_cop_C45_R870",
-				freq = 1,
-				amount_min = 1,
+				freq = 2,
+				amount_min = 2,
 				tactics = self._tactics.CS_cop,
 				rank = 1
 			}
 		}
 	}
 	self.enemy_spawn_groups.CS_stealth_a = {
-		amount = {2, 3},
+		amount = {4, 6},
 		spawn = {
 			{
 				unit = "CS_cop_stealth_MP5",
-				freq = 1,
-				amount_min = 1,
+				freq = 2,
+				amount_min = 2,
 				tactics = self._tactics.CS_cop_stealth,
 				rank = 1
 			}
 		}
 	}
 	self.enemy_spawn_groups.CS_swats = {
-		amount = {3, 4},
+		amount = {6, 8},
 		spawn = {
 			{
 				unit = "CS_swat_MP5",
-				freq = 1,
+				freq = 2,
 				tactics = self._tactics.CS_swat_rifle,
 				rank = 2
 			},
 			{
 				unit = "CS_swat_R870",
-				freq = 0.5,
-				amount_max = 2,
+				freq = 1,
+				amount_max = 4,
 				tactics = self._tactics.CS_swat_shotgun,
 				rank = 1
 			},
 			{
 				unit = "CS_swat_MP5",
-				freq = 0.33,
+				freq = 0.66,
 				tactics = self._tactics.CS_swat_rifle_flank,
 				rank = 3
 			}
 		}
 	}
 	self.enemy_spawn_groups.CS_heavys = {
-		amount = {3, 4},
+		amount = {6, 8},
 		spawn = {
 			{
 				unit = "CS_heavy_M4",
-				freq = 1,
+				freq = 2,
 				tactics = self._tactics.CS_swat_rifle,
 				rank = 2
 			},
 			{
 				unit = "CS_heavy_M4",
-				freq = 0.35,
+				freq = 0.7,
 				tactics = self._tactics.CS_swat_rifle_flank,
 				rank = 3
 			}
@@ -829,58 +829,58 @@ function GroupAITweakData:_init_enemy_spawn_groups(difficulty_index)
 		}
 	}
 	self.enemy_spawn_groups.FBI_defend_a = {
-		amount = {3, 3},
+		amount = {6, 6},
 		spawn = {
 			{
 				unit = "FBI_suit_C45_M4",
-				freq = 1,
-				amount_min = 1,
+				freq = 2,
+				amount_min = 2,
 				tactics = self._tactics.FBI_suit,
 				rank = 2
 			},
 			{
 				unit = "CS_cop_C45_R870",
-				freq = 1,
+				freq = 2,
 				tactics = self._tactics.FBI_suit,
 				rank = 1
 			}
 		}
 	}
 	self.enemy_spawn_groups.FBI_defend_b = {
-		amount = {3, 3},
+		amount = {6, 6},
 		spawn = {
 			{
 				unit = "FBI_suit_M4_MP5",
-				freq = 1,
-				amount_min = 1,
+				freq = 2,
+				amount_min = 2,
 				tactics = self._tactics.FBI_suit,
 				rank = 2
 			},
 			{
 				unit = "FBI_swat_M4",
-				freq = 1,
+				freq = 2,
 				tactics = self._tactics.FBI_suit,
 				rank = 1
 			}
 		}
 	}
 	self.enemy_spawn_groups.FBI_defend_c = {
-		amount = {3, 3},
+		amount = {6, 6},
 		spawn = {
 			{
 				unit = "FBI_swat_M4",
-				freq = 1,
+				freq = 2,
 				tactics = self._tactics.FBI_suit,
 				rank = 1
 			}
 		}
 	}
 	self.enemy_spawn_groups.FBI_defend_d = {
-		amount = {2, 3},
+		amount = {4, 6},
 		spawn = {
 			{
 				unit = "FBI_heavy_G36",
-				freq = 1,
+				freq = 2,
 				tactics = self._tactics.FBI_suit,
 				rank = 1
 			}
@@ -888,12 +888,12 @@ function GroupAITweakData:_init_enemy_spawn_groups(difficulty_index)
 	}
 	if difficulty_index < 2 then
 		self.enemy_spawn_groups.FBI_stealth_a = {
-			amount = {2, 3},
+			amount = {4, 6},
 			spawn = {
 				{
 					unit = "FBI_suit_stealth_MP5",
-					freq = 1,
-					amount_min = 1,
+					freq = 2,
+					amount_min = 2,
 					tactics = self._tactics.FBI_suit_stealth,
 					rank = 1
 				},
@@ -908,12 +908,12 @@ function GroupAITweakData:_init_enemy_spawn_groups(difficulty_index)
 		}
 	else
 		self.enemy_spawn_groups.FBI_stealth_a = {
-			amount = {3, 4},
+			amount = {6, 8},
 			spawn = {
 				{
 					unit = "FBI_suit_stealth_MP5",
-					freq = 1,
-					amount_min = 1,
+					freq = 2,
+					amount_min = 2,
 					tactics = self._tactics.FBI_suit_stealth,
 					rank = 2
 				},
@@ -929,18 +929,18 @@ function GroupAITweakData:_init_enemy_spawn_groups(difficulty_index)
 	end
 	if difficulty_index < 2 then
 		self.enemy_spawn_groups.FBI_stealth_b = {
-			amount = {2, 3},
+			amount = {4, 6},
 			spawn = {
 				{
 					unit = "FBI_suit_stealth_MP5",
-					freq = 1,
-					amount_min = 1,
+					freq = 2,
+					amount_min = 2,
 					tactics = self._tactics.FBI_suit_stealth,
 					rank = 1
 				},
 				{
 					unit = "FBI_suit_M4_MP5",
-					freq = 0.75,
+					freq = 1.5,
 					tactics = self._tactics.FBI_suit,
 					rank = 2
 				}
@@ -948,18 +948,18 @@ function GroupAITweakData:_init_enemy_spawn_groups(difficulty_index)
 		}
 	else
 		self.enemy_spawn_groups.FBI_stealth_b = {
-			amount = {4, 4},
+			amount = {8, 8},
 			spawn = {
 				{
 					unit = "FBI_suit_stealth_MP5",
-					freq = 1,
-					amount_min = 1,
+					freq = 2,
+					amount_min = 2,
 					tactics = self._tactics.FBI_suit_stealth,
 					rank = 1
 				},
 				{
 					unit = "FBI_suit_M4_MP5",
-					freq = 0.75,
+					freq = 1.5,
 					tactics = self._tactics.FBI_suit_stealth,
 					rank = 2
 				}
@@ -968,25 +968,25 @@ function GroupAITweakData:_init_enemy_spawn_groups(difficulty_index)
 	end
 	if difficulty_index < 2 then
 		self.enemy_spawn_groups.FBI_swats = {
-			amount = {3, 4},
+			amount = {6, 8},
 			spawn = {
 				{
 					unit = "FBI_swat_M4",
-					freq = 1,
-					amount_min = 1,
+					freq = 2,
+					amount_min = 2,
 					tactics = self._tactics.FBI_swat_rifle,
 					rank = 2
 				},
 				{
 					unit = "FBI_swat_M4",
-					freq = 0.75,
+					freq = 1.5,
 					tactics = self._tactics.FBI_swat_rifle_flank,
 					rank = 3
 				},
 				{
 					unit = "FBI_swat_R870",
-					freq = 0.5,
-					amount_max = 2,
+					freq = 1,
+					amount_max = 4,
 					tactics = self._tactics.FBI_swat_shotgun,
 					rank = 1
 				},
@@ -1001,25 +1001,25 @@ function GroupAITweakData:_init_enemy_spawn_groups(difficulty_index)
 		}
 	else
 		self.enemy_spawn_groups.FBI_swats = {
-			amount = {3, 4},
+			amount = {6, 8},
 			spawn = {
 				{
 					unit = "FBI_swat_M4",
-					freq = 1,
-					amount_min = 3,
+					freq = 2,
+					amount_min = 6,
 					tactics = self._tactics.FBI_swat_rifle,
 					rank = 1
 				},
 				{
 					unit = "FBI_suit_M4_MP5",
-					freq = 1,
+					freq = 2,
 					tactics = self._tactics.FBI_swat_rifle_flank,
 					rank = 2
 				},
 				{
 					unit = "FBI_swat_R870",
-					amount_min = 2,
-					freq = 1,
+					amount_min = 4,
+					freq = 2,
 					tactics = self._tactics.FBI_swat_shotgun,
 					rank = 3
 				}
@@ -1028,17 +1028,17 @@ function GroupAITweakData:_init_enemy_spawn_groups(difficulty_index)
 	end
 	if difficulty_index < 2 then
 		self.enemy_spawn_groups.FBI_heavys = {
-			amount = {2, 3},
+			amount = {4, 6},
 			spawn = {
 				{
 					unit = "FBI_heavy_G36",
-					freq = 1,
+					freq = 2,
 					tactics = self._tactics.FBI_swat_rifle,
 					rank = 1
 				},
 				{
 					unit = "FBI_heavy_G36",
-					freq = 0.75,
+					freq = 1.5,
 					tactics = self._tactics.FBI_swat_rifle_flank,
 					rank = 2
 				},
@@ -1053,19 +1053,19 @@ function GroupAITweakData:_init_enemy_spawn_groups(difficulty_index)
 		}
 	else
 		self.enemy_spawn_groups.FBI_heavys = {
-			amount = {3, 4},
+			amount = {6, 8},
 			spawn = {
 				{
 					unit = "FBI_heavy_G36_w",
-					freq = 1,
-					amount_min = 4,
+					freq = 2,
+					amount_min = 8,
 					tactics = self._tactics.FBI_swat_rifle,
 					rank = 1
 				},
 				{
 					unit = "FBI_swat_M4",
-					freq = 1,
-					amount_min = 3,
+					freq = 2,
+					amount_min = 6,
 					tactics = self._tactics.FBI_heavy_flank,
 					rank = 2
 				}
@@ -1898,9 +1898,9 @@ function GroupAITweakData:_init_task_data(difficulty_index, difficulty)
 	}
 	self.street = deep_clone(self.besiege)
 	self.phalanx.minions.min_count = 0
-	self.phalanx.minions.amount = 20
+	self.phalanx.minions.amount = 15
 	self.phalanx.minions.distance = 80
-	self.phalanx.vip.health_ratio_flee = 0.225
+	self.phalanx.vip.health_ratio_flee = 0.2
 	self.phalanx.vip.damage_reduction = {
 		start = 0.5,
 		increase = 0,
