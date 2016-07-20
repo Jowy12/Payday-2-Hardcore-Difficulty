@@ -1,3 +1,8 @@
+V.3.4.3
+- Doubled spawn for regular cops
+- Removed cop spawn limit (keep the helmets flying!)
+- Reduced phalanx minion during captain siege (caused some spawn issue)
+
 V.3.4.2
 - Tweaked some codes and did some cleaning up
 
