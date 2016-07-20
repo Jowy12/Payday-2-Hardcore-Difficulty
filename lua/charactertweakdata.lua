@@ -1323,9 +1323,9 @@ end
 function CharacterTweakData:_init_phalanx_vip(presets)
 	self.phalanx_vip = deep_clone(self.phalanx_minion)
 	self.phalanx_vip.LOWER_HEALTH_PERCENTAGE_LIMIT = 1
-	self.phalanx_vip.FINAL_LOWER_HEALTH_PERCENTAGE_LIMIT = 0.225
+	self.phalanx_vip.FINAL_LOWER_HEALTH_PERCENTAGE_LIMIT = 0.2
 	self.phalanx_vip.HEALTH_INIT = 1500
-	self.phalanx_vip.DAMAGE_CLAMP_BULLET = 150
+	self.phalanx_vip.DAMAGE_CLAMP_BULLET = 75
 	self.phalanx_vip.DAMAGE_CLAMP_EXPLOSION = self.phalanx_vip.DAMAGE_CLAMP_BULLET
 	self.phalanx_vip.can_be_tased = false
 end
@@ -4696,20 +4696,20 @@ function CharacterTweakData:_presets(tweak_data)
 		guard = {},
 		ntl = {}
 	}
-	presets.detection.normal.idle.dis_max = 10000
-	presets.detection.normal.idle.angle_max = 120
+	presets.detection.normal.idle.dis_max = 1000000000000
+	presets.detection.normal.idle.angle_max = 360
 	presets.detection.normal.idle.delay = {0, 0}
 	presets.detection.normal.idle.use_uncover_range = true
-	presets.detection.normal.combat.dis_max = 10000
-	presets.detection.normal.combat.angle_max = 120
+	presets.detection.normal.combat.dis_max = 1000000000000
+	presets.detection.normal.combat.angle_max = 360
 	presets.detection.normal.combat.delay = {0, 0}
 	presets.detection.normal.combat.use_uncover_range = true
-	presets.detection.normal.recon.dis_max = 10000
-	presets.detection.normal.recon.angle_max = 120
+	presets.detection.normal.recon.dis_max = 1000000000000
+	presets.detection.normal.recon.angle_max = 360
 	presets.detection.normal.recon.delay = {0, 0}
 	presets.detection.normal.recon.use_uncover_range = true
-	presets.detection.normal.guard.dis_max = 10000
-	presets.detection.normal.guard.angle_max = 120
+	presets.detection.normal.guard.dis_max = 1000000000000
+	presets.detection.normal.guard.angle_max = 360
 	presets.detection.normal.guard.delay = {0, 0}
 	presets.detection.normal.ntl.dis_max = 4000
 	presets.detection.normal.ntl.angle_max = 60
