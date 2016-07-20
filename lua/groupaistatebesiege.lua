@@ -63,7 +63,7 @@ function GroupAIStateBesiege:_upd_assault_task()
 		local end_assault = true
 		local enemies_left = self:_count_police_force("assault")
 		if not self._hunt_mode then
-			local min_enemies_left = 15
+			local min_enemies_left = 10
 			if enemies_left < min_enemies_left or t > task_data.phase_end_t + 350 then
 				if t > task_data.phase_end_t - 8 and not task_data.said_retreat then
 					if self._drama_data.amount < tweak_data.drama.assault_fade_end then
@@ -74,7 +74,7 @@ function GroupAIStateBesiege:_upd_assault_task()
 					end_assault = true
 				end
 			else
-				print("kill more cops to end fade phase: ", min_enemies_left - enemies_left)
+				print("kill more enemies to end fade phase: ", min_enemies_left - enemies_left)
 			end
 			if task_data.force_end or end_assault then
 				print("assault task clear")
@@ -125,9 +125,6 @@ function GroupAIStateBesiege:_upd_assault_task()
 	local nr_wanted = task_data.force - self:_count_police_force("assault")
 	if task_data.phase == "anticipation" then
 		nr_wanted = nr_wanted - 5
-	end
-	if self:_count_police_force("assault") >= 80 then
-		nr_wanted = nr_wanted - 10000
 	end
 	if nr_wanted > 0 and task_data.phase ~= "fade" then
 		local used_event
