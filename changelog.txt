@@ -1,3 +1,6 @@
+V.3.4.4
+- Fixed Elite Shotguner
+
 V.3.4.3
 - Removed cop spawn limit (keep the helmets flying!)
 - Reduced phalanx minion during captain siege (caused some spawn issue)
