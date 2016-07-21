@@ -338,8 +338,7 @@ function GroupAITweakData:_init_unit_categories(difficulty_index)
 		self.unit_categories.FBI_swat_R870 = {
 			unit_types = {
 				america = {
-					Idstring("units/payday2/characters/ene_fbi_swat_2/ene_fbi_swat_2"),
-					Idstring("units/payday2/characters/ene_city_swat_3/ene_city_swat_3")
+					Idstring("units/payday2/characters/ene_city_swat_2/ene_city_swat_2")
 				},
 				russia = {
 					Idstring("units/pd2_dlc_mad/characters/ene_akan_fbi_swat_dw_r870/ene_akan_fbi_swat_dw_r870"),
