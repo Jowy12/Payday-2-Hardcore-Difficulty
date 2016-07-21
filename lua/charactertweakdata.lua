@@ -371,6 +371,68 @@ function CharacterTweakData:_init_city_swat(presets)
 	self.city_swat.melee_weapon = "knife_1"
 	self.city_swat.steal_loot = true
 	self.city_swat.has_alarm_pager = true
+	self.city_swat.weapon.r870.FALLOFF= {
+		{
+			r = 100,
+			acc = {1, 1},
+			dmg_mul = 3.5,
+			recoil = {0.3, 0.6},
+			mode = {
+				0,
+				3,
+				3,
+				1
+			}
+		},
+		{
+			r = 500,
+			acc = {0.9, 0.9},
+			dmg_mul = 3,
+			recoil = {0.3, 0.6},
+			mode = {
+				0,
+				3,
+				3,
+				1
+			}
+		},
+		{
+			r = 1000,
+			acc = {0.8, 0.8},
+			dmg_mul = 2,
+			recoil = {0.4, 0.7},
+			mode = {
+				0,
+				3,
+				3,
+				1
+			}
+		},
+		{
+			r = 2000,
+			acc = {0.7, 0.7},
+			dmg_mul = 1.5,
+			recoil = {0.4, 0.7},
+			mode = {
+				0,
+				3,
+				3,
+				1
+			}
+		},
+		{
+			r = 3000,
+			acc = {0.6, 0.6},
+			dmg_mul = 1,
+			recoil = {0.5, 0.8},
+			mode = {
+				0,
+				3,
+				3,
+				1
+			}
+		}
+	}
 end
 function CharacterTweakData:_init_sniper(presets)
 	self.sniper = deep_clone(presets.base)
