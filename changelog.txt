@@ -1,3 +1,6 @@
+V.3.4.6
+- Slightly reduce Heavy Swat damage (was kinda too much lol)
+
 V.3.4.5
 - Heavy Swat now does "damage" instead of being meatshield
 
