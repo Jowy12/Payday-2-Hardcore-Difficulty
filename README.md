@@ -11,4 +11,3 @@ What this difficulty mod does :
 - Decreased invinsibility frame
 - Increased ammo pick up rate
 - Captain Winters will siege more than once (during 1st assault, 3rd, 5th, and so on)
-- Dozers now run and unstunable
