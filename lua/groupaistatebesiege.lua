@@ -1,5 +1,6 @@
 GroupAIStateBesiege = GroupAIStateBesiege or class(GroupAIStateBase)
 GroupAIStateBesiege._MAX_SIMULTANEOUS_SPAWNS = 10000
+
 function GroupAIStateBesiege:_upd_assault_task()
 	local task_data = self._task_data.assault
 	if not task_data.active then
@@ -126,6 +127,9 @@ function GroupAIStateBesiege:_upd_assault_task()
 	if task_data.phase == "anticipation" then
 		nr_wanted = nr_wanted - 5
 	end
+	if self:_count_police_force("assault") >= 45 then
+		nr_wanted = nr_wanted - 100000000
+	end
 	if nr_wanted > 0 and task_data.phase ~= "fade" then
 		local used_event
 		if task_data.use_spawn_event and task_data.phase ~= "anticipation" then
@@ -167,4 +171,52 @@ function GroupAIStateBesiege:_upd_assault_task()
 		end
 	end
 	self:_assign_enemy_groups_to_assault(task_data.phase)
+end
+function GroupAIStateBesiege:_upd_recon_tasks()
+	local task_data = self._task_data.recon.tasks[1]
+	self:_assign_enemy_groups_to_recon()
+	if not task_data then
+		return
+	end
+	local t = self._t
+	self:_assign_assault_groups_to_retire()
+	local target_pos = task_data.target_area.pos
+	local nr_wanted = self:_get_difficulty_dependent_value(tweak_data.group_ai.besiege.recon.force) - self:_count_police_force("recon")
+	if nr_wanted <= 0 then
+		return
+	end
+	if self:_count_police_force("recon") >= 5 then
+		nr_wanted = nr_wanted - 100000000
+	end
+	local used_event, used_spawn_points, reassigned
+	if task_data.use_spawn_event then
+		task_data.use_spawn_event = false
+		if self:_try_use_task_spawn_event(t, task_data.target_area, "recon") then
+			used_event = true
+		end
+	end
+	if not used_event then
+		local used_group
+		if next(self._spawning_groups) then
+			used_group = true
+		else
+			local spawn_group, spawn_group_type = self:_find_spawn_group_near_area(task_data.target_area, tweak_data.group_ai.besiege.recon.groups, nil, nil, callback(self, self, "_verify_anticipation_spawn_point"))
+			if spawn_group then
+				local grp_objective = {
+					type = "recon_area",
+					area = spawn_group.area,
+					target_area = task_data.target_area,
+					attitude = "avoid",
+					stance = "hos",
+					scan = true
+				}
+				self:_spawn_in_group(spawn_group, spawn_group_type, grp_objective)
+				used_group = true
+			end
+		end
+	end
+	if used_event or used_spawn_points or reassigned then
+		table.remove(self._task_data.recon.tasks, 1)
+		self._task_data.recon.next_dispatch_t = t + math.ceil(self:_get_difficulty_dependent_value(tweak_data.group_ai.besiege.recon.interval)) + math.random() * tweak_data.group_ai.besiege.recon.interval_variation
+	end
 end
