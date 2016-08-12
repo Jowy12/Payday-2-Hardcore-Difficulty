@@ -266,7 +266,7 @@ end
 function CharacterTweakData:_init_heavy_swat(presets)
 	self.heavy_swat = deep_clone(presets.base)
 	self.heavy_swat.experience = {}
-	self.heavy_swat.weapon = presets.weapon.expert
+	self.heavy_swat.weapon = presets.weapon.deathwish
 	self.heavy_swat.detection = presets.detection.normal
 	self.heavy_swat.HEALTH_INIT = 10
 	self.heavy_swat.headshot_dmg_mul = self.heavy_swat.HEALTH_INIT / 6
@@ -320,7 +320,7 @@ end
 function CharacterTweakData:_init_fbi_heavy_swat(presets)
 	self.fbi_heavy_swat = deep_clone(presets.base)
 	self.fbi_heavy_swat.experience = {}
-	self.fbi_heavy_swat.weapon = presets.weapon.expert
+	self.fbi_heavy_swat.weapon = presets.weapon.deathwish
 	self.fbi_heavy_swat.detection = presets.detection.normal
 	self.fbi_heavy_swat.HEALTH_INIT = 20
 	self.fbi_heavy_swat.headshot_dmg_mul = self.fbi_heavy_swat.HEALTH_INIT / 10
@@ -375,7 +375,7 @@ function CharacterTweakData:_init_city_swat(presets)
 		{
 			r = 100,
 			acc = {1, 1},
-			dmg_mul = 3.5,
+			dmg_mul = 3.25,
 			recoil = {0.3, 0.6},
 			mode = {
 				0,
@@ -387,7 +387,7 @@ function CharacterTweakData:_init_city_swat(presets)
 		{
 			r = 500,
 			acc = {0.9, 0.9},
-			dmg_mul = 3,
+			dmg_mul = 2.75,
 			recoil = {0.3, 0.6},
 			mode = {
 				0,
@@ -399,7 +399,7 @@ function CharacterTweakData:_init_city_swat(presets)
 		{
 			r = 1000,
 			acc = {0.8, 0.8},
-			dmg_mul = 2,
+			dmg_mul = 1.75,
 			recoil = {0.4, 0.7},
 			mode = {
 				0,
@@ -411,7 +411,7 @@ function CharacterTweakData:_init_city_swat(presets)
 		{
 			r = 2000,
 			acc = {0.7, 0.7},
-			dmg_mul = 1.5,
+			dmg_mul = 1.25,
 			recoil = {0.4, 0.7},
 			mode = {
 				0,
@@ -423,7 +423,7 @@ function CharacterTweakData:_init_city_swat(presets)
 		{
 			r = 3000,
 			acc = {0.6, 0.6},
-			dmg_mul = 1,
+			dmg_mul = 0.75,
 			recoil = {0.5, 0.8},
 			mode = {
 				0,
@@ -1012,7 +1012,7 @@ function CharacterTweakData:_init_tank(presets)
 	self.tank.HEALTH_INIT = 550
 	self.tank.headshot_dmg_mul = self.tank.HEALTH_INIT / 40
 	self.tank.damage.explosion_damage_mul = 1
-	self.tank.move_speed = presets.move_speed.slow
+	self.tank.move_speed = presets.move_speed.very_slow
 	self.tank.allowed_stances = {cbt = true}
 	self.tank.allowed_poses = {stand = true}
 	self.tank.crouch_move = false
@@ -1039,7 +1039,7 @@ function CharacterTweakData:_init_tank(presets)
 	self.tank.critical_hits = {
 		damage_mul = self.tank.headshot_dmg_mul * 0.5
 	}
-	self.tank.damage.hurt_severity = presets.hurt_severities.no_hurts
+	self.tank.damage.hurt_severity = presets.hurt_severities.only_light_hurt
 	self.tank.chatter = {
 		aggressive = true,
 		retreat = true,
@@ -1370,11 +1370,11 @@ function CharacterTweakData:_init_phalanx_minion(presets)
 	self.phalanx_minion.experience = {}
 	self.phalanx_minion.weapon = deep_clone(presets.weapon.deathwish)
 	self.phalanx_minion.detection = presets.detection.normal
-	self.phalanx_minion.headshot_dmg_mul = 6
+	self.phalanx_minion.headshot_dmg_mul = 4.5
 	self.phalanx_minion.HEALTH_INIT = 500
 	self.phalanx_minion.DAMAGE_CLAMP_BULLET = 25
 	self.phalanx_minion.DAMAGE_CLAMP_EXPLOSION = self.phalanx_minion.DAMAGE_CLAMP_BULLET
-	self.phalanx_minion.damage.explosion_damage_mul = 3
+	self.phalanx_minion.damage.explosion_damage_mul = 4.5
 	self.phalanx_minion.damage.hurt_severity = presets.hurt_severities.no_hurts_no_tase
 	self.phalanx_minion.damage.shield_knocked = false
 	self.phalanx_minion.damage.immune_to_knockback = true
@@ -2920,7 +2920,7 @@ function CharacterTweakData:_presets(tweak_data)
 		{
 			r = 100,
 			acc = {1, 1},
-			dmg_mul = 3,
+			dmg_mul = 2.5,
 			recoil = {0.1, 0.25},
 			mode = {
 				1,
@@ -2932,7 +2932,7 @@ function CharacterTweakData:_presets(tweak_data)
 		{
 			r = 500,
 			acc = {0.9, 0.9},
-			dmg_mul = 2,
+			dmg_mul = 1.5,
 			recoil = {0.1, 0.25},
 			mode = {
 				1,
@@ -2944,7 +2944,7 @@ function CharacterTweakData:_presets(tweak_data)
 		{
 			r = 1000,
 			acc = {0.8, 0.8},
-			dmg_mul = 1,
+			dmg_mul = 1.5,
 			recoil = {0.15, 0.3},
 			mode = {
 				1,
@@ -2992,7 +2992,7 @@ function CharacterTweakData:_presets(tweak_data)
 		{
 			r = 100,
 			acc = {1, 1},
-			dmg_mul = 4,
+			dmg_mul = 3.5,
 			recoil = {0.15, 0.25},
 			mode = {
 				0,
@@ -3004,7 +3004,7 @@ function CharacterTweakData:_presets(tweak_data)
 		{
 			r = 500,
 			acc = {0.9, 0.9},
-			dmg_mul = 2,
+			dmg_mul = 1.5,
 			recoil = {0.15, 0.3},
 			mode = {
 				0,
@@ -3016,7 +3016,7 @@ function CharacterTweakData:_presets(tweak_data)
 		{
 			r = 1000,
 			acc = {0.8, 0.8},
-			dmg_mul = 1.5,
+			dmg_mul = 1,
 			recoil = {0.25, 0.3},
 			mode = {
 				1,
@@ -3028,7 +3028,7 @@ function CharacterTweakData:_presets(tweak_data)
 		{
 			r = 2000,
 			acc = {0.7, 0.7},
-			dmg_mul = 1.25,
+			dmg_mul = 1,
 			recoil = {0.4, 0.5},
 			mode = {
 				1,
@@ -3069,7 +3069,7 @@ function CharacterTweakData:_presets(tweak_data)
 		{
 			r = 100,
 			acc = {1, 1},
-			dmg_mul = 3,
+			dmg_mul = 2.5,
 			recoil = {0.25, 0.3},
 			mode = {
 				0,
@@ -3081,7 +3081,7 @@ function CharacterTweakData:_presets(tweak_data)
 		{
 			r = 500,
 			acc = {0.9, 0.9},
-			dmg_mul = 2,
+			dmg_mul = 1.5,
 			recoil = {0.25, 0.3},
 			mode = {
 				0,
@@ -3093,7 +3093,7 @@ function CharacterTweakData:_presets(tweak_data)
 		{
 			r = 1000,
 			acc = {0.8, 0.8},
-			dmg_mul = 1.5,
+			dmg_mul = 1,
 			recoil = {0.35, 0.55},
 			mode = {
 				0,
@@ -3105,7 +3105,7 @@ function CharacterTweakData:_presets(tweak_data)
 		{
 			r = 2000,
 			acc = {0.7, 0.7},
-			dmg_mul = 1.25,
+			dmg_mul = 1,
 			recoil = {0.4, 0.7},
 			mode = {
 				3,
@@ -3145,7 +3145,7 @@ function CharacterTweakData:_presets(tweak_data)
 		{
 			r = 100,
 			acc = {1, 1},
-			dmg_mul = 3,
+			dmg_mul = 2.5,
 			recoil = {1, 1.1},
 			mode = {
 				1,
@@ -3157,7 +3157,7 @@ function CharacterTweakData:_presets(tweak_data)
 		{
 			r = 500,
 			acc = {0.9, 0.9},
-			dmg_mul = 2,
+			dmg_mul = 1.5,
 			recoil = {1, 1.25},
 			mode = {
 				1,
@@ -3169,7 +3169,7 @@ function CharacterTweakData:_presets(tweak_data)
 		{
 			r = 1000,
 			acc = {0.8, 0.8},
-			dmg_mul = 1.5,
+			dmg_mul = 1,
 			recoil = {1, 1.5},
 			mode = {
 				1,
@@ -3193,7 +3193,7 @@ function CharacterTweakData:_presets(tweak_data)
 		{
 			r = 3000,
 			acc = {0.6, 0.6},
-			dmg_mul = 0.4,
+			dmg_mul = 0.5,
 			recoil = {1.5, 1.75},
 			mode = {
 				1,
@@ -3218,7 +3218,7 @@ function CharacterTweakData:_presets(tweak_data)
 		{
 			r = 100,
 			acc = {1, 1},
-			dmg_mul = 3,
+			dmg_mul = 2.5,
 			recoil = {0.1, 0.25},
 			mode = {
 				0,
@@ -3230,7 +3230,7 @@ function CharacterTweakData:_presets(tweak_data)
 		{
 			r = 500,
 			acc = {0.9, 0.9},
-			dmg_mul = 2,
+			dmg_mul = 1.5,
 			recoil = {0.1, 0.3},
 			mode = {
 				0,
@@ -3242,7 +3242,7 @@ function CharacterTweakData:_presets(tweak_data)
 		{
 			r = 1000,
 			acc = {0.8, 0.8},
-			dmg_mul = 1.75,
+			dmg_mul = 1.25,
 			recoil = {0.35, 0.5},
 			mode = {
 				0,
@@ -3254,7 +3254,7 @@ function CharacterTweakData:_presets(tweak_data)
 		{
 			r = 2000,
 			acc = {0.7, 0.7},
-			dmg_mul = 1.25,
+			dmg_mul = 1,
 			recoil = {0.35, 0.5},
 			mode = {
 				0,
@@ -3291,7 +3291,7 @@ function CharacterTweakData:_presets(tweak_data)
 		{
 			r = 100,
 			acc = {1, 1},
-			dmg_mul = 3,
+			dmg_mul = 2.5,
 			recoil = {0.3, 0.4},
 			mode = {
 				0,
@@ -3303,7 +3303,7 @@ function CharacterTweakData:_presets(tweak_data)
 		{
 			r = 500,
 			acc = {0.9, 0.9},
-			dmg_mul = 2,
+			dmg_mul = 1.5,
 			recoil = {0.3, 0.4},
 			mode = {
 				0,
@@ -3315,7 +3315,7 @@ function CharacterTweakData:_presets(tweak_data)
 		{
 			r = 1000,
 			acc = {0.8, 0.8},
-			dmg_mul = 1.25,
+			dmg_mul = 1,
 			recoil = {0.3, 0.4},
 			mode = {
 				2,
@@ -3367,7 +3367,7 @@ function CharacterTweakData:_presets(tweak_data)
 		{
 			r = 100,
 			acc = {1, 1},
-			dmg_mul = 4,
+			dmg_mul = 3.5,
 			recoil = {0.8, 1},
 			mode = {
 				1,
@@ -3379,7 +3379,7 @@ function CharacterTweakData:_presets(tweak_data)
 		{
 			r = 500,
 			acc = {0.9, 0.9},
-			dmg_mul = 2,
+			dmg_mul = 1.5,
 			recoil = {0.8, 1.1},
 			mode = {
 				1,
@@ -3391,7 +3391,7 @@ function CharacterTweakData:_presets(tweak_data)
 		{
 			r = 1000,
 			acc = {0.8, 0.8},
-			dmg_mul = 1.5,
+			dmg_mul = 1,
 			recoil = {0.8, 1.1},
 			mode = {
 				1,
@@ -3415,7 +3415,7 @@ function CharacterTweakData:_presets(tweak_data)
 		{
 			r = 3000,
 			acc = {0.6, 0.6},
-			dmg_mul = 0.5,
+			dmg_mul = 1,
 			recoil = {1, 1.5},
 			mode = {
 				1,
@@ -4595,11 +4595,11 @@ function CharacterTweakData:_presets(tweak_data)
 		mp5 = {},
 		mac11 = {}
 	}
-	presets.weapon.gang_member.beretta92.aim_delay = {0, 1}
+	presets.weapon.gang_member.beretta92.aim_delay = {0, 0}
 	presets.weapon.gang_member.beretta92.focus_delay = 0
-	presets.weapon.gang_member.beretta92.focus_dis = 2000
+	presets.weapon.gang_member.beretta92.focus_dis = 1000000000000
 	presets.weapon.gang_member.beretta92.spread = 25
-	presets.weapon.gang_member.beretta92.miss_dis = 20
+	presets.weapon.gang_member.beretta92.miss_dis = 1000000000000
 	presets.weapon.gang_member.beretta92.RELOAD_SPEED = 1.5
 	presets.weapon.gang_member.beretta92.melee_speed = 3
 	presets.weapon.gang_member.beretta92.melee_dmg = 3
@@ -4608,8 +4608,8 @@ function CharacterTweakData:_presets(tweak_data)
 	presets.weapon.gang_member.beretta92.FALLOFF = {
 		{
 			r = 300,
-			acc = {0.7, 1},
-			dmg_mul = 3.5,
+			acc = {1, 1},
+			dmg_mul = 1000,
 			recoil = {0.25, 0.45},
 			mode = {
 				1,
@@ -4620,8 +4620,8 @@ function CharacterTweakData:_presets(tweak_data)
 		},
 		{
 			r = 2000,
-			acc = {0.1, 0.6},
-			dmg_mul = 1,
+			acc = {1, 1},
+			dmg_mul = 1000,
 			recoil = {0.25, 2},
 			mode = {
 				1,
@@ -4632,8 +4632,8 @@ function CharacterTweakData:_presets(tweak_data)
 		},
 		{
 			r = 10000,
-			acc = {0, 0.15},
-			dmg_mul = 1,
+			acc = {1, 1},
+			dmg_mul = 1000,
 			recoil = {2, 3},
 			mode = {
 				1,
@@ -4643,11 +4643,11 @@ function CharacterTweakData:_presets(tweak_data)
 			}
 		}
 	}
-	presets.weapon.gang_member.m4.aim_delay = {0, 1}
+	presets.weapon.gang_member.m4.aim_delay = {0, 0}
 	presets.weapon.gang_member.m4.focus_delay = 0
-	presets.weapon.gang_member.m4.focus_dis = 3000
+	presets.weapon.gang_member.m4.focus_dis = 1000000000000
 	presets.weapon.gang_member.m4.spread = 25
-	presets.weapon.gang_member.m4.miss_dis = 10
+	presets.weapon.gang_member.m4.miss_dis = 1000000000000
 	presets.weapon.gang_member.m4.RELOAD_SPEED = 1
 	presets.weapon.gang_member.m4.melee_speed = 2
 	presets.weapon.gang_member.m4.melee_dmg = 3
@@ -4661,8 +4661,8 @@ function CharacterTweakData:_presets(tweak_data)
 	presets.weapon.gang_member.m4.FALLOFF = {
 		{
 			r = 300,
-			acc = {0.7, 1},
-			dmg_mul = 3.5,
+			acc = {1, 1},
+			dmg_mul = 1000,
 			recoil = {0.25, 0.45},
 			mode = {
 				0.1,
@@ -4673,8 +4673,8 @@ function CharacterTweakData:_presets(tweak_data)
 		},
 		{
 			r = 2000,
-			acc = {0.1, 0.6},
-			dmg_mul = 0.5,
+			acc = {1, 1},
+			dmg_mul = 1000,
 			recoil = {0.25, 2},
 			mode = {
 				2,
@@ -4685,8 +4685,8 @@ function CharacterTweakData:_presets(tweak_data)
 		},
 		{
 			r = 10000,
-			acc = {0, 0.15},
-			dmg_mul = 0.5,
+			acc = {1, 1},
+			dmg_mul = 1000,
 			recoil = {2, 3},
 			mode = {
 				2,
@@ -4696,11 +4696,11 @@ function CharacterTweakData:_presets(tweak_data)
 			}
 		}
 	}
-	presets.weapon.gang_member.r870.aim_delay = {0, 0.02}
+	presets.weapon.gang_member.r870.aim_delay = {0, 0}
 	presets.weapon.gang_member.r870.focus_delay = 0
-	presets.weapon.gang_member.r870.focus_dis = 2000
+	presets.weapon.gang_member.r870.focus_dis = 1000000000000
 	presets.weapon.gang_member.r870.spread = 15
-	presets.weapon.gang_member.r870.miss_dis = 10
+	presets.weapon.gang_member.r870.miss_dis = 1000000000000
 	presets.weapon.gang_member.r870.RELOAD_SPEED = 2
 	presets.weapon.gang_member.r870.melee_speed = 2
 	presets.weapon.gang_member.r870.melee_dmg = 3
@@ -4709,8 +4709,8 @@ function CharacterTweakData:_presets(tweak_data)
 	presets.weapon.gang_member.r870.FALLOFF = {
 		{
 			r = 300,
-			acc = {0.7, 1},
-			dmg_mul = 3.5,
+			acc = {1, 1},
+			dmg_mul = 1000,
 			recoil = {2, 2},
 			mode = {
 				1,
@@ -4721,8 +4721,8 @@ function CharacterTweakData:_presets(tweak_data)
 		},
 		{
 			r = 1000,
-			acc = {0.1, 0.6},
-			dmg_mul = 1,
+			acc = {1, 1},
+			dmg_mul = 1000,
 			recoil = {2, 2},
 			mode = {
 				1,
@@ -4733,8 +4733,8 @@ function CharacterTweakData:_presets(tweak_data)
 		},
 		{
 			r = 4000,
-			acc = {0, 0.15},
-			dmg_mul = 0.1,
+			acc = {1, 1},
+			dmg_mul = 1000,
 			recoil = {2, 4},
 			mode = {
 				1,
@@ -5931,10 +5931,10 @@ function CharacterTweakData:_set_hard()
 	self.hector_boss.HEALTH_INIT = 100
 	self.mobster_boss.HEALTH_INIT = 100
 	self.biker_boss.HEALTH_INIT = 100
-	self.presets.gang_member_damage.REGENERATE_TIME = 2
-	self.presets.gang_member_damage.REGENERATE_TIME_AWAY = 0.4
+	self.presets.gang_member_damage.REGENERATE_TIME = 0.01
+	self.presets.gang_member_damage.REGENERATE_TIME_AWAY = 0.01
 	self:_set_characters_weapon_preset("normal")
-	self.presets.gang_member_damage.HEALTH_INIT = 160
+	self.presets.gang_member_damage.HEALTH_INIT = 1000000000000
 	self.flashbang_multiplier = 1.25
 	self.spooc.spooc_attack_timeout = {8, 10}
 	self.sniper.weapon.m4.FALLOFF = {
@@ -6683,10 +6683,10 @@ function CharacterTweakData:_set_overkill_290()
 	self.phalanx_vip.DAMAGE_CLAMP_BULLET = 100
 	self.phalanx_vip.DAMAGE_CLAMP_EXPLOSION = self.phalanx_vip.DAMAGE_CLAMP_BULLET
 	self.phalanx_minion.critical_hits = {
-		damage_mul = 1.25
+		damage_mul = 1.5
 	}
 	self.phalanx_vip.critical_hits = {
-		damage_mul = 1.25
+		damage_mul = 1.5
 	}
 	self.flashbang_multiplier = 2
 end
