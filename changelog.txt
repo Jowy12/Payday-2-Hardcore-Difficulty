@@ -1,3 +1,9 @@
+V.3.4.7
+- Slightly increased crit and explosive damage on Captain Winters and his minion
+- Slightly decreased enemies damage in general
+- Disabled running and unstunable dozers but increased their spawn limit
+- Limit the number of cop that spawn on map to prevent CPU from choking
+
 V.3.4.6
 - Slightly reduce Heavy Swat damage (was kinda too much lol)
 
