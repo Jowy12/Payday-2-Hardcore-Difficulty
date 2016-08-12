@@ -142,14 +142,14 @@ function GroupAITweakData:_init_unit_categories(difficulty_index)
 		}
 	elseif difficulty_index == 6 then
 		self.special_unit_spawn_limits = {
-			tank = 8,
+			tank = 12,
 			taser = 8,
 			spooc = 8,
 			shield = 8
 		}
 	else
 		self.special_unit_spawn_limits = {
-			tank = 8,
+			tank = 12,
 			taser = 8,
 			spooc = 8,
 			shield = 8
@@ -394,7 +394,7 @@ function GroupAITweakData:_init_unit_categories(difficulty_index)
 					Idstring("units/pd2_dlc_mad/characters/ene_akan_fbi_tank_r870/ene_akan_fbi_tank_r870")
 				}
 			},
-			access = access_type_all,
+			access = access_type_walk_only,
 			special_type = "tank"
 		}
 	else
@@ -409,7 +409,7 @@ function GroupAITweakData:_init_unit_categories(difficulty_index)
 					Idstring("units/pd2_dlc_mad/characters/ene_akan_fbi_tank_rpk_lmg/ene_akan_fbi_tank_rpk_lmg")
 				}
 			},
-			access = access_type_all,
+			access = access_type_walk_only,
 			special_type = "tank"
 		}
 	end
