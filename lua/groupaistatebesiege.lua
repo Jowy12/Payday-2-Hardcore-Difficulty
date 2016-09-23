@@ -404,7 +404,7 @@ function GroupAIStateBesiege:_upd_assault_task()
 		local end_assault = false
 		local enemies_left = self:_count_police_force("assault")
 		if not self._hunt_mode then
-			local min_enemies_left = 10
+			local min_enemies_left = 7
 			if enemies_left < min_enemies_left or t > task_data.phase_end_t + 350 then
 				if t > task_data.phase_end_t - 8 and not task_data.said_retreat then
 					if self._drama_data.amount < tweak_data.drama.assault_fade_end then
@@ -465,9 +465,6 @@ function GroupAIStateBesiege:_upd_assault_task()
 	local nr_wanted = task_data.force - self:_count_police_force("assault")
 	if task_data.phase == "anticipation" then
 		nr_wanted = nr_wanted - 5
-	end
-	if self:_count_police_force("assault") >= 75 then
-		nr_wanted = nr_wanted - 100000000
 	end
 	if nr_wanted > 0 and task_data.phase ~= "fade" then
 		local used_event
@@ -667,9 +664,6 @@ function GroupAIStateBesiege:_upd_recon_tasks()
 	local nr_wanted = self:_get_difficulty_dependent_value(self._tweak_data.recon.force) - self:_count_police_force("recon")
 	if nr_wanted <= 0 then
 		return
-	end
-	if self:_count_police_force("recon") >= 5 then
-		nr_wanted = nr_wanted - 100000000
 	end
 	local used_event, used_spawn_points, reassigned
 	if task_data.use_spawn_event then
