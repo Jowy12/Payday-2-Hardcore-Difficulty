@@ -12,9 +12,6 @@
 		{	"hook_id" : "lib/managers/enemymanager",
 			"script_path" : "lua/enemymanager.lua"
 		},
-		{	"hook_id" : "lib/managers/group_ai_states/groupaistatebesiege",
-        		"script_path" : "lua/groupaistatebesiege.lua"
-    		},
 		{	"hook_id" : "lib/tweak_data/groupaitweakdata",
         		"script_path" : "lua/groupaitweakdata.lua"
     		},
