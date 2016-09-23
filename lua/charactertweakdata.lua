@@ -55,6 +55,7 @@ function CharacterTweakData:init(tweak_data)
 		end
 	}
 	self.tweak_data = tweak_data
+	self._enemy_list = {}
 	self:_init_security(presets)
 	self:_init_gensec(presets)
 	self:_init_cop(presets)
@@ -137,9 +138,11 @@ function CharacterTweakData:_init_security(presets)
 	self.security.has_alarm_pager = true
 	self.security.melee_weapon = "baton"
 	self.security.steal_loot = true
+	table.insert(self._enemy_list, "security")
 	self.security_undominatable = deep_clone(self.security)
 	self.security_undominatable.suppression = nil
 	self.security_undominatable.surrender = nil
+	table.insert(self._enemy_list, "security_undominatable")
 end
 function CharacterTweakData:_init_gensec(presets)
 	self.gensec = deep_clone(presets.base)
@@ -172,6 +175,7 @@ function CharacterTweakData:_init_gensec(presets)
 	self.gensec.has_alarm_pager = true
 	self.gensec.melee_weapon = "baton"
 	self.gensec.steal_loot = nil
+	table.insert(self._enemy_list, "gensec")
 end
 function CharacterTweakData:_init_cop(presets)
 	self.cop = deep_clone(presets.base)
@@ -200,13 +204,16 @@ function CharacterTweakData:_init_cop(presets)
 	self.cop.chatter = presets.enemy_chatter.cop
 	self.cop.melee_weapon = "baton"
 	self.cop.steal_loot = true
+	table.insert(self._enemy_list, "cop")
 	self.cop_scared = deep_clone(self.cop)
 	self.cop_scared.surrender = presets.surrender.always
 	self.cop_scared.surrender_break_time = nil
+	table.insert(self._enemy_list, "cop_scared")
 	self.cop_female = deep_clone(self.cop)
 	self.cop_female.speech_prefix_p1 = "fl"
 	self.cop_female.speech_prefix_p2 = "n"
 	self.cop_female.speech_prefix_count = 1
+	table.insert(self._enemy_list, "cop_female")
 end
 function CharacterTweakData:_init_fbi(presets)
 	self.fbi = deep_clone(presets.base)
@@ -235,6 +242,7 @@ function CharacterTweakData:_init_fbi(presets)
 	self.fbi.no_arrest = true
 	self.fbi.chatter = presets.enemy_chatter.cop
 	self.fbi.steal_loot = true
+	table.insert(self._enemy_list, "fbi")
 end
 function CharacterTweakData:_init_swat(presets)
 	self.swat = deep_clone(presets.base)
@@ -263,6 +271,7 @@ function CharacterTweakData:_init_swat(presets)
 	self.swat.melee_weapon = "knife_1"
 	self.swat.melee_weapon_dmg_multiplier = 1
 	self.swat.steal_loot = true
+	table.insert(self._enemy_list, "swat")
 end
 function CharacterTweakData:_init_heavy_swat(presets)
 	self.heavy_swat = deep_clone(presets.base)
@@ -290,6 +299,7 @@ function CharacterTweakData:_init_heavy_swat(presets)
 	self.heavy_swat.no_arrest = true
 	self.heavy_swat.chatter = presets.enemy_chatter.swat
 	self.heavy_swat.steal_loot = true
+	table.insert(self._enemy_list, "heavy_swat")
 end
 function CharacterTweakData:_init_fbi_swat(presets)
 	self.fbi_swat = deep_clone(presets.base)
@@ -317,6 +327,7 @@ function CharacterTweakData:_init_fbi_swat(presets)
 	self.fbi_swat.chatter = presets.enemy_chatter.swat
 	self.fbi_swat.melee_weapon = "knife_1"
 	self.fbi_swat.steal_loot = true
+	table.insert(self._enemy_list, "fbi_swat")
 end
 function CharacterTweakData:_init_fbi_heavy_swat(presets)
 	self.fbi_heavy_swat = deep_clone(presets.base)
@@ -344,6 +355,7 @@ function CharacterTweakData:_init_fbi_heavy_swat(presets)
 	self.fbi_heavy_swat.no_arrest = true
 	self.fbi_heavy_swat.chatter = presets.enemy_chatter.swat
 	self.fbi_heavy_swat.steal_loot = true
+	table.insert(self._enemy_list, "fbi_heavy_swat")
 end
 function CharacterTweakData:_init_city_swat(presets)
 	self.city_swat = deep_clone(presets.base)
@@ -372,6 +384,7 @@ function CharacterTweakData:_init_city_swat(presets)
 	self.city_swat.melee_weapon = "knife_1"
 	self.city_swat.steal_loot = true
 	self.city_swat.has_alarm_pager = true
+	table.insert(self._enemy_list, "city_swat")
 	self.city_swat.weapon.r870.FALLOFF= {
 		{
 			r = 100,
@@ -461,6 +474,7 @@ function CharacterTweakData:_init_sniper(presets)
 	self.sniper.chatter = presets.enemy_chatter.no_chatter
 	self.sniper.steal_loot = nil
 	self.sniper.rescue_hostages = false
+	table.insert(self._enemy_list, "sniper")
 end
 function CharacterTweakData:_init_gangster(presets)
 	self.gangster = deep_clone(presets.base)
@@ -493,10 +507,12 @@ function CharacterTweakData:_init_gangster(presets)
 	self.gangster.chatter = presets.enemy_chatter.no_chatter
 	self.gangster.melee_weapon = "fists"
 	self.gangster.steal_loot = nil
+	table.insert(self._enemy_list, "gangster")
 end
 function CharacterTweakData:_init_biker(presets)
 	self.biker = deep_clone(self.gangster)
 	self.biker.calls_in = true
+	table.insert(self._enemy_list, "biker")
 end
 function CharacterTweakData:_init_biker_escape(presets)
 	self.biker_escape = deep_clone(self.gangster)
@@ -504,10 +520,12 @@ function CharacterTweakData:_init_biker_escape(presets)
 	self.biker_escape.move_speed = presets.move_speed.very_fast
 	self.biker_escape.HEALTH_INIT = 8
 	self.biker_escape.suppression = nil
+	table.insert(self._enemy_list, "biker_escape")
 end
 function CharacterTweakData:_init_mobster(presets)
 	self.mobster = deep_clone(self.gangster)
 	self.mobster.calls_in = nil
+	table.insert(self._enemy_list, "mobster")
 end
 function CharacterTweakData:_init_mobster_boss(presets)
 	self.mobster_boss = deep_clone(presets.base)
@@ -620,6 +638,7 @@ function CharacterTweakData:_init_mobster_boss(presets)
 	self.mobster_boss.chatter = presets.enemy_chatter.no_chatter
 	self.mobster_boss.use_radio = nil
 	self.mobster_boss.can_be_tased = false
+	table.insert(self._enemy_list, "mobster_boss")
 end
 function CharacterTweakData:_init_biker_boss(presets)
 	self.biker_boss = deep_clone(presets.base)
@@ -738,6 +757,7 @@ function CharacterTweakData:_init_biker_boss(presets)
 	self.biker_boss.flammable = true
 	self.biker_boss.can_be_tased = false
 	self.biker_boss.immune_to_knock_down = true
+	table.insert(self._enemy_list, "biker_boss")
 end
 function CharacterTweakData:_init_hector_boss(presets)
 	self.hector_boss = deep_clone(self.mobster_boss)
@@ -825,6 +845,7 @@ function CharacterTweakData:_init_hector_boss(presets)
 	}
 	self.hector_boss.can_be_tased = false
 	self:_process_weapon_usage_table(self.hector_boss.weapon)
+	table.insert(self._enemy_list, "hector_boss")
 end
 function CharacterTweakData:_init_hector_boss_no_armor(presets)
 	self.hector_boss_no_armor = deep_clone(self.fbi)
@@ -839,6 +860,7 @@ function CharacterTweakData:_init_hector_boss_no_armor(presets)
 	self.hector_boss_no_armor.chatter = presets.enemy_chatter.no_chatter
 	self.hector_boss_no_armor.use_radio = nil
 	self.hector_boss_no_armor.can_be_tased = false
+	table.insert(self._enemy_list, "hector_boss_no_armor")
 end
 function CharacterTweakData:_init_tank(presets)
 	self.tank = deep_clone(presets.base)
@@ -1055,6 +1077,7 @@ function CharacterTweakData:_init_tank(presets)
 	self.tank.flammable = true
 	self.tank.can_be_tased = false
 	self.tank.immune_to_knock_down = true
+	self.tank.immune_to_concussion = true
 	self.tank_hw = deep_clone(self.tank)
 	self.tank_hw.move_speed = {
 		stand = {
@@ -1121,6 +1144,8 @@ function CharacterTweakData:_init_tank(presets)
 	self.tank_hw.use_animation_on_fire_damage = false
 	self.tank_hw.flammable = true
 	self.tank_hw.can_be_tased = false
+	table.insert(self._enemy_list, "tank")
+	table.insert(self._enemy_list, "tank_hw")
 end
 function CharacterTweakData:_init_spooc(presets)
 	self.spooc = deep_clone(presets.base)
@@ -1167,6 +1192,7 @@ function CharacterTweakData:_init_spooc(presets)
 	self.spooc.steal_loot = nil
 	self.spooc.spawn_sound_event = "cloaker_presence_loop"
 	self.spooc.die_sound_event = "cloaker_presence_stop"
+	table.insert(self._enemy_list, "spooc")
 end
 function CharacterTweakData:_init_shield(presets)
 	self.shield = deep_clone(presets.base)
@@ -1365,6 +1391,7 @@ function CharacterTweakData:_init_shield(presets)
 	self.shield.announce_incomming = "incomming_shield"
 	self.shield.steal_loot = nil
 	self.shield.use_animation_on_fire_damage = false
+	table.insert(self._enemy_list, "shield")
 end
 function CharacterTweakData:_init_phalanx_minion(presets)
 	self.phalanx_minion = deep_clone(self.shield)
@@ -1384,6 +1411,7 @@ function CharacterTweakData:_init_phalanx_minion(presets)
 		ears = {min_duration = 2, max_duration = 3}
 	}
 	self.phalanx_minion.priority_shout = "f45"
+	table.insert(self._enemy_list, "phalanx_minion")
 end
 function CharacterTweakData:_init_phalanx_vip(presets)
 	self.phalanx_vip = deep_clone(self.phalanx_minion)
@@ -1393,6 +1421,8 @@ function CharacterTweakData:_init_phalanx_vip(presets)
 	self.phalanx_vip.DAMAGE_CLAMP_BULLET = 500
 	self.phalanx_vip.DAMAGE_CLAMP_EXPLOSION = self.phalanx_vip.DAMAGE_CLAMP_BULLET
 	self.phalanx_vip.can_be_tased = false
+	self.phalanx_vip.immune_to_knock_down = true
+	table.insert(self._enemy_list, "phalanx_vip")
 end
 function CharacterTweakData:_init_taser(presets)
 	self.taser = deep_clone(presets.base)
@@ -1521,6 +1551,7 @@ function CharacterTweakData:_init_taser(presets)
 			special_comment = "x01"
 		}
 	}
+	table.insert(self._enemy_list, "taser")
 end
 function CharacterTweakData:_init_inside_man(presets)
 	self.inside_man = deep_clone(presets.base)
@@ -6010,6 +6041,9 @@ function CharacterTweakData:_process_weapon_usage_table(weap_usage_table)
 			end
 		end
 	end
+end
+function CharacterTweakData:enemy_list()
+	return self._enemy_list
 end
 function CharacterTweakData:_set_easy()
 	self:_multiply_all_hp(1, 1)
