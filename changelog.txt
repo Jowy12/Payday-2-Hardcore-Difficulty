@@ -1,3 +1,6 @@
+V.3.5.1
+- Updated codes due to Payday 2 update 108
+
 V.3.5
 - Fixed crash
 
