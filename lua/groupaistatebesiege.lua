@@ -8,18 +8,18 @@ function GroupAIStateBesiege:_upd_assault_task()
 	end
 	local t = self._t
 	self:_assign_recon_groups_to_retire()
-	local force_pool = self:_get_difficulty_dependent_value(tweak_data.group_ai.besiege.assault.force_pool) * self:_get_balancing_multiplier(tweak_data.group_ai.besiege.assault.force_pool_balance_mul)
+	local force_pool = self:_get_difficulty_dependent_value(self._tweak_data.assault.force_pool) * self:_get_balancing_multiplier(self._tweak_data.assault.force_pool_balance_mul)
 	local task_spawn_allowance = force_pool - (self._hunt_mode and 0 or task_data.force_spawned)
 	if task_data.phase == "anticipation" then
 		if task_spawn_allowance <= 0 then
 			task_data.phase = "fade"
-			task_data.phase_end_t = t + tweak_data.group_ai.besiege.assault.fade_duration
+			task_data.phase_end_t = t + self._tweak_data.assault.fade_duration
 		elseif t > task_data.phase_end_t or self._drama_data.zone == "high" then
 			managers.mission:call_global_event("start_assault")
 			managers.hud:start_assault()
 			self:_set_rescue_state(false)
 			task_data.phase = "build"
-			task_data.phase_end_t = self._t + tweak_data.group_ai.besiege.assault.build_duration
+			task_data.phase_end_t = self._t + self._tweak_data.assault.build_duration
 			task_data.is_hesitating = nil
 			self:set_assault_mode(true)
 			managers.trade:set_trade_countdown(false)
@@ -47,18 +47,18 @@ function GroupAIStateBesiege:_upd_assault_task()
 	elseif task_data.phase == "build" then
 		if task_spawn_allowance <= 0 then
 			task_data.phase = "fade"
-			task_data.phase_end_t = t + tweak_data.group_ai.besiege.assault.fade_duration
+			task_data.phase_end_t = t + self._tweak_data.assault.fade_duration
 		elseif t > task_data.phase_end_t or self._drama_data.zone == "high" then
 			task_data.phase = "sustain"
-			task_data.phase_end_t = t + math.lerp(self:_get_difficulty_dependent_value(tweak_data.group_ai.besiege.assault.sustain_duration_min), self:_get_difficulty_dependent_value(tweak_data.group_ai.besiege.assault.sustain_duration_max), math.random()) * self:_get_balancing_multiplier(tweak_data.group_ai.besiege.assault.sustain_duration_balance_mul)
+			task_data.phase_end_t = t + math.lerp(self:_get_difficulty_dependent_value(self._tweak_data.assault.sustain_duration_min), self:_get_difficulty_dependent_value(self._tweak_data.assault.sustain_duration_max), math.random()) * self:_get_balancing_multiplier(self._tweak_data.assault.sustain_duration_balance_mul)
 		end
 	elseif task_data.phase == "sustain" then
 		if task_spawn_allowance <= 0 then
 			task_data.phase = "fade"
-			task_data.phase_end_t = t + tweak_data.group_ai.besiege.assault.fade_duration
+			task_data.phase_end_t = t + self._tweak_data.assault.fade_duration
 		elseif t > task_data.phase_end_t and not self._hunt_mode then
 			task_data.phase = "fade"
-			task_data.phase_end_t = t + tweak_data.group_ai.besiege.assault.fade_duration
+			task_data.phase_end_t = t + self._tweak_data.assault.fade_duration
 		end
 	else
 		local end_assault = true
@@ -140,7 +140,7 @@ function GroupAIStateBesiege:_upd_assault_task()
 		end
 		if used_event or next(self._spawning_groups) then
 		else
-			local spawn_group, spawn_group_type = self:_find_spawn_group_near_area(primary_target_area, tweak_data.group_ai.besiege.assault.groups, nil, nil, nil)
+			local spawn_group, spawn_group_type = self:_find_spawn_group_near_area(primary_target_area, self._tweak_data.assault.groups, nil, nil, nil)
 			if spawn_group then
 				local grp_objective = {
 					type = "assault_area",
@@ -181,7 +181,7 @@ function GroupAIStateBesiege:_upd_recon_tasks()
 	local t = self._t
 	self:_assign_assault_groups_to_retire()
 	local target_pos = task_data.target_area.pos
-	local nr_wanted = self:_get_difficulty_dependent_value(tweak_data.group_ai.besiege.recon.force) - self:_count_police_force("recon")
+	local nr_wanted = self:_get_difficulty_dependent_value(self._tweak_data.recon.force) - self:_count_police_force("recon")
 	if nr_wanted <= 0 then
 		return
 	end
@@ -200,7 +200,7 @@ function GroupAIStateBesiege:_upd_recon_tasks()
 		if next(self._spawning_groups) then
 			used_group = true
 		else
-			local spawn_group, spawn_group_type = self:_find_spawn_group_near_area(task_data.target_area, tweak_data.group_ai.besiege.recon.groups, nil, nil, callback(self, self, "_verify_anticipation_spawn_point"))
+			local spawn_group, spawn_group_type = self:_find_spawn_group_near_area(task_data.target_area, self._tweak_data.recon.groups, nil, nil, callback(self, self, "_verify_anticipation_spawn_point"))
 			if spawn_group then
 				local grp_objective = {
 					type = "recon_area",
@@ -217,6 +217,6 @@ function GroupAIStateBesiege:_upd_recon_tasks()
 	end
 	if used_event or used_spawn_points or reassigned then
 		table.remove(self._task_data.recon.tasks, 1)
-		self._task_data.recon.next_dispatch_t = t + math.ceil(self:_get_difficulty_dependent_value(tweak_data.group_ai.besiege.recon.interval)) + math.random() * tweak_data.group_ai.besiege.recon.interval_variation
+		self._task_data.recon.next_dispatch_t = t + math.ceil(self:_get_difficulty_dependent_value(self._tweak_data.recon.interval)) + math.random() * self._tweak_data.recon.interval_variation
 	end
 end
