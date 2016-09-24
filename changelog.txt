@@ -1,3 +1,6 @@
+V.3.5.3
+- Fixed enemies on map limit
+
 V.3.5.2
 - Fixed Crash
 
