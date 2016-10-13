@@ -53,6 +53,13 @@ function CharacterTweakData:init(tweak_data)
 			else
 				return "bdz"
 			end
+		end,
+		medic = function()
+			if ai_type == r then
+				return "rmdc"
+			else
+				return "mdc"
+			end
 		end
 	}
 	self.tweak_data = tweak_data
@@ -80,6 +87,7 @@ function CharacterTweakData:init(tweak_data)
 	self:_init_hector_boss(presets)
 	self:_init_hector_boss_no_armor(presets)
 	self:_init_tank(presets)
+	self:_init_medic(presets)
 	self:_init_spooc(presets)
 	self:_init_shield(presets)
 	self:_init_phalanx_minion(presets)
@@ -249,6 +257,38 @@ function CharacterTweakData:_init_fbi(presets)
 	self.fbi.chatter = presets.enemy_chatter.cop
 	self.fbi.steal_loot = true
 	table.insert(self._enemy_list, "fbi")
+end
+function CharacterTweakData:_init_medic(presets)
+	self.medic = deep_clone(presets.base)
+	self.medic.experience = {}
+	self.medic.weapon = presets.weapon.normal
+	self.medic.detection = presets.detection.normal
+	self.medic.HEALTH_INIT = 80
+	self.medic.headshot_dmg_mul = 2
+	self.medic.damage.hurt_severity = presets.hurt_severities.no_hurts
+	self.medic.suppression = presets.suppression.no_supress
+	self.medic.surrender = presets.surrender.special
+	self.medic.move_speed = presets.move_speed.very_fast
+	self.medic.surrender_break_time = {7, 12}
+	self.medic.ecm_vulnerability = 1
+	self.medic.ecm_hurts = {
+		ears = {min_duration = 8, max_duration = 10}
+	}
+	self.medic.weapon_voice = "2"
+	self.medic.experience.cable_tie = "tie_swat"
+	self.medic.speech_prefix_p1 = self._prefix_data_p1.medic()
+	self.medic.speech_prefix_count = nil
+	self.medic.spawn_sound_event = self._prefix_data_p1.medic() .. "_entrance"
+	self.medic.silent_priority_shout = "f37"
+	self.medic.access = "swat"
+	self.medic.dodge = presets.dodge.athletic
+	self.medic.deathguard = true
+	self.medic.no_arrest = true
+	self.medic.chatter = {aggressive = true, contact = true}
+	self.medic.steal_loot = false
+	self.medic.priority_shout = "f47"
+	self.medic.priority_shout_max_dis = 700
+	table.insert(self._enemy_list, "medic")
 end
 function CharacterTweakData:_init_swat(presets)
 	self.swat = deep_clone(presets.base)
@@ -7225,6 +7265,7 @@ function CharacterTweakData:_set_overkill_145()
 		self:_multiply_all_hp(3, 3)
 	end
 	self:_multiply_all_speeds(2.05, 2.1)
+	self.medic.HEALTH_INIT = 90
 	self.hector_boss.weapon.saiga.FALLOFF = {
 		{
 			r = 200,
@@ -7360,6 +7401,7 @@ function CharacterTweakData:_set_easy_wish()
 	else
 		self:_multiply_all_hp(6, 1)
 	end
+	self.medic.HEALTH_INIT = 180
 	self.hector_boss.HEALTH_INIT = 900
 	self.mobster_boss.HEALTH_INIT = 900
 	self.biker_boss.HEALTH_INIT = 3000
@@ -7506,6 +7548,7 @@ function CharacterTweakData:_set_overkill_290()
 	else
 		self:_multiply_all_hp(6, 1)
 	end
+	self.medic.HEALTH_INIT = 180
 	self.hector_boss.weapon.saiga.FALLOFF = {
 		{
 			r = 200,
@@ -7967,6 +8010,7 @@ function CharacterTweakData:_set_sm_wish()
 	else
 		self:_multiply_all_hp(9, 1)
 	end
+	self.medic.HEALTH_INIT = 270
 	self.hector_boss.weapon.saiga.FALLOFF = {
 		{
 			r = 200,
@@ -8447,6 +8491,7 @@ function CharacterTweakData:_multiply_all_hp(hp_mul, hs_mul)
 	self.city_swat.HEALTH_INIT = self.city_swat.HEALTH_INIT * hp_mul
 	self.biker_escape.HEALTH_INIT = self.biker_escape.HEALTH_INIT * hp_mul
 	self.fbi_swat.HEALTH_INIT = self.fbi_swat.HEALTH_INIT * hp_mul
+	self.medic.HEALTH_INIT = self.medic.HEALTH_INIT * hp_mul
 	if self.security.headshot_dmg_mul then
 		self.security.headshot_dmg_mul = self.security.headshot_dmg_mul * hs_mul
 	end
@@ -8716,6 +8761,8 @@ function CharacterTweakData:character_map()
 				"ene_veteran_cop_1",
 				"npc_old_hoxton_prisonsuit_1",
 				"npc_old_hoxton_prisonsuit_2",
+				"ene_medic_r870",
+				"ene_medic_m4",
 				"ene_city_heavy_r870",
 				"ene_city_heavy_g36"
 			}
