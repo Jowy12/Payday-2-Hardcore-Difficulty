@@ -450,7 +450,7 @@ function GroupAITweakData:_init_unit_categories(difficulty_index)
 		self.unit_categories.FBI_swat_R870 = {
 			unit_types = {
 				america = {
-					Idstring("units/payday2/characters/ene_fbi_swat_2/ene_fbi_swat_2")
+					Idstring("units/payday2/characters/ene_city_swat_r870/ene_city_swat_r870")
 				},
 				russia = {
 					Idstring("units/pd2_dlc_mad/characters/ene_akan_fbi_swat_dw_r870/ene_akan_fbi_swat_dw_r870")
@@ -902,6 +902,14 @@ function GroupAITweakData:_init_enemy_spawn_groups(difficulty_index)
 					amount_max = 2,
 					tactics = self._tactics.swat_shotgun_rush,
 					rank = 3
+				},
+				{
+					unit = "medic_R870",
+					freq = 0.2,
+					amount_min = 1,
+					amount_max = 1,
+					tactics = self._tactics.swat_shotgun_rush,
+					rank = 2
 				}
 			}
 		}
@@ -924,6 +932,14 @@ function GroupAITweakData:_init_enemy_spawn_groups(difficulty_index)
 					amount_max = 1,
 					tactics = self._tactics.swat_shotgun_rush,
 					rank = 3
+				},
+				{
+					unit = "medic_R870",
+					freq = 0.35,
+					amount_min = 1,
+					amount_max = 1,
+					tactics = self._tactics.swat_shotgun_rush,
+					rank = 2
 				}
 			}
 		}
@@ -946,6 +962,14 @@ function GroupAITweakData:_init_enemy_spawn_groups(difficulty_index)
 					amount_max = 2,
 					tactics = self._tactics.swat_shotgun_rush,
 					rank = 3
+				},
+				{
+					unit = "medic_R870",
+					freq = 0.35,
+					amount_min = 1,
+					amount_max = 1,
+					tactics = self._tactics.swat_shotgun_rush,
+					rank = 2
 				}
 			}
 		}
@@ -968,6 +992,14 @@ function GroupAITweakData:_init_enemy_spawn_groups(difficulty_index)
 					amount_max = 3,
 					tactics = self._tactics.swat_shotgun_rush,
 					rank = 3
+				},
+				{
+					unit = "medic_R870",
+					freq = 0.35,
+					amount_min = 1,
+					amount_max = 1,
+					tactics = self._tactics.swat_shotgun_rush,
+					rank = 2
 				}
 			}
 		}
@@ -1058,6 +1090,14 @@ function GroupAITweakData:_init_enemy_spawn_groups(difficulty_index)
 					amount_max = 2,
 					tactics = self._tactics.swat_shotgun_flank,
 					rank = 3
+				},
+				{
+					unit = "medic_R870",
+					freq = 0.2,
+					amount_min = 0,
+					amount_max = 1,
+					tactics = self._tactics.swat_shotgun_flank,
+					rank = 2
 				}
 			}
 		}
@@ -1080,6 +1120,14 @@ function GroupAITweakData:_init_enemy_spawn_groups(difficulty_index)
 					amount_max = 1,
 					tactics = self._tactics.swat_shotgun_flank,
 					rank = 3
+				},
+				{
+					unit = "medic_R870",
+					freq = 0.35,
+					amount_min = 0,
+					amount_max = 1,
+					tactics = self._tactics.swat_shotgun_flank,
+					rank = 2
 				}
 			}
 		}
@@ -1102,6 +1150,14 @@ function GroupAITweakData:_init_enemy_spawn_groups(difficulty_index)
 					amount_max = 2,
 					tactics = self._tactics.swat_shotgun_flank,
 					rank = 3
+				},
+				{
+					unit = "medic_R870",
+					freq = 0.35,
+					amount_min = 0,
+					amount_max = 1,
+					tactics = self._tactics.swat_shotgun_flank,
+					rank = 2
 				}
 			}
 		}
@@ -1124,6 +1180,14 @@ function GroupAITweakData:_init_enemy_spawn_groups(difficulty_index)
 					amount_max = 3,
 					tactics = self._tactics.swat_shotgun_flank,
 					rank = 3
+				},
+				{
+					unit = "medic_R870",
+					freq = 0.5,
+					amount_min = 0,
+					amount_max = 1,
+					tactics = self._tactics.swat_shotgun_flank,
+					rank = 2
 				}
 			}
 		}
@@ -1214,6 +1278,14 @@ function GroupAITweakData:_init_enemy_spawn_groups(difficulty_index)
 					amount_max = 2,
 					tactics = self._tactics.swat_rifle,
 					rank = 3
+				},
+				{
+					unit = "medic_M4",
+					freq = 0.2,
+					amount_min = 0,
+					amount_max = 1,
+					tactics = self._tactics.swat_rifle,
+					rank = 2
 				}
 			}
 		}
@@ -1236,6 +1308,14 @@ function GroupAITweakData:_init_enemy_spawn_groups(difficulty_index)
 					amount_max = 1,
 					tactics = self._tactics.swat_rifle,
 					rank = 3
+				},
+				{
+					unit = "medic_M4",
+					freq = 0.35,
+					amount_min = 0,
+					amount_max = 1,
+					tactics = self._tactics.swat_rifle,
+					rank = 2
 				}
 			}
 		}
@@ -1258,6 +1338,14 @@ function GroupAITweakData:_init_enemy_spawn_groups(difficulty_index)
 					amount_max = 2,
 					tactics = self._tactics.swat_rifle,
 					rank = 3
+				},
+				{
+					unit = "medic_M4",
+					freq = 0.35,
+					amount_min = 0,
+					amount_max = 1,
+					tactics = self._tactics.swat_rifle,
+					rank = 2
 				}
 			}
 		}
@@ -1280,6 +1368,14 @@ function GroupAITweakData:_init_enemy_spawn_groups(difficulty_index)
 					amount_max = 3,
 					tactics = self._tactics.swat_rifle,
 					rank = 3
+				},
+				{
+					unit = "medic_M4",
+					freq = 0.5,
+					amount_min = 0,
+					amount_max = 1,
+					tactics = self._tactics.swat_rifle,
+					rank = 2
 				}
 			}
 		}
@@ -1370,6 +1466,14 @@ function GroupAITweakData:_init_enemy_spawn_groups(difficulty_index)
 					amount_max = 2,
 					tactics = self._tactics.swat_rifle_flank,
 					rank = 3
+				},
+				{
+					unit = "medic_M4",
+					freq = 0.2,
+					amount_min = 0,
+					amount_max = 1,
+					tactics = self._tactics.swat_rifle_flank,
+					rank = 2
 				}
 			}
 		}
@@ -1392,6 +1496,14 @@ function GroupAITweakData:_init_enemy_spawn_groups(difficulty_index)
 					amount_max = 1,
 					tactics = self._tactics.swat_rifle_flank,
 					rank = 3
+				},
+				{
+					unit = "medic_M4",
+					freq = 0.35,
+					amount_min = 0,
+					amount_max = 1,
+					tactics = self._tactics.swat_rifle_flank,
+					rank = 2
 				}
 			}
 		}
@@ -1414,6 +1526,14 @@ function GroupAITweakData:_init_enemy_spawn_groups(difficulty_index)
 					amount_max = 2,
 					tactics = self._tactics.swat_rifle_flank,
 					rank = 3
+				},
+				{
+					unit = "medic_M4",
+					freq = 0.35,
+					amount_min = 0,
+					amount_max = 1,
+					tactics = self._tactics.swat_rifle_flank,
+					rank = 2
 				}
 			}
 		}
@@ -1436,6 +1556,14 @@ function GroupAITweakData:_init_enemy_spawn_groups(difficulty_index)
 					amount_max = 3,
 					tactics = self._tactics.swat_rifle_flank,
 					rank = 3
+				},
+				{
+					unit = "medic_M4",
+					freq = 0.35,
+					amount_min = 0,
+					amount_max = 1,
+					tactics = self._tactics.swat_rifle_flank,
+					rank = 2
 				}
 			}
 		}
@@ -1525,6 +1653,14 @@ function GroupAITweakData:_init_enemy_spawn_groups(difficulty_index)
 					amount_max = 2,
 					tactics = self._tactics.shield_wall_ranged,
 					rank = 3
+				},
+				{
+					unit = "medic_M4",
+					freq = 0.2,
+					amount_min = 0,
+					amount_max = 1,
+					tactics = self._tactics.shield_support_charge,
+					rank = 2
 				}
 			}
 		}
@@ -1547,6 +1683,14 @@ function GroupAITweakData:_init_enemy_spawn_groups(difficulty_index)
 					amount_max = 2,
 					tactics = self._tactics.shield_wall_ranged,
 					rank = 3
+				},
+				{
+					unit = "medic_M4",
+					freq = 0.35,
+					amount_min = 0,
+					amount_max = 1,
+					tactics = self._tactics.shield_support_charge,
+					rank = 2
 				}
 			}
 		}
@@ -1569,6 +1713,14 @@ function GroupAITweakData:_init_enemy_spawn_groups(difficulty_index)
 					amount_max = 2,
 					tactics = self._tactics.shield_wall_ranged,
 					rank = 3
+				},
+				{
+					unit = "medic_M4",
+					freq = 0.35,
+					amount_min = 0,
+					amount_max = 1,
+					tactics = self._tactics.shield_support_charge,
+					rank = 2
 				}
 			}
 		}
@@ -1591,6 +1743,14 @@ function GroupAITweakData:_init_enemy_spawn_groups(difficulty_index)
 					amount_max = 2,
 					tactics = self._tactics.shield_wall_ranged,
 					rank = 3
+				},
+				{
+					unit = "medic_M4",
+					freq = 0.5,
+					amount_min = 0,
+					amount_max = 1,
+					tactics = self._tactics.shield_support_charge,
+					rank = 2
 				}
 			}
 		}
@@ -1680,6 +1840,14 @@ function GroupAITweakData:_init_enemy_spawn_groups(difficulty_index)
 					amount_max = 2,
 					tactics = self._tactics.shield_wall_charge,
 					rank = 3
+				},
+				{
+					unit = "medic_R870",
+					freq = 0.2,
+					amount_min = 0,
+					amount_max = 1,
+					tactics = self._tactics.shield_support_charge,
+					rank = 2
 				}
 			}
 		}
@@ -1702,6 +1870,14 @@ function GroupAITweakData:_init_enemy_spawn_groups(difficulty_index)
 					amount_max = 2,
 					tactics = self._tactics.shield_wall_charge,
 					rank = 3
+				},
+				{
+					unit = "medic_R870",
+					freq = 0.35,
+					amount_min = 0,
+					amount_max = 1,
+					tactics = self._tactics.shield_support_charge,
+					rank = 2
 				}
 			}
 		}
@@ -1724,6 +1900,14 @@ function GroupAITweakData:_init_enemy_spawn_groups(difficulty_index)
 					amount_max = 2,
 					tactics = self._tactics.shield_wall_charge,
 					rank = 3
+				},
+				{
+					unit = "medic_R870",
+					freq = 0.35,
+					amount_min = 0,
+					amount_max = 1,
+					tactics = self._tactics.shield_support_charge,
+					rank = 2
 				}
 			}
 		}
@@ -1746,6 +1930,14 @@ function GroupAITweakData:_init_enemy_spawn_groups(difficulty_index)
 					amount_max = 2,
 					tactics = self._tactics.shield_wall_charge,
 					rank = 3
+				},
+				{
+					unit = "medic_R870",
+					freq = 0.5,
+					amount_min = 0,
+					amount_max = 1,
+					tactics = self._tactics.shield_support_charge,
+					rank = 2
 				}
 			}
 		}
@@ -1803,6 +1995,14 @@ function GroupAITweakData:_init_enemy_spawn_groups(difficulty_index)
 					amount_max = 4,
 					tactics = self._tactics.shield_wall,
 					rank = 3
+				},
+				{
+					unit = "medic_M4",
+					freq = 0.2,
+					amount_min = 0,
+					amount_max = 1,
+					tactics = self._tactics.shield_wall,
+					rank = 3
 				}
 			}
 		}
@@ -1815,6 +2015,14 @@ function GroupAITweakData:_init_enemy_spawn_groups(difficulty_index)
 					freq = 4,
 					amount_min = 4,
 					amount_max = 4,
+					tactics = self._tactics.shield_wall,
+					rank = 3
+				},
+				{
+					unit = "medic_M4",
+					freq = 0.35,
+					amount_min = 0,
+					amount_max = 1,
 					tactics = self._tactics.shield_wall,
 					rank = 3
 				}
@@ -1831,6 +2039,14 @@ function GroupAITweakData:_init_enemy_spawn_groups(difficulty_index)
 					amount_max = 4,
 					tactics = self._tactics.shield_wall,
 					rank = 3
+				},
+				{
+					unit = "medic_M4",
+					freq = 0.35,
+					amount_min = 0,
+					amount_max = 1,
+					tactics = self._tactics.shield_wall,
+					rank = 3
 				}
 			}
 		}
@@ -1843,6 +2059,14 @@ function GroupAITweakData:_init_enemy_spawn_groups(difficulty_index)
 					freq = 4,
 					amount_min = 4,
 					amount_max = 4,
+					tactics = self._tactics.shield_wall,
+					rank = 3
+				},
+				{
+					unit = "medic_M4",
+					freq = 0.5,
+					amount_min = 0,
+					amount_max = 1,
 					tactics = self._tactics.shield_wall,
 					rank = 3
 				}
