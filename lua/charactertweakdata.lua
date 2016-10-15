@@ -8546,6 +8546,9 @@ function CharacterTweakData:_multiply_all_hp(hp_mul, hs_mul)
 	if self.fbi_swat.headshot_dmg_mul then
 		self.fbi_swat.headshot_dmg_mul = self.fbi_swat.headshot_dmg_mul * hs_mul
 	end
+	if self.medic.headshot_dmg_mul then
+		self.medic.headshot_dmg_mul = self.medic.headshot_dmg_mul * hs_mul
+	end
 end
 function CharacterTweakData:_multiply_all_speeds(walk_mul, run_mul)
 	local all_units = {
