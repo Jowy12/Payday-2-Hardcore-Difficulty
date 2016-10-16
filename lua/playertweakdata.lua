@@ -1061,6 +1061,7 @@ function PlayerTweakData:_init_new_stances()
 	self:_init_tecci()
 	self:_init_hajk()
 	self:_init_boot()
+	self:_init_rota()
 end
 function PlayerTweakData:_init_hs2000()
 	self.stances.hs2000 = deep_clone(self.stances.default)
