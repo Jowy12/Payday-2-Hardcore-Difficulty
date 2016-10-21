@@ -121,12 +121,12 @@ function GroupAIStateBesiege:_upd_assault_task()
 		end
 	end
 	local force
-	if task_data.force < 15 then
+	if task_data.force < 45 then
 		force = task_data.force
 	else
 		force = 30
 	end
-	local nr_wanted = 15 - self:_count_police_force("assault")
+	local nr_wanted = 45 - self:_count_police_force("assault")
 	if task_data.phase == "anticipation" then
 		nr_wanted = nr_wanted - 5
 	end
