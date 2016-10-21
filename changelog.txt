@@ -1,3 +1,6 @@
+V.3.6
+- Fixed random crashes
+
 V.3.5.9
 - Updated codes due to Payday 2 Update 119
 
