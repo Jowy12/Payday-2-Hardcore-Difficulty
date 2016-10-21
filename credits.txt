@@ -1,4 +1,3 @@
-Credit goes to all the testers, LazzyOzzy for the ammo pickup rate script,
-TdlQ for the enemies reaction script,
-all my friends and especially magecow for the game (without him i won't be able to create this mod) and suggestions,
-Pertetoes for all the suggestions and opinions to make this mod better!
+Credit goes to magecow for the game (without him i won't be able to create this mod) and suggestions,
+LazzyOzzy for the ammo pickup rate script,
+All my friends, especially Pertetoes for all the suggestions and opinions to make this mod better!
