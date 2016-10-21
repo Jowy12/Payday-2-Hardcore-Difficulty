@@ -1,3 +1,4 @@
 Credit goes to magecow for the game (without him i won't be able to create this mod) and suggestions,
 LazzyOzzy for the ammo pickup rate script,
+TdlQ for the enemy's reaction codes,
 All my friends, especially Pertetoes for all the suggestions and opinions to make this mod better!
