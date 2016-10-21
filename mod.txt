@@ -3,11 +3,17 @@
 	"description" : "A custom difficulty made for all hardcore heisters out there! Enjoy the game!",
 	"author" : "Jowy",
 	"contact" : "http://steamcommunity.com/id/jowyyy/ or http://steamcommunity.com/id/pertetoes",
-	"version" : "3.6",
+	"version" : "3.6.1",
 	"priority" : 250,
 	"hooks" : [
 		{	"hook_id" : "lib/tweak_data/charactertweakdata",
 			"script_path" : "lua/charactertweakdata.lua"
+    		},
+		{	"hook_id" : "lib/managers/enemymanager",
+			"script_path" : "lua/enemymanager.lua"
+    		},
+		{	"hook_id" : "lib/managers/group_ai_states/groupaistatebesiege",
+			"script_path" : "lua/groupaistatebesiege.lua"
     		},
 		{	"hook_id" : "lib/tweak_data/groupaitweakdata",
         		"script_path" : "lua/groupaitweakdata.lua"
