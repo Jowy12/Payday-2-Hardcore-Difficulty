@@ -707,7 +707,8 @@ function GroupAITweakData:_init_unit_categories(difficulty_index)
 			}
 		},
 		access = access_type_walk_only,
-		special_type = "shield"
+		special_type = "shield",
+		is_captain = true
 	}
 	self.unit_categories.Phalanx_vip = {
 		unit_types = {
@@ -719,7 +720,8 @@ function GroupAITweakData:_init_unit_categories(difficulty_index)
 			}
 		},
 		access = access_type_walk_only,
-		special_type = "shield"
+		special_type = "shield",
+		is_captain = true
 	}
 end
 function GroupAITweakData:_init_enemy_spawn_groups(difficulty_index)
@@ -2817,9 +2819,9 @@ function GroupAITweakData:_init_task_data(difficulty_index, difficulty)
 				0.13
 			},
 			tac_swat_rifle = {
-				0.13,
-				0.13,
-				0.13
+				0.2,
+				0.2,
+				0.2
 			},
 			tac_swat_rifle_flank = {
 				0.13,
@@ -2852,14 +2854,14 @@ function GroupAITweakData:_init_task_data(difficulty_index, difficulty)
 				0.09
 			},
 			FBI_spoocs = {
-				0.01,
-				0.01,
-				0.01
+				0.02,
+				0.02,
+				0.02
 			},
 			tac_bull_rush = {
-				0.09,
-				0.09,
-				0.09
+				0.04,
+				0.04,
+				0.04
 			}
 		}
 	elseif difficulty_index == 5 then
@@ -2875,9 +2877,9 @@ function GroupAITweakData:_init_task_data(difficulty_index, difficulty)
 				0.13
 			},
 			tac_swat_rifle = {
-				0.13,
-				0.13,
-				0.13
+				0.2,
+				0.2,
+				0.2
 			},
 			tac_swat_rifle_flank = {
 				0.13,
@@ -2910,14 +2912,14 @@ function GroupAITweakData:_init_task_data(difficulty_index, difficulty)
 				0.09
 			},
 			FBI_spoocs = {
-				0.01,
-				0.01,
-				0.01
+				0.02,
+				0.02,
+				0.02
 			},
 			tac_bull_rush = {
-				0.09,
-				0.09,
-				0.09
+				0.04,
+				0.04,
+				0.04
 			}
 		}
 	elseif difficulty_index == 6 then
@@ -2968,14 +2970,14 @@ function GroupAITweakData:_init_task_data(difficulty_index, difficulty)
 				0.09
 			},
 			FBI_spoocs = {
-				0.01,
-				0.01,
-				0.01
+				0.03,
+				0.03,
+				0.03
 			},
 			tac_bull_rush = {
-				0.09,
-				0.09,
-				0.09
+				0.05,
+				0.05,
+				0.05
 			}
 		}
 	elseif difficulty_index == 7 then
@@ -3026,14 +3028,14 @@ function GroupAITweakData:_init_task_data(difficulty_index, difficulty)
 				0.09
 			},
 			FBI_spoocs = {
-				0.01,
-				0.01,
-				0.01
+				0.03,
+				0.03,
+				0.03
 			},
 			tac_bull_rush = {
-				0.09,
-				0.09,
-				0.09
+				0.05,
+				0.05,
+				0.05
 			}
 		}
 	elseif difficulty_index == 8 then
