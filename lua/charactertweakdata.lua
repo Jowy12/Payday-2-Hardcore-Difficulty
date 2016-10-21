@@ -116,6 +116,7 @@ function CharacterTweakData:init(tweak_data)
 	self:_init_sydney(presets)
 	self:_init_wild(presets)
 	self:_init_biker_boss(presets)
+	self:_init_chavez_boss(presets)
 	self:_init_old_hoxton_mission(presets)
 	self._prefix_data = nil
 	self._prefix_data_p1 = nil
@@ -807,6 +808,125 @@ function CharacterTweakData:_init_biker_boss(presets)
 	self.biker_boss.immune_to_concussion = true
 	table.insert(self._enemy_list, "biker_boss")
 end
+function CharacterTweakData:_init_chavez_boss(presets)
+	self.chavez_boss = deep_clone(presets.base)
+	self.chavez_boss.experience = {}
+	self.chavez_boss.weapon = deep_clone(presets.weapon.good)
+	self.chavez_boss.weapon.akimbo_pistol = {}
+	self.chavez_boss.weapon.akimbo_pistol.aim_delay = {0, 0}
+	self.chavez_boss.weapon.akimbo_pistol.focus_delay = 0
+	self.chavez_boss.weapon.akimbo_pistol.focus_dis = 10000000000000000000000
+	self.chavez_boss.weapon.akimbo_pistol.spread = 20
+	self.chavez_boss.weapon.akimbo_pistol.miss_dis = 40
+	self.chavez_boss.weapon.akimbo_pistol.RELOAD_SPEED = 1
+	self.chavez_boss.weapon.akimbo_pistol.melee_speed = 1
+	self.chavez_boss.weapon.akimbo_pistol.melee_dmg = 25
+	self.chavez_boss.weapon.akimbo_pistol.melee_retry_delay = {1, 2}
+	self.chavez_boss.weapon.akimbo_pistol.range = {
+		close = 1000,
+		optimal = 2500,
+		far = 5000
+	}
+	self.chavez_boss.weapon.akimbo_pistol.autofire_rounds = {20, 30}
+	self.chavez_boss.weapon.akimbo_pistol.FALLOFF = {
+		{
+			r = 100,
+			acc = {1, 1},
+			dmg_mul = 3,
+			recoil = {0.4, 0.7},
+			mode = {
+				0,
+				0,
+				0,
+				1
+			}
+		},
+		{
+			r = 500,
+			acc = {0.9, 0.9},
+			dmg_mul = 3,
+			recoil = {0.4, 0.7},
+			mode = {
+				0,
+				1,
+				2,
+				8
+			}
+		},
+		{
+			r = 1000,
+			acc = {0.8, 0.8},
+			dmg_mul = 1.5,
+			recoil = {0.45, 0.8},
+			mode = {
+				1,
+				3,
+				6,
+				6
+			}
+		},
+		{
+			r = 2000,
+			acc = {0.7, 0.7},
+			dmg_mul = 1,
+			recoil = {0.45, 0.8},
+			mode = {
+				1,
+				2,
+				2,
+				1
+			}
+		},
+		{
+			r = 3000,
+			acc = {0.6, 0.6},
+			dmg_mul = 1,
+			recoil = {1, 1.2},
+			mode = {
+				4,
+				2,
+				1,
+				0
+			}
+		}
+	}
+	self:_process_weapon_usage_table(self.chavez_boss.weapon)
+	self.chavez_boss.detection = presets.detection.normal
+	self.chavez_boss.HEALTH_INIT = 550
+	self.chavez_boss.headshot_dmg_mul = 2
+	self.chavez_boss.damage.explosion_damage_mul = 1
+	self.chavez_boss.move_speed = presets.move_speed.fast
+	self.chavez_boss.allowed_poses = {stand = true}
+	self.chavez_boss.no_retreat = true
+	self.chavez_boss.no_arrest = true
+	self.chavez_boss.surrender = nil
+	self.chavez_boss.ecm_vulnerability = 0
+	self.chavez_boss.ecm_hurts = {
+		ears = {min_duration = 0, max_duration = 0}
+	}
+	self.chavez_boss.weapon_voice = "1"
+	self.chavez_boss.experience.cable_tie = "tie_swat"
+	self.chavez_boss.access = "gangster"
+	self.chavez_boss.speech_prefix_p1 = "bb"
+	self.chavez_boss.speech_prefix_p2 = "n"
+	self.chavez_boss.speech_prefix_count = 1
+	self.chavez_boss.rescue_hostages = false
+	self.chavez_boss.melee_weapon = "fists"
+	self.chavez_boss.melee_weapon_dmg_multiplier = 2.5
+	self.chavez_boss.steal_loot = nil
+	self.chavez_boss.calls_in = nil
+	self.chavez_boss.chatter = presets.enemy_chatter.no_chatter
+	self.chavez_boss.use_radio = nil
+	self.chavez_boss.can_be_tased = false
+	self.chavez_boss.DAMAGE_CLAMP_BULLET = 80
+	self.chavez_boss.DAMAGE_CLAMP_EXPLOSION = 80
+	self.chavez_boss.use_animation_on_fire_damage = false
+	self.chavez_boss.flammable = true
+	self.chavez_boss.can_be_tased = false
+	self.chavez_boss.immune_to_knock_down = true
+	self.chavez_boss.immune_to_concussion = true
+	table.insert(self._enemy_list, "chavez_boss")
+end
 function CharacterTweakData:_init_hector_boss(presets)
 	self.hector_boss = deep_clone(self.mobster_boss)
 	self.hector_boss.DAMAGE_CLAMP_BULLET = 320
@@ -1108,6 +1228,9 @@ function CharacterTweakData:_init_tank(presets)
 	self.tank.deathguard = true
 	self.tank.melee_weapon = "fists"
 	self.tank.melee_weapon_dmg_multiplier = 2.5
+	self.tank.melee_anims = {
+		"cbt_std_melee"
+	}
 	self.tank.critical_hits = {
 		damage_mul = self.tank.headshot_dmg_mul * 1
 	}
@@ -6615,7 +6738,8 @@ function CharacterTweakData:_create_table_structure()
 		"akmsu_smg",
 		"asval_smg",
 		"sr2_smg",
-		"ak47_ass"
+		"ak47_ass",
+		"x_c45"
 	}
 	self.weap_unit_names = {
 		Idstring("units/payday2/weapons/wpn_npc_beretta92/wpn_npc_beretta92"),
@@ -6641,7 +6765,8 @@ function CharacterTweakData:_create_table_structure()
 		Idstring("units/pd2_dlc_mad/weapons/wpn_npc_akmsu/wpn_npc_akmsu"),
 		Idstring("units/pd2_dlc_mad/weapons/wpn_npc_asval/wpn_npc_asval"),
 		Idstring("units/pd2_dlc_mad/weapons/wpn_npc_sr2/wpn_npc_sr2"),
-		Idstring("units/pd2_dlc_mad/weapons/wpn_npc_ak47/wpn_npc_ak47")
+		Idstring("units/pd2_dlc_mad/weapons/wpn_npc_ak47/wpn_npc_ak47"),
+		Idstring("units/payday2/weapons/wpn_npc_c45/wpn_npc_x_c45")
 	}
 end
 function CharacterTweakData:_process_weapon_usage_table(weap_usage_table)
@@ -7001,6 +7126,7 @@ function CharacterTweakData:_set_normal()
 	self.hector_boss.HEALTH_INIT = 50
 	self.mobster_boss.HEALTH_INIT = 50
 	self.biker_boss.HEALTH_INIT = 100
+	self.chavez_boss.HEALTH_INIT = 100
 	self.presets.gang_member_damage.REGENERATE_TIME = 1.5
 	self.presets.gang_member_damage.REGENERATE_TIME_AWAY = 0.2
 	self.presets.gang_member_damage.HEALTH_INIT = 125
@@ -7080,6 +7206,7 @@ function CharacterTweakData:_set_hard()
 	self.hector_boss.HEALTH_INIT = 100
 	self.mobster_boss.HEALTH_INIT = 100
 	self.biker_boss.HEALTH_INIT = 100
+	self.chavez_boss.HEALTH_INIT = 100
 	self.presets.gang_member_damage.REGENERATE_TIME = 2
 	self.presets.gang_member_damage.REGENERATE_TIME_AWAY = 0.4
 	self:_set_characters_weapon_preset("normal")
@@ -7199,6 +7326,7 @@ function CharacterTweakData:_set_overkill()
 	self.hector_boss.HEALTH_INIT = 300
 	self.mobster_boss.HEALTH_INIT = 300
 	self.biker_boss.HEALTH_INIT = 300
+	self.chavez_boss.HEALTH_INIT = 300
 	self.phalanx_minion.HEALTH_INIT = 500
 	self.phalanx_minion.DAMAGE_CLAMP_BULLET = 25
 	self.phalanx_minion.DAMAGE_CLAMP_EXPLOSION = self.phalanx_minion.DAMAGE_CLAMP_BULLET
@@ -7331,6 +7459,7 @@ function CharacterTweakData:_set_overkill_145()
 	self.hector_boss.HEALTH_INIT = 600
 	self.mobster_boss.HEALTH_INIT = 600
 	self.biker_boss.HEALTH_INIT = 1800
+	self.chavez_boss.HEALTH_INIT = 600
 	self.phalanx_minion.HEALTH_INIT = 500
 	self.phalanx_minion.DAMAGE_CLAMP_BULLET = 25
 	self.phalanx_minion.DAMAGE_CLAMP_EXPLOSION = self.phalanx_minion.DAMAGE_CLAMP_BULLET
@@ -7397,14 +7526,15 @@ function CharacterTweakData:_set_overkill_145()
 end
 function CharacterTweakData:_set_easy_wish()
 	if SystemInfo:platform() == Idstring("PS3") then
-		self:_multiply_all_hp(6, 1)
+		self:_multiply_all_hp(6, 1.5)
 	else
-		self:_multiply_all_hp(6, 1)
+		self:_multiply_all_hp(6, 1.5)
 	end
 	self.medic.HEALTH_INIT = 180
 	self.hector_boss.HEALTH_INIT = 900
 	self.mobster_boss.HEALTH_INIT = 900
 	self.biker_boss.HEALTH_INIT = 3000
+	self.chavez_boss.HEALTH_INIT = 900
 	self:_multiply_all_speeds(2.05, 2.1)
 	self:_multiply_weapon_delay(self.presets.weapon.normal, 0)
 	self:_multiply_weapon_delay(self.presets.weapon.good, 0)
@@ -7544,9 +7674,9 @@ function CharacterTweakData:_set_easy_wish()
 end
 function CharacterTweakData:_set_overkill_290()
 	if SystemInfo:platform() == Idstring("PS3") then
-		self:_multiply_all_hp(6, 1)
+		self:_multiply_all_hp(6, 1.5)
 	else
-		self:_multiply_all_hp(6, 1)
+		self:_multiply_all_hp(6, 1.5)
 	end
 	self.medic.HEALTH_INIT = 180
 	self.hector_boss.weapon.saiga.FALLOFF = {
@@ -7614,6 +7744,7 @@ function CharacterTweakData:_set_overkill_290()
 	self.hector_boss.HEALTH_INIT = 900
 	self.mobster_boss.HEALTH_INIT = 900
 	self.biker_boss.HEALTH_INIT = 3000
+	self.chavez_boss.HEALTH_INIT = 900
 	self:_multiply_all_speeds(2.05, 2.1)
 	self:_multiply_weapon_delay(self.presets.weapon.normal, 0)
 	self:_multiply_weapon_delay(self.presets.weapon.good, 0)
@@ -8006,9 +8137,9 @@ function CharacterTweakData:_set_overkill_290()
 end
 function CharacterTweakData:_set_sm_wish()
 	if SystemInfo:platform() == Idstring("PS3") then
-		self:_multiply_all_hp(9, 1)
+		self:_multiply_all_hp(9, 1.5)
 	else
-		self:_multiply_all_hp(9, 1)
+		self:_multiply_all_hp(9, 1.5)
 	end
 	self.medic.HEALTH_INIT = 270
 	self.hector_boss.weapon.saiga.FALLOFF = {
@@ -8076,6 +8207,7 @@ function CharacterTweakData:_set_sm_wish()
 	self.hector_boss.HEALTH_INIT = 900
 	self.mobster_boss.HEALTH_INIT = 900
 	self.biker_boss.HEALTH_INIT = 3000
+	self.chavez_boss.HEALTH_INIT = 900
 	self:_multiply_all_speeds(2.05, 2.1)
 	self:_multiply_weapon_delay(self.presets.weapon.normal, 0)
 	self:_multiply_weapon_delay(self.presets.weapon.good, 0)
@@ -8563,7 +8695,8 @@ function CharacterTweakData:_multiply_all_speeds(walk_mul, run_mul)
 		"spooc",
 		"shield",
 		"taser",
-		"city_swat"
+		"city_swat",
+		"fbi_swat"
 	}
 	for _, name in ipairs(all_units) do
 		local speed_table = self[name].SPEED_WALK
@@ -8585,6 +8718,7 @@ function CharacterTweakData:_multiply_all_speeds(walk_mul, run_mul)
 	self.taser.SPEED_RUN = self.taser.SPEED_RUN * run_mul
 	self.city_swat.SPEED_RUN = self.city_swat.SPEED_RUN * run_mul
 	self.biker_escape.SPEED_RUN = self.biker_escape.SPEED_RUN * run_mul
+	self.fbi_swat.SPEED_RUN = self.fbi_swat.SPEED_RUN * run_mul
 end
 function CharacterTweakData:_set_characters_weapon_preset(preset)
 	local all_units = {
@@ -8935,6 +9069,13 @@ function CharacterTweakData:character_map()
 				"ene_biker_female_2",
 				"ene_biker_female_3",
 				"npc_male_mechanic"
+			}
+		},
+		flat = {
+			path = "units/pd2_dlc_flat/characters/",
+			list = {
+				"npc_chavez",
+				"npc_jamaican"
 			}
 		},
 		gitgud = {
