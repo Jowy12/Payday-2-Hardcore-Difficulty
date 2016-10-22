@@ -114,7 +114,7 @@ function GroupAITweakData:_init_unit_categories(difficulty_index)
 	local access_type_all = {walk = true, acrobatic = true}
 	if difficulty_index <= 2 then
 		self.special_unit_spawn_limits = {
-			tank = 4,
+			tank = 8,
 			taser = 8,
 			spooc = 8,
 			shield = 8,
@@ -122,7 +122,7 @@ function GroupAITweakData:_init_unit_categories(difficulty_index)
 		}
 	elseif difficulty_index == 3 then
 		self.special_unit_spawn_limits = {
-			tank = 4,
+			tank = 8,
 			taser = 8,
 			spooc = 8,
 			shield = 8,
@@ -130,7 +130,7 @@ function GroupAITweakData:_init_unit_categories(difficulty_index)
 		}
 	elseif difficulty_index == 4 then
 		self.special_unit_spawn_limits = {
-			tank = 4,
+			tank = 8,
 			taser = 8,
 			spooc = 8,
 			shield = 8,
@@ -138,7 +138,7 @@ function GroupAITweakData:_init_unit_categories(difficulty_index)
 		}
 	elseif difficulty_index == 5 then
 		self.special_unit_spawn_limits = {
-			tank = 4,
+			tank = 8,
 			taser = 8,
 			spooc = 8,
 			shield = 8,
@@ -146,7 +146,7 @@ function GroupAITweakData:_init_unit_categories(difficulty_index)
 		}
 	else
 		self.special_unit_spawn_limits = {
-			tank = 4,
+			tank = 8,
 			taser = 8,
 			spooc = 8,
 			shield = 8,
@@ -3439,15 +3439,15 @@ function GroupAITweakData:_init_task_data(difficulty_index, difficulty)
 		}
 	}
 	self.street = deep_clone(self.besiege)
-	self.phalanx.minions.min_count = 4
+	self.phalanx.minions.min_count = 0
 	self.phalanx.minions.amount = 15
 	self.phalanx.minions.distance = 80
 	self.phalanx.vip.health_ratio_flee = 0.2
 	self.phalanx.vip.damage_reduction = {
-		start = 0.1,
-		increase = 0.05,
+		start = 0.5,
+		increase = 0,
 		max = 0.5,
-		increase_intervall = 5
+		increase_intervall = 0
 	}
 	self.phalanx.check_spawn_intervall = 300
 	self.phalanx.chance_increase_intervall = 0
