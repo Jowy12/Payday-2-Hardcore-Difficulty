@@ -5281,7 +5281,7 @@ function CharacterTweakData:_presets(tweak_data)
 		},
 		{
 			r = 4000,
-			acc = {0.5, 0.5},
+			acc = {0.2, 0.2},
 			dmg_mul = 3,
 			recoil = {1, 1.5},
 			mode = {
