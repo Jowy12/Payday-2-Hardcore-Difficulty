@@ -7,7 +7,7 @@ function PlayerTweakData:_set_easy()
 	self.suspicion.buildup_mul = 1.4
 	self.damage.BLEED_OT_TIME = 10
 	self.damage.LIVES_INIT = 4
-	self.damage.MIN_DAMAGE_INTERVAL = 0.25
+	self.damage.MIN_DAMAGE_INTERVAL = 0.35
 	self.damage.REVIVE_HEALTH_STEPS = {0.1}
 end
 function PlayerTweakData:_set_normal()
@@ -18,7 +18,7 @@ function PlayerTweakData:_set_normal()
 	self.suspicion.buildup_mul = 1.4
 	self.damage.BLEED_OT_TIME = 10
 	self.damage.LIVES_INIT = 4
-	self.damage.MIN_DAMAGE_INTERVAL = 0.25
+	self.damage.MIN_DAMAGE_INTERVAL = 0.35
 	self.damage.REVIVE_HEALTH_STEPS = {0.1}
 end
 function PlayerTweakData:_set_hard()
@@ -29,7 +29,7 @@ function PlayerTweakData:_set_hard()
 	self.suspicion.buildup_mul = 1.4
 	self.damage.BLEED_OT_TIME = 10
 	self.damage.LIVES_INIT = 4
-	self.damage.MIN_DAMAGE_INTERVAL = 0.25
+	self.damage.MIN_DAMAGE_INTERVAL = 0.35
 	self.damage.REVIVE_HEALTH_STEPS = {0.1}
 end
 function PlayerTweakData:_set_overkill()
@@ -40,7 +40,7 @@ function PlayerTweakData:_set_overkill()
 	self.suspicion.buildup_mul = 1.4
 	self.damage.BLEED_OT_TIME = 10
 	self.damage.LIVES_INIT = 4
-	self.damage.MIN_DAMAGE_INTERVAL = 0.25
+	self.damage.MIN_DAMAGE_INTERVAL = 0.35
 	self.damage.REVIVE_HEALTH_STEPS = {0.1}
 end
 function PlayerTweakData:_set_overkill_145()
@@ -51,7 +51,7 @@ function PlayerTweakData:_set_overkill_145()
 	self.suspicion.buildup_mul = 1.4
 	self.damage.BLEED_OT_TIME = 10
 	self.damage.LIVES_INIT = 4
-	self.damage.MIN_DAMAGE_INTERVAL = 0.25
+	self.damage.MIN_DAMAGE_INTERVAL = 0.35
 	self.damage.REVIVE_HEALTH_STEPS = {0.1}
 end
 function PlayerTweakData:_set_easy_wish()
@@ -62,7 +62,7 @@ function PlayerTweakData:_set_easy_wish()
 	self.suspicion.buildup_mul = 1.4
 	self.damage.BLEED_OT_TIME = 10
 	self.damage.LIVES_INIT = 4
-	self.damage.MIN_DAMAGE_INTERVAL = 0.25
+	self.damage.MIN_DAMAGE_INTERVAL = 0.35
 	self.damage.REVIVE_HEALTH_STEPS = {0.1}
 end
 function PlayerTweakData:_set_overkill_290()
@@ -73,7 +73,7 @@ function PlayerTweakData:_set_overkill_290()
 	self.suspicion.buildup_mul = 1.4
 	self.damage.BLEED_OT_TIME = 10
 	self.damage.LIVES_INIT = 4
-	self.damage.MIN_DAMAGE_INTERVAL = 0.25
+	self.damage.MIN_DAMAGE_INTERVAL = 0.35
 	self.damage.REVIVE_HEALTH_STEPS = {0.1}
 end
 function PlayerTweakData:_set_sm_wish()
@@ -84,7 +84,7 @@ function PlayerTweakData:_set_sm_wish()
 	self.suspicion.buildup_mul = 1.4
 	self.damage.BLEED_OT_TIME = 10
 	self.damage.LIVES_INIT = 4
-	self.damage.MIN_DAMAGE_INTERVAL = 0.25
+	self.damage.MIN_DAMAGE_INTERVAL = 0.35
 	self.damage.REVIVE_HEALTH_STEPS = {0.1}
 end
 function PlayerTweakData:_set_singleplayer()
@@ -135,7 +135,7 @@ function PlayerTweakData:init()
 	self.damage.DOWNED_TIME_MIN = 10
 	self.damage.ARRESTED_TIME = 30
 	self.damage.INCAPACITATED_TIME = 15
-	self.damage.MIN_DAMAGE_INTERVAL = 0.25
+	self.damage.MIN_DAMAGE_INTERVAL = 0.45
 	self.damage.respawn_time_penalty = 0
 	self.damage.base_respawn_time_penalty = 5
 	self.damage.automatic_assault_ai_trade_time = 120
