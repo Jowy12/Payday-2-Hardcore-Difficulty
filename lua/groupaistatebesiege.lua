@@ -120,7 +120,10 @@ function GroupAIStateBesiege:_upd_assault_task()
 			task_data.target_areas[1] = nearest_area
 		end
 	end
-	local force
+	local nr_wanted = task_data.force - self:_count_police_force("assault")
+	if task_data.phase == "anticipation" then
+		nr_wanted = nr_wanted - 5
+	end
 	if self:_count_police_force("assault") >= 45 then
 		nr_wanted = nr_wanted - 100000000
 	end
