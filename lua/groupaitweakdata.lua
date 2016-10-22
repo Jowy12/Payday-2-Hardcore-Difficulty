@@ -3453,7 +3453,7 @@ function GroupAITweakData:_init_task_data(difficulty_index, difficulty)
 	self.phalanx.chance_increase_intervall = 0
 	if difficulty_index == 4 then
 		self.phalanx.spawn_chance = {
-			start = 0,
+			start = 0.05,
 			increase = 0.5,
 			decrease = 0,
 			max = 1,
@@ -3461,7 +3461,7 @@ function GroupAITweakData:_init_task_data(difficulty_index, difficulty)
 		}
 	elseif difficulty_index == 5 then
 		self.phalanx.spawn_chance = {
-			start = 0,
+			start = 0.05,
 			increase = 0.5,
 			decrease = 0,
 			max = 1,
@@ -3469,7 +3469,7 @@ function GroupAITweakData:_init_task_data(difficulty_index, difficulty)
 		}
 	elseif difficulty_index == 6 then
 		self.phalanx.spawn_chance = {
-			start = 0,
+			start = 0.05,
 			increase = 0.5,
 			decrease = 0,
 			max = 1,
@@ -3477,7 +3477,7 @@ function GroupAITweakData:_init_task_data(difficulty_index, difficulty)
 		}
 	elseif difficulty_index == 7 then
 		self.phalanx.spawn_chance = {
-			start = 0,
+			start = 0.05,
 			increase = 0.5,
 			decrease = 0,
 			max = 1,
@@ -3485,7 +3485,7 @@ function GroupAITweakData:_init_task_data(difficulty_index, difficulty)
 		}
 	elseif difficulty_index == 8 then
 		self.phalanx.spawn_chance = {
-			start = 0,
+			start = 0.05,
 			increase = 0.5,
 			decrease = 0,
 			max = 1,
@@ -3493,7 +3493,7 @@ function GroupAITweakData:_init_task_data(difficulty_index, difficulty)
 		}
 	else
 		self.phalanx.spawn_chance = {
-			start = 0,
+			start = 0.05,
 			increase = 0.5,
 			decrease = 0,
 			max = 1,
