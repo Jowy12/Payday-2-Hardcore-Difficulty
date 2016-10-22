@@ -7912,7 +7912,7 @@ function CharacterTweakData:_set_overkill_290()
 		},
 		{
 			r = 3000,
-			acc = {0.6, 0.6},
+			acc = {0.2, 0.2},
 			dmg_mul = 5,
 			recoil = {1, 2},
 			mode = {
