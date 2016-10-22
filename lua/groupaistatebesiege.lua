@@ -121,10 +121,8 @@ function GroupAIStateBesiege:_upd_assault_task()
 		end
 	end
 	local force
-	if task_data.force < 45 then
-		force = task_data.force
-	else
-		force = 30
+	if self:_count_police_force("assault") >= 45 then
+		nr_wanted = nr_wanted - 100000000
 	end
 	local nr_wanted = 45 - self:_count_police_force("assault")
 	if task_data.phase == "anticipation" then
@@ -187,7 +185,7 @@ function GroupAIStateBesiege:_upd_recon_tasks()
 		return
 	end
 	if self:_count_police_force("recon") >= 5 then
-		nr_wanted = nr_wanted - 1000
+		nr_wanted = nr_wanted - 100000000
 	end
 	local used_event, used_spawn_points, reassigned
 	if task_data.use_spawn_event then
