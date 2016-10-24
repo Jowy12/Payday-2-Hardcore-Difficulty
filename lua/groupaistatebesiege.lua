@@ -59,10 +59,10 @@ function GroupAIStateBesiege:_upd_assault_task()
 			task_data.phase_end_t = t + self._tweak_data.assault.fade_duration
 		end
 	else
-		local end_assault = false
+		local end_assault = true
 		local enemies_left = self:_count_police_force("assault")
 		if not self._hunt_mode then
-			local min_enemies_left = 7
+			local min_enemies_left = 10
 			if enemies_left < min_enemies_left or t > task_data.phase_end_t + 350 then
 				if t > task_data.phase_end_t - 8 and not task_data.said_retreat then
 					if self._drama_data.amount < tweak_data.drama.assault_fade_end then
