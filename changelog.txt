@@ -1,3 +1,6 @@
+V.3.6.3
+- Fixed fading phase
+
 V.3.6.2
 - Tweaked enemy's accuracy to make it less aimbot
 
