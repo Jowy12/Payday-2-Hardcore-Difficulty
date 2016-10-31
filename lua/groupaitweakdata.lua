@@ -2693,372 +2693,24 @@ function GroupAITweakData:_init_task_data(difficulty_index, difficulty)
 	if difficulty_index <= 2 then
 		self.besiege.assault.groups = {
 			tac_swat_shotgun_rush = {
-				0.2,
-				0.2,
-				0.2
+				0.26,
+				0.26,
+				0.26
 			},
 			tac_swat_shotgun_flank = {
-				0.2,
-				0.2,
-				0.2
+				0.26,
+				0.26,
+				0.26
 			},
 			tac_swat_rifle = {
-				0.2,
-				0.2,
-				0.2
+				0.26,
+				0.26,
+				0.26
 			},
 			tac_swat_rifle_flank = {
-				0.2,
-				0.2,
-				0.2
-			},
-			tac_shield_wall_ranged = {
-				0.2,
-				0.2,
-				0.2
-			},
-			tac_shield_wall_charge = {
-				0,
-				0,
-				0
-			},
-			tac_shield_wall = {
-				0,
-				0,
-				0
-			},
-			tac_tazer_flanking = {
-				0,
-				0,
-				0
-			},
-			tac_tazer_charge = {
-				0,
-				0,
-				0
-			},
-			single_spoocs = {
-				0,
-				0,
-				0
-			},
-			tac_bull_rush = {
-				0,
-				0,
-				0
-			}
-		}
-	elseif difficulty_index == 3 then
-		self.besiege.assault.groups = {
-			tac_swat_shotgun_rush = {
-				0.1,
-				0.1,
-				0.1
-			},
-			tac_swat_shotgun_flank = {
-				0.1,
-				0.1,
-				0.1
-			},
-			tac_swat_rifle = {
-				0.2,
-				0.2,
-				0.2
-			},
-			tac_swat_rifle_flank = {
-				0.1,
-				0.1,
-				0.1
-			},
-			tac_shield_wall_ranged = {
-				0.1,
-				0.1,
-				0.1
-			},
-			tac_shield_wall_charge = {
-				0.1,
-				0.1,
-				0.1
-			},
-			tac_shield_wall = {
-				0.1,
-				0.1,
-				0.1
-			},
-			tac_tazer_flanking = {
-				0.1,
-				0.1,
-				0.1
-			},
-			tac_tazer_charge = {
-				0.1,
-				0.1,
-				0.1
-			},
-			single_spoocs = {
-				0,
-				0,
-				0
-			},
-			tac_bull_rush = {
-				0,
-				0,
-				0
-			}
-		}
-	elseif difficulty_index == 4 then
-		self.besiege.assault.groups = {
-			tac_swat_shotgun_rush = {
-				0.19,
-				0.19,
-				0.19
-			},
-			tac_swat_shotgun_flank = {
-				0.19,
-				0.19,
-				0.19
-			},
-			tac_swat_rifle = {
-				0.2,
-				0.2,
-				0.2
-			},
-			tac_swat_rifle_flank = {
-				0.19,
-				0.19,
-				0.19
-			},
-			tac_shield_wall_ranged = {
-				0.03,
-				0.03,
-				0.03
-			},
-			tac_shield_wall_charge = {
-				0.025,
-				0.025,
-				0.025
-			},
-			tac_shield_wall = {
-				0.025,
-				0.025,
-				0.025
-			},
-			tac_tazer_flanking = {
-				0.045,
-				0.045,
-				0.045
-			},
-			tac_tazer_charge = {
-				0.045,
-				0.045,
-				0.045
-			},
-			FBI_spoocs = {
-				0.02,
-				0.02,
-				0.02
-			},
-			tac_bull_rush = {
-				0.04,
-				0.04,
-				0.04
-			}
-		}
-	elseif difficulty_index == 5 then
-		self.besiege.assault.groups = {
-			tac_swat_shotgun_rush = {
-				0.19,
-				0.19,
-				0.19
-			},
-			tac_swat_shotgun_flank = {
-				0.19,
-				0.19,
-				0.19
-			},
-			tac_swat_rifle = {
-				0.2,
-				0.2,
-				0.2
-			},
-			tac_swat_rifle_flank = {
-				0.19,
-				0.19,
-				0.19
-			},
-			tac_shield_wall_ranged = {
-				0.03,
-				0.03,
-				0.03
-			},
-			tac_shield_wall_charge = {
-				0.025,
-				0.025,
-				0.025
-			},
-			tac_shield_wall = {
-				0.025,
-				0.025,
-				0.025
-			},
-			tac_tazer_flanking = {
-				0.045,
-				0.045,
-				0.045
-			},
-			tac_tazer_charge = {
-				0.045,
-				0.045,
-				0.045
-			},
-			FBI_spoocs = {
-				0.02,
-				0.02,
-				0.02
-			},
-			tac_bull_rush = {
-				0.04,
-				0.04,
-				0.04
-			}
-		}
-	elseif difficulty_index == 6 then
-		self.besiege.assault.groups = {
-			tac_swat_shotgun_rush = {
-				0.18,
-				0.18,
-				0.18
-			},
-			tac_swat_shotgun_flank = {
-				0.18,
-				0.18,
-				0.18
-			},
-			tac_swat_rifle = {
-				0.18,
-				0.18,
-				0.18
-			},
-			tac_swat_rifle_flank = {
-				0.18,
-				0.18,
-				0.18
-			},
-			tac_shield_wall_ranged = {
-				0.03,
-				0.03,
-				0.03
-			},
-			tac_shield_wall_charge = {
-				0.04,
-				0.04,
-				0.04
-			},
-			tac_shield_wall = {
-				0.03,
-				0.03,
-				0.03
-			},
-			tac_tazer_flanking = {
-				0.05,
-				0.05,
-				0.05
-			},
-			tac_tazer_charge = {
-				0.05,
-				0.05,
-				0.05
-			},
-			FBI_spoocs = {
-				0.03,
-				0.03,
-				0.03
-			},
-			tac_bull_rush = {
-				0.05,
-				0.05,
-				0.05
-			}
-		}
-	elseif difficulty_index == 7 then
-		self.besiege.assault.groups = {
-			tac_swat_shotgun_rush = {
-				0.18,
-				0.18,
-				0.18
-			},
-			tac_swat_shotgun_flank = {
-				0.18,
-				0.18,
-				0.18
-			},
-			tac_swat_rifle = {
-				0.18,
-				0.18,
-				0.18
-			},
-			tac_swat_rifle_flank = {
-				0.18,
-				0.18,
-				0.18
-			},
-			tac_shield_wall_ranged = {
-				0.03,
-				0.03,
-				0.03
-			},
-			tac_shield_wall_charge = {
-				0.04,
-				0.04,
-				0.04
-			},
-			tac_shield_wall = {
-				0.03,
-				0.03,
-				0.03
-			},
-			tac_tazer_flanking = {
-				0.05,
-				0.05,
-				0.05
-			},
-			tac_tazer_charge = {
-				0.05,
-				0.05,
-				0.05
-			},
-			FBI_spoocs = {
-				0.03,
-				0.03,
-				0.03
-			},
-			tac_bull_rush = {
-				0.05,
-				0.05,
-				0.05
-			}
-		}
-	elseif difficulty_index == 8 then
-		self.besiege.assault.groups = {
-			tac_swat_shotgun_rush = {
-				0.13,
-				0.13,
-				0.13
-			},
-			tac_swat_shotgun_flank = {
-				0.13,
-				0.13,
-				0.13
-			},
-			tac_swat_rifle = {
-				0.13,
-				0.13,
-				0.13
-			},
-			tac_swat_rifle_flank = {
-				0.13,
-				0.13,
-				0.13
+				0.26,
+				0.26,
+				0.26
 			},
 			tac_shield_wall_ranged = {
 				0.06,
@@ -3086,9 +2738,357 @@ function GroupAITweakData:_init_task_data(difficulty_index, difficulty)
 				0.09
 			},
 			FBI_spoocs = {
-				0.01,
-				0.01,
-				0.01
+				0.09,
+				0.09,
+				0.09
+			},
+			tac_bull_rush = {
+				0.09,
+				0.09,
+				0.09
+			}
+		}
+	elseif difficulty_index == 3 then
+		self.besiege.assault.groups = {
+			tac_swat_shotgun_rush = {
+				0.26,
+				0.26,
+				0.26
+			},
+			tac_swat_shotgun_flank = {
+				0.26,
+				0.26,
+				0.26
+			},
+			tac_swat_rifle = {
+				0.26,
+				0.26,
+				0.26
+			},
+			tac_swat_rifle_flank = {
+				0.26,
+				0.26,
+				0.26
+			},
+			tac_shield_wall_ranged = {
+				0.06,
+				0.06,
+				0.06
+			},
+			tac_shield_wall_charge = {
+				0.05,
+				0.05,
+				0.05
+			},
+			tac_shield_wall = {
+				0.05,
+				0.05,
+				0.05
+			},
+			tac_tazer_flanking = {
+				0.09,
+				0.09,
+				0.09
+			},
+			tac_tazer_charge = {
+				0.09,
+				0.09,
+				0.09
+			},
+			FBI_spoocs = {
+				0.09,
+				0.09,
+				0.09
+			},
+			tac_bull_rush = {
+				0.09,
+				0.09,
+				0.09
+			}
+		}
+	elseif difficulty_index == 4 then
+		self.besiege.assault.groups = {
+			tac_swat_shotgun_rush = {
+				0.26,
+				0.26,
+				0.26
+			},
+			tac_swat_shotgun_flank = {
+				0.26,
+				0.26,
+				0.26
+			},
+			tac_swat_rifle = {
+				0.26,
+				0.26,
+				0.26
+			},
+			tac_swat_rifle_flank = {
+				0.26,
+				0.26,
+				0.26
+			},
+			tac_shield_wall_ranged = {
+				0.06,
+				0.06,
+				0.06
+			},
+			tac_shield_wall_charge = {
+				0.05,
+				0.05,
+				0.05
+			},
+			tac_shield_wall = {
+				0.05,
+				0.05,
+				0.05
+			},
+			tac_tazer_flanking = {
+				0.09,
+				0.09,
+				0.09
+			},
+			tac_tazer_charge = {
+				0.09,
+				0.09,
+				0.09
+			},
+			FBI_spoocs = {
+				0.09,
+				0.09,
+				0.09
+			},
+			tac_bull_rush = {
+				0.09,
+				0.09,
+				0.09
+			}
+		}
+	elseif difficulty_index == 5 then
+		self.besiege.assault.groups = {
+			tac_swat_shotgun_rush = {
+				0.26,
+				0.26,
+				0.26
+			},
+			tac_swat_shotgun_flank = {
+				0.26,
+				0.26,
+				0.26
+			},
+			tac_swat_rifle = {
+				0.26,
+				0.26,
+				0.26
+			},
+			tac_swat_rifle_flank = {
+				0.26,
+				0.26,
+				0.26
+			},
+			tac_shield_wall_ranged = {
+				0.06,
+				0.06,
+				0.06
+			},
+			tac_shield_wall_charge = {
+				0.05,
+				0.05,
+				0.05
+			},
+			tac_shield_wall = {
+				0.05,
+				0.05,
+				0.05
+			},
+			tac_tazer_flanking = {
+				0.09,
+				0.09,
+				0.09
+			},
+			tac_tazer_charge = {
+				0.09,
+				0.09,
+				0.09
+			},
+			FBI_spoocs = {
+				0.09,
+				0.09,
+				0.09
+			},
+			tac_bull_rush = {
+				0.09,
+				0.09,
+				0.09
+			}
+		}
+	elseif difficulty_index == 6 then
+		self.besiege.assault.groups = {
+			tac_swat_shotgun_rush = {
+				0.26,
+				0.26,
+				0.26
+			},
+			tac_swat_shotgun_flank = {
+				0.26,
+				0.26,
+				0.26
+			},
+			tac_swat_rifle = {
+				0.26,
+				0.26,
+				0.26
+			},
+			tac_swat_rifle_flank = {
+				0.26,
+				0.26,
+				0.26
+			},
+			tac_shield_wall_ranged = {
+				0.06,
+				0.06,
+				0.06
+			},
+			tac_shield_wall_charge = {
+				0.05,
+				0.05,
+				0.05
+			},
+			tac_shield_wall = {
+				0.05,
+				0.05,
+				0.05
+			},
+			tac_tazer_flanking = {
+				0.09,
+				0.09,
+				0.09
+			},
+			tac_tazer_charge = {
+				0.09,
+				0.09,
+				0.09
+			},
+			FBI_spoocs = {
+				0.09,
+				0.09,
+				0.09
+			},
+			tac_bull_rush = {
+				0.09,
+				0.09,
+				0.09
+			}
+		}
+	elseif difficulty_index == 7 then
+		self.besiege.assault.groups = {
+			tac_swat_shotgun_rush = {
+				0.26,
+				0.26,
+				0.26
+			},
+			tac_swat_shotgun_flank = {
+				0.26,
+				0.26,
+				0.26
+			},
+			tac_swat_rifle = {
+				0.26,
+				0.26,
+				0.26
+			},
+			tac_swat_rifle_flank = {
+				0.26,
+				0.26,
+				0.26
+			},
+			tac_shield_wall_ranged = {
+				0.06,
+				0.06,
+				0.06
+			},
+			tac_shield_wall_charge = {
+				0.05,
+				0.05,
+				0.05
+			},
+			tac_shield_wall = {
+				0.05,
+				0.05,
+				0.05
+			},
+			tac_tazer_flanking = {
+				0.09,
+				0.09,
+				0.09
+			},
+			tac_tazer_charge = {
+				0.09,
+				0.09,
+				0.09
+			},
+			FBI_spoocs = {
+				0.09,
+				0.09,
+				0.09
+			},
+			tac_bull_rush = {
+				0.09,
+				0.09,
+				0.09
+			}
+		}
+	elseif difficulty_index == 8 then
+		self.besiege.assault.groups = {
+			tac_swat_shotgun_rush = {
+				0.26,
+				0.26,
+				0.26
+			},
+			tac_swat_shotgun_flank = {
+				0.26,
+				0.26,
+				0.26
+			},
+			tac_swat_rifle = {
+				0.26,
+				0.26,
+				0.26
+			},
+			tac_swat_rifle_flank = {
+				0.26,
+				0.26,
+				0.26
+			},
+			tac_shield_wall_ranged = {
+				0.06,
+				0.06,
+				0.06
+			},
+			tac_shield_wall_charge = {
+				0.05,
+				0.05,
+				0.05
+			},
+			tac_shield_wall = {
+				0.05,
+				0.05,
+				0.05
+			},
+			tac_tazer_flanking = {
+				0.09,
+				0.09,
+				0.09
+			},
+			tac_tazer_charge = {
+				0.09,
+				0.09,
+				0.09
+			},
+			FBI_spoocs = {
+				0.09,
+				0.09,
+				0.09
 			},
 			tac_bull_rush = {
 				0.09,
@@ -3099,24 +3099,24 @@ function GroupAITweakData:_init_task_data(difficulty_index, difficulty)
 	else
 		self.besiege.assault.groups = {
 			tac_swat_shotgun_rush = {
-				0.13,
-				0.13,
-				0.13
+				0.26,
+				0.26,
+				0.26
 			},
 			tac_swat_shotgun_flank = {
-				0.13,
-				0.13,
-				0.13
+				0.26,
+				0.26,
+				0.26
 			},
 			tac_swat_rifle = {
-				0.13,
-				0.13,
-				0.13
+				0.26,
+				0.26,
+				0.26
 			},
 			tac_swat_rifle_flank = {
-				0.13,
-				0.13,
-				0.13
+				0.26,
+				0.26,
+				0.26
 			},
 			tac_shield_wall_ranged = {
 				0.06,
@@ -3144,9 +3144,9 @@ function GroupAITweakData:_init_task_data(difficulty_index, difficulty)
 				0.09
 			},
 			FBI_spoocs = {
-				0.01,
-				0.01,
-				0.01
+				0.09,
+				0.09,
+				0.09
 			},
 			tac_bull_rush = {
 				0.09,
