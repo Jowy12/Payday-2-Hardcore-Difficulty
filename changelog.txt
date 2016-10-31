@@ -1,3 +1,6 @@
+V.3.6.4
+- Increased spawn for regular cops and our beloved special unit aka Cloaker
+
 V.3.6.3
 - Fixed fading phase
 
