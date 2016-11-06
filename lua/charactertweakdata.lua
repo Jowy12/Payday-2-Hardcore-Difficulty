@@ -141,7 +141,7 @@ function CharacterTweakData:_init_security(presets)
 	self.security.weapon_voice = "3"
 	self.security.experience.cable_tie = "tie_swat"
 	self.security.speech_prefix_p1 = "l"
-	self.security.speech_prefix_p2 = self._speech_prefix_p2
+	self.security.speech_prefix_p2 = "n"
 	self.security.speech_prefix_count = 4
 	self.security.access = "security"
 	self.security.rescue_hostages = false
@@ -178,7 +178,7 @@ function CharacterTweakData:_init_gensec(presets)
 	self.gensec.weapon_voice = "3"
 	self.gensec.experience.cable_tie = "tie_swat"
 	self.gensec.speech_prefix_p1 = "l"
-	self.gensec.speech_prefix_p2 = self._speech_prefix_p2
+	self.gensec.speech_prefix_p2 = "n"
 	self.gensec.speech_prefix_count = 4
 	self.gensec.access = "security"
 	self.gensec.rescue_hostages = false
@@ -210,7 +210,7 @@ function CharacterTweakData:_init_cop(presets)
 	self.cop.weapon_voice = "1"
 	self.cop.experience.cable_tie = "tie_swat"
 	self.cop.speech_prefix_p1 = self._prefix_data_p1.swat()
-	self.cop.speech_prefix_p2 = self._speech_prefix_p2
+	self.cop.speech_prefix_p2 = "n"
 	self.cop.speech_prefix_count = 4
 	self.cop.access = "cop"
 	self.cop.silent_priority_shout = "f37"
@@ -226,7 +226,7 @@ function CharacterTweakData:_init_cop(presets)
 	table.insert(self._enemy_list, "cop_scared")
 	self.cop_female = deep_clone(self.cop)
 	self.cop_female.speech_prefix_p1 = "fl"
-	self.cop_female.speech_prefix_p2 = self._speech_prefix_p2
+	self.cop_female.speech_prefix_p2 = "n"
 	self.cop_female.speech_prefix_count = 1
 	table.insert(self._enemy_list, "cop_female")
 end
@@ -248,7 +248,7 @@ function CharacterTweakData:_init_fbi(presets)
 	self.fbi.weapon_voice = "2"
 	self.fbi.experience.cable_tie = "tie_swat"
 	self.fbi.speech_prefix_p1 = "l"
-	self.fbi.speech_prefix_p2 = self._speech_prefix_p2
+	self.fbi.speech_prefix_p2 = "n"
 	self.fbi.speech_prefix_count = 4
 	self.fbi.silent_priority_shout = "f37"
 	self.fbi.access = "fbi"
@@ -512,7 +512,7 @@ function CharacterTweakData:_init_sniper(presets)
 	self.sniper.weapon_voice = "1"
 	self.sniper.experience.cable_tie = "tie_swat"
 	self.sniper.speech_prefix_p1 = "l"
-	self.sniper.speech_prefix_p2 = self._speech_prefix_p2
+	self.sniper.speech_prefix_p2 = "n"
 	self.sniper.speech_prefix_count = 4
 	self.sniper.priority_shout = "f34"
 	self.sniper.access = "sniper"
@@ -1308,8 +1308,8 @@ function CharacterTweakData:_init_tank(presets)
 			}
 		}
 	}
-	self.tank_hw.HEALTH_INIT = 1100
-	self.tank_hw.headshot_dmg_mul = self.tank.HEALTH_INIT / 40
+	self.tank_hw.HEALTH_INIT = 200
+	self.tank_hw.headshot_dmg_mul = 2
 	self.tank_hw.damage.explosion_damage_mul = 1
 	self.tank_hw.use_animation_on_fire_damage = false
 	self.tank_hw.flammable = true
@@ -8623,6 +8623,7 @@ function CharacterTweakData:_multiply_all_hp(hp_mul, hs_mul)
 	self.city_swat.HEALTH_INIT = self.city_swat.HEALTH_INIT * hp_mul
 	self.biker_escape.HEALTH_INIT = self.biker_escape.HEALTH_INIT * hp_mul
 	self.fbi_swat.HEALTH_INIT = self.fbi_swat.HEALTH_INIT * hp_mul
+	self.tank_hw.HEALTH_INIT = self.tank_hw.HEALTH_INIT * hp_mul
 	self.medic.HEALTH_INIT = self.medic.HEALTH_INIT * hp_mul
 	if self.security.headshot_dmg_mul then
 		self.security.headshot_dmg_mul = self.security.headshot_dmg_mul * hs_mul
@@ -8677,6 +8678,9 @@ function CharacterTweakData:_multiply_all_hp(hp_mul, hs_mul)
 	end
 	if self.fbi_swat.headshot_dmg_mul then
 		self.fbi_swat.headshot_dmg_mul = self.fbi_swat.headshot_dmg_mul * hs_mul
+	end
+	if self.tank_hw.headshot_dmg_mul then
+		self.tank_hw.headshot_dmg_mul = self.tank_hw.headshot_dmg_mul * hs_mul
 	end
 	if self.medic.headshot_dmg_mul then
 		self.medic.headshot_dmg_mul = self.medic.headshot_dmg_mul * hs_mul
