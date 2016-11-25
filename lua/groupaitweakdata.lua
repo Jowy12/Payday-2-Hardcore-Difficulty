@@ -754,7 +754,8 @@ function GroupAITweakData:_init_enemy_spawn_groups(difficulty_index)
 			"provide_coverfire",
 			"provide_support",
 			"flank",
-			"deathguard"
+			"deathguard",
+			"flash_grenade"
 		},
 		swat_rifle = {
 			"ranged_fire",
@@ -765,7 +766,8 @@ function GroupAITweakData:_init_enemy_spawn_groups(difficulty_index)
 			"ranged_fire",
 			"provide_coverfire",
 			"provide_support",
-			"flank"
+			"flank",
+			"flash_grenade"
 		},
 		shield_wall_ranged = {
 			"shield",
@@ -2382,6 +2384,21 @@ function GroupAITweakData:_init_task_data(difficulty_index, difficulty)
 		self.smoke_grenade_lifetime = 12
 	end
 	self.flash_grenade_lifetime = 7.5
+	self.flash_grenade = {
+		timer = 3,
+		range = 1000,
+		light_color = Vector3(255, 0, 0),
+		light_range = 300,
+		light_specular = 1,
+		beep_speed = {0.1, 0.025},
+		beep_fade_speed = 4,
+		beep_multi = 0.3
+	}
+	if difficulty_index < 6 then
+		self.flash_grenade.timer = 3
+	else
+		self.flash_grenade.timer = 2
+	end
 	self.optimal_trade_distance = {0, 0}
 	self.bain_assault_praise_limits = {1, 3}
 	if difficulty_index <= 2 then
