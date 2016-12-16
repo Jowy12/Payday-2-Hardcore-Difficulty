@@ -298,7 +298,7 @@ function PlayerTweakData:init()
 	self.movement_state.standard.movement.jump_velocity.xy.walk = self.movement_state.standard.movement.speed.STANDARD_MAX * 1.2
 	self.movement_state.interaction_delay = 1.5
 	self.movement_state.stamina = {}
-	self.movement_state.stamina.STAMINA_INIT = 20
+	self.movement_state.stamina.STAMINA_INIT = 50
 	self.movement_state.stamina.STAMINA_REGEN_RATE = 3
 	self.movement_state.stamina.STAMINA_DRAIN_RATE = 2
 	self.movement_state.stamina.REGENERATE_TIME = 1
