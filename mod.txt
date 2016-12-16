@@ -9,9 +9,6 @@
 		{	"hook_id" : "lib/tweak_data/charactertweakdata",
 			"script_path" : "lua/charactertweakdata.lua"
     		},
-		{	"hook_id" : "lib/managers/enemymanager",
-			"script_path" : "lua/enemymanager.lua"
-    		},
 		{	"hook_id" : "lib/managers/group_ai_states/groupaistatebesiege",
 			"script_path" : "lua/groupaistatebesiege.lua"
     		},
