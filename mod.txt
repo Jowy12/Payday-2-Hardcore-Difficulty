@@ -6,9 +6,6 @@
 	"version" : "3.6.7",
 	"priority" : 250,
 	"hooks" : [
-		{	"hook_id" : "lib/tweak_data/charactertweakdata",
-			"script_path" : "lua/charactertweakdata.lua"
-    		},
 		{	"hook_id" : "lib/managers/group_ai_states/groupaistatebesiege",
 			"script_path" : "lua/groupaistatebesiege.lua"
     		},
