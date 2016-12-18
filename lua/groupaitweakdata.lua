@@ -2376,7 +2376,7 @@ function GroupAITweakData:_init_task_data(difficulty_index, difficulty)
 	if difficulty_index < 6 then
 		self.smoke_and_flash_grenade_timeout = {10, 20}
 	else
-		self.smoke_and_flash_grenade_timeout = {4, 6}
+		self.smoke_and_flash_grenade_timeout = {15, 20}
 	end
 	if difficulty_index < 6 then
 		self.smoke_grenade_lifetime = 7.5
