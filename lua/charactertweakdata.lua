@@ -118,6 +118,10 @@ function CharacterTweakData:init(tweak_data)
 	self:_init_wild(presets)
 	self:_init_biker_boss(presets)
 	self:_init_chavez_boss(presets)
+	self:_init_chico(presets)
+	self:_init_bolivians(presets)
+	self:_init_drug_lord_boss(presets)
+	self:_init_drug_lord_boss_stealth(presets)
 	self:_init_old_hoxton_mission(presets)
 	self._prefix_data = nil
 	self._prefix_data_p1 = nil
@@ -265,7 +269,7 @@ function CharacterTweakData:_init_medic(presets)
 	self.medic.experience = {}
 	self.medic.weapon = presets.weapon.normal
 	self.medic.detection = presets.detection.normal
-	self.medic.HEALTH_INIT = 80
+	self.medic.HEALTH_INIT = 30
 	self.medic.headshot_dmg_mul = 2
 	self.medic.damage.hurt_severity = presets.hurt_severities.no_hurts
 	self.medic.suppression = presets.suppression.no_supress
@@ -1031,6 +1035,264 @@ function CharacterTweakData:_init_hector_boss_no_armor(presets)
 	self.hector_boss_no_armor.can_be_tased = false
 	self.hector_boss_no_armor.immune_to_concussion = true
 	table.insert(self._enemy_list, "hector_boss_no_armor")
+end
+function CharacterTweakData:_init_bolivians(presets)
+	self.bolivian = deep_clone(self.gangster)
+	self.bolivian.detection = presets.detection.guard
+	self.bolivian.access = "security"
+	self.bolivian.radio_prefix = "fri_"
+	self.bolivian.suspicious = true
+	self.bolivian.weapon.c45.range = {
+		close = 500,
+		optimal = 900,
+		far = 3000
+	}
+	self.bolivian.crouch_move = nil
+	self.bolivian.no_arrest = false
+	table.insert(self._enemy_list, "bolivian")
+	self.bolivian_indoors = deep_clone(self.bolivian)
+	self.bolivian_indoors.has_alarm_pager = true
+	table.insert(self._enemy_list, "bolivian_indoors")
+end
+function CharacterTweakData:_init_drug_lord_boss(presets)
+	self.drug_lord_boss = deep_clone(presets.base)
+	self.drug_lord_boss.experience = {}
+	self.drug_lord_boss.weapon = deep_clone(presets.weapon.good)
+	self.drug_lord_boss.weapon.ak47 = {}
+	self.drug_lord_boss.weapon.ak47.aim_delay = {0, 0}
+	self.drug_lord_boss.weapon.ak47.focus_delay = 0
+	self.drug_lord_boss.weapon.ak47.focus_dis = 10000000000000000000000
+	self.drug_lord_boss.weapon.ak47.spread = 20
+	self.drug_lord_boss.weapon.ak47.miss_dis = 10000000000000000000000
+	self.drug_lord_boss.weapon.ak47.RELOAD_SPEED = 1
+	self.drug_lord_boss.weapon.ak47.melee_speed = 1
+	self.drug_lord_boss.weapon.ak47.melee_dmg = 25
+	self.drug_lord_boss.weapon.ak47.melee_retry_delay = {1, 2}
+	self.drug_lord_boss.weapon.ak47.range = {
+		close = 1000,
+		optimal = 2500,
+		far = 5000
+	}
+	self.drug_lord_boss.weapon.ak47.autofire_rounds = {20, 30}
+	self.drug_lord_boss.weapon.ak47.FALLOFF = {
+		{
+			r = 100,
+			acc = {1, 1},
+			dmg_mul = 3,
+			recoil = {0.4, 0.7},
+			mode = {
+				0,
+				0,
+				0,
+				1
+			}
+		},
+		{
+			r = 500,
+			acc = {0.8, 0.8},
+			dmg_mul = 3,
+			recoil = {0.4, 0.7},
+			mode = {
+				0,
+				1,
+				2,
+				8
+			}
+		},
+		{
+			r = 1000,
+			acc = {0.6, 0.6},
+			dmg_mul = 1.5,
+			recoil = {0.45, 0.8},
+			mode = {
+				1,
+				3,
+				6,
+				6
+			}
+		},
+		{
+			r = 2000,
+			acc = {0.4, 0.4},
+			dmg_mul = 1,
+			recoil = {0.45, 0.8},
+			mode = {
+				1,
+				2,
+				2,
+				1
+			}
+		},
+		{
+			r = 3000,
+			acc = {0.2, 0.2},
+			dmg_mul = 1,
+			recoil = {1, 1.2},
+			mode = {
+				4,
+				2,
+				1,
+				0
+			}
+		}
+	}
+	self:_process_weapon_usage_table(self.drug_lord_boss.weapon)
+	self.drug_lord_boss.detection = presets.detection.normal
+	self.drug_lord_boss.HEALTH_INIT = 900
+	self.drug_lord_boss.headshot_dmg_mul = 2
+	self.drug_lord_boss.damage.explosion_damage_mul = 1
+	self.drug_lord_boss.move_speed = presets.move_speed.normal
+	self.drug_lord_boss.allowed_poses = {stand = true}
+	self.drug_lord_boss.no_retreat = true
+	self.drug_lord_boss.no_arrest = true
+	self.drug_lord_boss.surrender = nil
+	self.drug_lord_boss.ecm_vulnerability = 0
+	self.drug_lord_boss.ecm_hurts = {
+		ears = {min_duration = 0, max_duration = 0}
+	}
+	self.drug_lord_boss.weapon_voice = "3"
+	self.drug_lord_boss.experience.cable_tie = "tie_swat"
+	self.drug_lord_boss.access = "gangster"
+	self.drug_lord_boss.speech_prefix_p1 = "bb"
+	self.drug_lord_boss.speech_prefix_p2 = "n"
+	self.drug_lord_boss.speech_prefix_count = 1
+	self.drug_lord_boss.rescue_hostages = false
+	self.drug_lord_boss.silent_priority_shout = "f37"
+	self.drug_lord_boss.melee_weapon = "fists"
+	self.drug_lord_boss.melee_weapon_dmg_multiplier = 2.5
+	self.drug_lord_boss.steal_loot = nil
+	self.drug_lord_boss.calls_in = nil
+	self.drug_lord_boss.chatter = presets.enemy_chatter.no_chatter
+	self.drug_lord_boss.use_radio = nil
+	self.drug_lord_boss.can_be_tased = false
+	self.drug_lord_boss.DAMAGE_CLAMP_BULLET = 80
+	self.drug_lord_boss.DAMAGE_CLAMP_EXPLOSION = 80
+	self.drug_lord_boss.use_animation_on_fire_damage = false
+	self.drug_lord_boss.flammable = true
+	self.drug_lord_boss.can_be_tased = false
+	self.drug_lord_boss.immune_to_knock_down = true
+	self.drug_lord_boss.immune_to_concussion = true
+	table.insert(self._enemy_list, "drug_lord_boss")
+end
+function CharacterTweakData:_init_drug_lord_boss_stealth(presets)
+	self.drug_lord_boss_stealth = deep_clone(presets.base)
+	self.drug_lord_boss_stealth.experience = {}
+	self.drug_lord_boss_stealth.weapon = deep_clone(presets.weapon.good)
+	self.drug_lord_boss_stealth.weapon.ak47 = {}
+	self.drug_lord_boss_stealth.weapon.ak47.aim_delay = {0, 0}
+	self.drug_lord_boss_stealth.weapon.ak47.focus_delay = 0
+	self.drug_lord_boss_stealth.weapon.ak47.focus_dis = 10000000000000000000000
+	self.drug_lord_boss_stealth.weapon.ak47.spread = 20
+	self.drug_lord_boss_stealth.weapon.ak47.miss_dis = 10000000000000000000000
+	self.drug_lord_boss_stealth.weapon.ak47.RELOAD_SPEED = 1
+	self.drug_lord_boss_stealth.weapon.ak47.melee_speed = 1
+	self.drug_lord_boss_stealth.weapon.ak47.melee_dmg = 25
+	self.drug_lord_boss_stealth.weapon.ak47.melee_retry_delay = {1, 2}
+	self.drug_lord_boss_stealth.weapon.ak47.range = {
+		close = 1000,
+		optimal = 2500,
+		far = 5000
+	}
+	self.drug_lord_boss_stealth.weapon.ak47.autofire_rounds = {20, 30}
+	self.drug_lord_boss_stealth.weapon.ak47.FALLOFF = {
+		{
+			r = 100,
+			acc = {1, 1},
+			dmg_mul = 3,
+			recoil = {0.4, 0.7},
+			mode = {
+				0,
+				0,
+				0,
+				1
+			}
+		},
+		{
+			r = 500,
+			acc = {0.8, 0.8},
+			dmg_mul = 3,
+			recoil = {0.4, 0.7},
+			mode = {
+				0,
+				1,
+				2,
+				8
+			}
+		},
+		{
+			r = 1000,
+			acc = {0.6, 0.6},
+			dmg_mul = 1.5,
+			recoil = {0.45, 0.8},
+			mode = {
+				1,
+				3,
+				6,
+				6
+			}
+		},
+		{
+			r = 2000,
+			acc = {0.4, 0.4},
+			dmg_mul = 1,
+			recoil = {0.45, 0.8},
+			mode = {
+				1,
+				2,
+				2,
+				1
+			}
+		},
+		{
+			r = 3000,
+			acc = {0.2, 0.2},
+			dmg_mul = 1,
+			recoil = {1, 1.2},
+			mode = {
+				4,
+				2,
+				1,
+				0
+			}
+		}
+	}
+	self:_process_weapon_usage_table(self.drug_lord_boss.weapon)
+	self.drug_lord_boss_stealth.detection = presets.detection.normal
+	self.drug_lord_boss_stealth.HEALTH_INIT = 100
+	self.drug_lord_boss_stealth.headshot_dmg_mul = 2
+	self.drug_lord_boss_stealth.damage.explosion_damage_mul = 1
+	self.drug_lord_boss_stealth.move_speed = presets.move_speed.normal
+	self.drug_lord_boss_stealth.allowed_poses = {stand = true}
+	self.drug_lord_boss_stealth.no_retreat = true
+	self.drug_lord_boss_stealth.no_arrest = true
+	self.drug_lord_boss_stealth.surrender = nil
+	self.drug_lord_boss_stealth.ecm_vulnerability = 0
+	self.drug_lord_boss_stealth.ecm_hurts = {
+		ears = {min_duration = 0, max_duration = 0}
+	}
+	self.drug_lord_boss_stealth.weapon_voice = "3"
+	self.drug_lord_boss_stealth.experience.cable_tie = "tie_swat"
+	self.drug_lord_boss_stealth.access = "gangster"
+	self.drug_lord_boss_stealth.speech_prefix_p1 = "bb"
+	self.drug_lord_boss_stealth.speech_prefix_p2 = "n"
+	self.drug_lord_boss_stealth.speech_prefix_count = 1
+	self.drug_lord_boss_stealth.rescue_hostages = false
+	self.drug_lord_boss_stealth.silent_priority_shout = "f37"
+	self.drug_lord_boss_stealth.melee_weapon = "fists"
+	self.drug_lord_boss_stealth.melee_weapon_dmg_multiplier = 2.5
+	self.drug_lord_boss_stealth.steal_loot = nil
+	self.drug_lord_boss_stealth.calls_in = nil
+	self.drug_lord_boss_stealth.chatter = presets.enemy_chatter.no_chatter
+	self.drug_lord_boss_stealth.use_radio = nil
+	self.drug_lord_boss_stealth.can_be_tased = false
+	self.drug_lord_boss_stealth.DAMAGE_CLAMP_BULLET = 80
+	self.drug_lord_boss_stealth.DAMAGE_CLAMP_EXPLOSION = 80
+	self.drug_lord_boss_stealth.use_animation_on_fire_damage = false
+	self.drug_lord_boss_stealth.flammable = true
+	self.drug_lord_boss_stealth.can_be_tased = false
+	self.drug_lord_boss_stealth.immune_to_knock_down = true
+	self.drug_lord_boss_stealth.immune_to_concussion = true
+	table.insert(self._enemy_list, "drug_lord_boss_stealth")
 end
 function CharacterTweakData:_init_tank(presets)
 	self.tank = deep_clone(presets.base)
@@ -2232,6 +2494,26 @@ function CharacterTweakData:_init_wild(presets)
 	self.wild.weapon_voice = "3"
 	self.wild.access = "teamAI1"
 	self.wild.arrest = {
+		timeout = 240,
+		aggression_timeout = 6,
+		arrest_timeout = 240
+	}
+end
+function CharacterTweakData:_init_chico(presets)
+	self.chico = {}
+	self.chico.damage = presets.gang_member_damage
+	self.chico.weapon = deep_clone(presets.weapon.gang_member)
+	self.chico.weapon.weapons_of_choice = {
+		primary = Idstring("units/payday2/weapons/wpn_npc_m4/wpn_npc_m4"),
+		secondary = Idstring("units/payday2/weapons/wpn_npc_mac11/wpn_npc_mac11")
+	}
+	self.chico.detection = presets.detection.gang_member
+	self.chico.move_speed = presets.move_speed.fast
+	self.chico.crouch_move = false
+	self.chico.speech_prefix = "rb17"
+	self.chico.weapon_voice = "3"
+	self.chico.access = "teamAI1"
+	self.chico.arrest = {
 		timeout = 240,
 		aggression_timeout = 6,
 		arrest_timeout = 240
@@ -6750,7 +7032,8 @@ function CharacterTweakData:_create_table_structure()
 		"asval_smg",
 		"sr2_smg",
 		"ak47_ass",
-		"x_c45"
+		"x_c45",
+		"sg417"
 	}
 	self.weap_unit_names = {
 		Idstring("units/payday2/weapons/wpn_npc_beretta92/wpn_npc_beretta92"),
@@ -6777,7 +7060,8 @@ function CharacterTweakData:_create_table_structure()
 		Idstring("units/pd2_dlc_mad/weapons/wpn_npc_asval/wpn_npc_asval"),
 		Idstring("units/pd2_dlc_mad/weapons/wpn_npc_sr2/wpn_npc_sr2"),
 		Idstring("units/pd2_dlc_mad/weapons/wpn_npc_ak47/wpn_npc_ak47"),
-		Idstring("units/payday2/weapons/wpn_npc_c45/wpn_npc_x_c45")
+		Idstring("units/payday2/weapons/wpn_npc_c45/wpn_npc_x_c45"),
+		Idstring("units/pd2_dlc_chico/weapons/wpn_npc_sg417/wpn_npc_sg417")
 	}
 end
 function CharacterTweakData:_process_weapon_usage_table(weap_usage_table)
@@ -7404,7 +7688,6 @@ function CharacterTweakData:_set_overkill_145()
 		self:_multiply_all_hp(3, 3)
 	end
 	self:_multiply_all_speeds(2.05, 2.1)
-	self.medic.HEALTH_INIT = 90
 	self.hector_boss.weapon.saiga.FALLOFF = {
 		{
 			r = 200,
@@ -7541,7 +7824,6 @@ function CharacterTweakData:_set_easy_wish()
 	else
 		self:_multiply_all_hp(6, 1.5)
 	end
-	self.medic.HEALTH_INIT = 180
 	self.hector_boss.HEALTH_INIT = 900
 	self.mobster_boss.HEALTH_INIT = 900
 	self.biker_boss.HEALTH_INIT = 3000
@@ -7555,7 +7837,7 @@ function CharacterTweakData:_set_easy_wish()
 	self.presets.gang_member_damage.REGENERATE_TIME = 1.8
 	self.presets.gang_member_damage.REGENERATE_TIME_AWAY = 0.6
 	self.presets.gang_member_damage.HEALTH_INIT = 300
-	self:_set_characters_weapon_preset("easywish")
+	self:_set_characters_weapon_preset("expert")
 	self.spooc.spooc_attack_timeout = {3, 4}
 	self.sniper.weapon.m4.FALLOFF = {
 		{
@@ -7601,68 +7883,6 @@ function CharacterTweakData:_set_easy_wish()
 	self.shield.weapon.mp9.focus_delay = 0
 	self.shield.weapon.c45.aim_delay = {0, 0}
 	self.shield.weapon.c45.focus_delay = 0
-	self.taser.weapon.m4.FALLOFF = {
-		{
-			r = 100,
-			acc = {1, 1},
-			dmg_mul = 6,
-			recoil = {0.4, 0.4},
-			mode = {
-				0,
-				3,
-				3,
-				1
-			}
-		},
-		{
-			r = 500,
-			acc = {0.8, 0.8},
-			dmg_mul = 5,
-			recoil = {0.4, 0.5},
-			mode = {
-				0,
-				3,
-				3,
-				1
-			}
-		},
-		{
-			r = 1000,
-			acc = {0.6, 0.6},
-			dmg_mul = 5,
-			recoil = {0.4, 0.6},
-			mode = {
-				1,
-				2,
-				3,
-				0
-			}
-		},
-		{
-			r = 2000,
-			acc = {0.4, 0.4},
-			dmg_mul = 4,
-			recoil = {0.5, 1},
-			mode = {
-				3,
-				2,
-				2,
-				0
-			}
-		},
-		{
-			r = 3000,
-			acc = {0.2, 0.2},
-			dmg_mul = 4,
-			recoil = {1, 2},
-			mode = {
-				3,
-				1,
-				1,
-				0
-			}
-		}
-	}
 	self.city_swat.damage.explosion_damage_mul = 1
 	self.city_swat.damage.hurt_severity = self.presets.hurt_severities.light_hurt_fire_poison
 	self.shield.weapon.mp9.focus_dis = 10000000000000000000000
@@ -7689,7 +7909,6 @@ function CharacterTweakData:_set_overkill_290()
 	else
 		self:_multiply_all_hp(6, 1.5)
 	end
-	self.medic.HEALTH_INIT = 180
 	self.hector_boss.weapon.saiga.FALLOFF = {
 		{
 			r = 200,
@@ -8636,6 +8855,10 @@ function CharacterTweakData:_multiply_all_hp(hp_mul, hs_mul)
 	self.fbi_swat.HEALTH_INIT = self.fbi_swat.HEALTH_INIT * hp_mul
 	self.tank_hw.HEALTH_INIT = self.tank_hw.HEALTH_INIT * hp_mul
 	self.medic.HEALTH_INIT = self.medic.HEALTH_INIT * hp_mul
+	self.bolivian.HEALTH_INIT = self.bolivian.HEALTH_INIT * hp_mul
+	self.bolivian_indoors.HEALTH_INIT = self.bolivian_indoors.HEALTH_INIT * hp_mul
+	self.drug_lord_boss.HEALTH_INIT = self.bolivian_indoors.HEALTH_INIT * hp_mul
+	self.drug_lord_boss_stealth.HEALTH_INIT = self.bolivian_indoors.HEALTH_INIT * hp_mul
 	if self.security.headshot_dmg_mul then
 		self.security.headshot_dmg_mul = self.security.headshot_dmg_mul * hs_mul
 	end
@@ -8696,6 +8919,15 @@ function CharacterTweakData:_multiply_all_hp(hp_mul, hs_mul)
 	if self.medic.headshot_dmg_mul then
 		self.medic.headshot_dmg_mul = self.medic.headshot_dmg_mul * hs_mul
 	end
+	if self.drug_lord_boss.headshot_dmg_mul then
+		self.drug_lord_boss.headshot_dmg_mul = self.drug_lord_boss.headshot_dmg_mul * hs_mul
+	end
+	if self.bolivian.headshot_dmg_mul then
+		self.bolivian.headshot_dmg_mul = self.bolivian.headshot_dmg_mul * hs_mul
+	end
+	if self.bolivian_indoors.headshot_dmg_mul then
+		self.bolivian_indoors.headshot_dmg_mul = self.bolivian_indoors.headshot_dmg_mul * hs_mul
+	end
 end
 function CharacterTweakData:_multiply_all_speeds(walk_mul, run_mul)
 	local all_units = {
@@ -8713,6 +8945,8 @@ function CharacterTweakData:_multiply_all_speeds(walk_mul, run_mul)
 		"city_swat",
 		"fbi_swat"
 	}
+	table.insert(all_units, "bolivian")
+	table.insert(all_units, "bolivian_indoors")
 	for _, name in ipairs(all_units) do
 		local speed_table = self[name].SPEED_WALK
 		speed_table.hos = speed_table.hos * walk_mul
@@ -9097,6 +9331,17 @@ function CharacterTweakData:character_map()
 			path = "units/pd2_dlc_moon/characters/",
 			list = {
 				"civ_male_pilot_2"
+			}
+		},
+		friend = {
+			path = "units/pd2_dlc_friend/characters/",
+			list = {
+				"ene_bolivian_thug_outdoor_01",
+				"ene_bolivian_thug_outdoor_02",
+				"ene_drug_lord_boss",
+				"ene_security_manager",
+				"ene_thug_indoor_01",
+				"ene_thug_indoor_02"
 			}
 		},
 		gitgud = {
