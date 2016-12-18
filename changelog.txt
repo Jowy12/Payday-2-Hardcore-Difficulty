@@ -1,3 +1,7 @@
+V.3.6.8
+- Updated codes due to Payday 2 update 127.1
+- Rehooked charactertweakdata (Finally overkill fixed their mess)
+
 V. 3.6.7
 - Updated codes due to Payday 2 update 126
 - Unhooked charactertweakdata (temporary) since it causes crash (Even using overkill's file it still does so) so i guess it's just another perfect update by Overkill
