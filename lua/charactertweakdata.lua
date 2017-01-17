@@ -9355,6 +9355,12 @@ function CharacterTweakData:character_map()
 				"ene_zeal_swat_heavy",
 				"ene_zeal_swat_shield"
 			}
+		},
+		help = {
+			path = "units/pd2_dlc_help/characters/",
+			list = {
+				"ene_zeal_bulldozer_halloween"
+			}
 		}
 	}
 	return char_map
