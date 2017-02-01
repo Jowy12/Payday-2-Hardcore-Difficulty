@@ -1,3 +1,6 @@
+V.3.7
+- Updated codes due to Payday update 130
+
 V.3.6.9
 - Updated codes due to Payday update 128
 
