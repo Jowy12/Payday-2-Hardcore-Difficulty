@@ -6899,9 +6899,20 @@ function CharacterTweakData:_presets(tweak_data)
 			health = {
 				[1] = 0.1,
 				[0.999] = 0.9
-			}
+			},
+			weapon_down = 0.5,
+			pants_down = 1,
+			isolated = 0.08
 		},
-		factors = {}
+		factors = {
+			flanked = 0.05,
+			unaware_of_aggressor = 0.1,
+			enemy_weap_cold = 0.11,
+			aggressor_dis = {
+				[1000] = 0,
+				[300] = 0.2
+			}
+		}
 	}
 	presets.surrender.normal = {
 		base_chance = 0.3,
