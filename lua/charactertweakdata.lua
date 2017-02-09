@@ -8458,7 +8458,7 @@ function CharacterTweakData:_set_sm_wish()
 	self.presets.gang_member_damage.REGENERATE_TIME = 1.8
 	self.presets.gang_member_damage.REGENERATE_TIME_AWAY = 0.6
 	self.presets.gang_member_damage.HEALTH_INIT = 300
-	self:_set_characters_weapon_preset("deathwish")
+	self:_set_characters_weapon_preset("expert")
 	self.spooc.spooc_attack_timeout = {3, 4}
 	self.sniper.weapon.m4.FALLOFF = {
 		{
