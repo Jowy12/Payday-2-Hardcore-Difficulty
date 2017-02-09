@@ -1,6 +1,7 @@
 V.3.7.1
 - Lowered assault duration to 4 mintues each (Hopefully fix the spawn bug on some heist like Alesso)
 - Increased the spawn limit per assault
+- Lowered cops damage on One Down (Dozers remain the same)
 
 V.3.7
 - Updated codes due to Payday update 130
