@@ -1,3 +1,6 @@
+V.3.7.3
+- Updated codes due to Payday 2 update 131
+
 V.3.7.2
 - Fixed some error
 
