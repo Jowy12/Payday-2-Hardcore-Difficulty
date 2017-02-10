@@ -123,6 +123,8 @@ function CharacterTweakData:init(tweak_data)
 	self:_init_drug_lord_boss(presets)
 	self:_init_drug_lord_boss_stealth(presets)
 	self:_init_old_hoxton_mission(presets)
+	self:_init_spa_vip(presets)
+	self:_init_spa_vip_hurt(presets)
 	self._prefix_data = nil
 	self._prefix_data_p1 = nil
 	self._speech_prefix_p2 = nil
@@ -2180,6 +2182,23 @@ function CharacterTweakData:_init_old_hoxton_mission(presets)
 	self.old_hoxton_mission.steal_loot = false
 	self.old_hoxton_mission.rescue_hostages = false
 end
+function CharacterTweakData:_init_spa_vip(presets)
+	self.spa_vip = deep_clone(self.old_hoxton_mission)
+	self.spa_vip.spotlight_important = 100
+	self.spa_vip.is_escort = true
+	self.spa_vip.escort_idle_talk = false
+	self.spa_vip.escort_scared_dist = 100
+end
+function CharacterTweakData:_init_spa_vip_hurt(presets)
+	self.spa_vip_hurt = deep_clone(self.civilian)
+	self.spa_vip_hurt.move_speed = presets.move_speed.slow
+	self.spa_vip_hurt.flee_type = "hide"
+	self.spa_vip_hurt.access = "civ_male"
+	self.spa_vip_hurt.intimidateable = nil
+	self.spa_vip_hurt.challenges = {type = "civilians"}
+	self.spa_vip_hurt.calls_in = nil
+	self.spa_vip_hurt.ignores_aggression = true
+end
 function CharacterTweakData:_init_russian(presets)
 	self.russian = {}
 	self.russian.damage = presets.gang_member_damage
@@ -2814,6 +2833,7 @@ function CharacterTweakData:_presets(tweak_data)
 	presets.base.dodge = nil
 	presets.base.challenges = {type = "law"}
 	presets.base.calls_in = true
+	presets.base.spotlight_important = false
 	presets.base.experience = {}
 	presets.base.experience.cable_tie = "tie_swat"
 	presets.base.damage = {}
@@ -7044,7 +7064,8 @@ function CharacterTweakData:_create_table_structure()
 		"sr2_smg",
 		"ak47_ass",
 		"x_c45",
-		"sg417"
+		"sg417",
+		"svdsil_snp"
 	}
 	self.weap_unit_names = {
 		Idstring("units/payday2/weapons/wpn_npc_beretta92/wpn_npc_beretta92"),
@@ -7072,7 +7093,8 @@ function CharacterTweakData:_create_table_structure()
 		Idstring("units/pd2_dlc_mad/weapons/wpn_npc_sr2/wpn_npc_sr2"),
 		Idstring("units/pd2_dlc_mad/weapons/wpn_npc_ak47/wpn_npc_ak47"),
 		Idstring("units/payday2/weapons/wpn_npc_c45/wpn_npc_x_c45"),
-		Idstring("units/pd2_dlc_chico/weapons/wpn_npc_sg417/wpn_npc_sg417")
+		Idstring("units/pd2_dlc_chico/weapons/wpn_npc_sg417/wpn_npc_sg417"),
+		Idstring("units/pd2_dlc_spa/weapons/wpn_npc_svd_silenced/wpn_npc_svd_silenced")
 	}
 end
 function CharacterTweakData:_process_weapon_usage_table(weap_usage_table)
@@ -9371,6 +9393,25 @@ function CharacterTweakData:character_map()
 			path = "units/pd2_dlc_help/characters/",
 			list = {
 				"ene_zeal_bulldozer_halloween"
+			}
+		},
+		spa = {
+			path = "units/pd2_dlc_spa/characters/",
+			list = {
+				"ene_sniper_3",
+				"npc_spa",
+				"npc_spa_2",
+				"npc_spa_3"
+			}
+		},
+		fish = {
+			path = "units/pd2_dlc_lxy/characters/",
+			list = {
+				"civ_female_guest_gala_1",
+				"civ_female_guest_gala_2",
+				"civ_male_guest_gala_1",
+				"civ_male_guest_gala_2",
+				"civ_male_camera_crew_1"
 			}
 		}
 	}
