@@ -10,4 +10,5 @@ What this difficulty mod does :
 - Captain Winters will siege more than once (during 1st assault, 3rd, 5th, and so on),
 - Faster mask up time,
 - Removed penalty from killing civilians,
-- One Down cops damage has been lowered but Dozers.
+- One Down cops damage has been lowered but Dozers,
+- Doctor bag doesn't heal health instead of down count only.
