@@ -1,6 +1,5 @@
 V.3.7.4
 - Increased enemy's accuracy
-- Doctor bag doesn't heal health, only down count
 
 V.3.7.3
 - Updated codes due to Payday 2 update 131
