@@ -21,9 +21,6 @@
         	{	"hook_id" : "lib/managers/mission/elementmissionend",
         		"script_path" : "lua/lobbymessage.lua"
     		},
-		{	"hook_id" : "lib/units/beings/player/playerdamage",
-			"script_path" : "lua/playerdamage.lua"
-		},
 		{	"hook_id" : "lib/tweak_data/playertweakdata",
 			"script_path" : "lua/playertweakdata.lua"
 		},
