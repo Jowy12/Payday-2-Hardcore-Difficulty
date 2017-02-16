@@ -1,3 +1,8 @@
+V.3.7.5
+- Increased enemy's accuracy even further
+- Increased assault duration
+- "New" It's possible to trade teammate durring assault
+
 V.3.7.4
 - Increased enemy's accuracy
 
