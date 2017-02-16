@@ -20,7 +20,7 @@ function GroupAIStateBesiege:_upd_assault_task()
 			task_data.phase_end_t = self._t + self._tweak_data.assault.build_duration
 			task_data.is_hesitating = nil
 			self:set_assault_mode(true)
-			managers.trade:set_trade_countdown(false)
+			managers.trade:set_trade_countdown(true)
 		else
 			managers.hud:check_anticipation_voice(task_data.phase_end_t - t)
 			managers.hud:check_start_anticipation_music(task_data.phase_end_t - t)
