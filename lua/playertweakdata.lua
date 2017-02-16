@@ -137,7 +137,7 @@ function PlayerTweakData:init()
 	self.damage.INCAPACITATED_TIME = 15
 	self.damage.MIN_DAMAGE_INTERVAL = 0.45
 	self.damage.respawn_time_penalty = 0
-	self.damage.base_respawn_time_penalty = 5
+	self.damage.base_respawn_time_penalty = 60
 	self.damage.automatic_assault_ai_trade_time = 120
 	self.damage.automatic_assault_ai_trade_time_max = 180
 	self.fall_health_damage = 4
