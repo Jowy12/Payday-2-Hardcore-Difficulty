@@ -11,4 +11,5 @@ What this difficulty mod does :
 - Faster mask up time,
 - Removed penalty from killing civilians,
 - One Down cops damage has been lowered but Dozers,
+- Harder domination,
 - Trading during assault with tweaked duration.
