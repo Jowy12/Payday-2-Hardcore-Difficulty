@@ -2,7 +2,7 @@
 A custom difficulty made for all hardcore heisters out there! Enjoy!
 What this difficulty mod does :
 - Increased spawn rate,
-- Increased assault duration (about 4 minutes long),
+- Increased assault duration (about 6 minutes long),
 - Improved enemy's accuracy, awareness and reactions,
 - Increased Captain Winters and his phalanx resistant to explosives and critical damage,
 - Decreased down time before custody (better stay close to teamates),
