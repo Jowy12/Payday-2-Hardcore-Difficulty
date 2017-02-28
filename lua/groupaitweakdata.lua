@@ -115,7 +115,7 @@ function GroupAITweakData:_init_unit_categories(difficulty_index)
 	if difficulty_index <= 2 then
 		self.special_unit_spawn_limits = {
 			tank = 8,
-			taser = 8,
+			taser = 4,
 			spooc = 8,
 			shield = 8,
 			medic = 8
@@ -123,7 +123,7 @@ function GroupAITweakData:_init_unit_categories(difficulty_index)
 	elseif difficulty_index == 3 then
 		self.special_unit_spawn_limits = {
 			tank = 8,
-			taser = 8,
+			taser = 4,
 			spooc = 8,
 			shield = 8,
 			medic = 8
@@ -131,7 +131,7 @@ function GroupAITweakData:_init_unit_categories(difficulty_index)
 	elseif difficulty_index == 4 then
 		self.special_unit_spawn_limits = {
 			tank = 8,
-			taser = 8,
+			taser = 4,
 			spooc = 8,
 			shield = 8,
 			medic = 8
@@ -139,7 +139,7 @@ function GroupAITweakData:_init_unit_categories(difficulty_index)
 	elseif difficulty_index == 5 then
 		self.special_unit_spawn_limits = {
 			tank = 8,
-			taser = 8,
+			taser = 4,
 			spooc = 8,
 			shield = 8,
 			medic = 8
@@ -147,7 +147,7 @@ function GroupAITweakData:_init_unit_categories(difficulty_index)
 	else
 		self.special_unit_spawn_limits = {
 			tank = 8,
-			taser = 8,
+			taser = 4,
 			spooc = 8,
 			shield = 8,
 			medic = 8
