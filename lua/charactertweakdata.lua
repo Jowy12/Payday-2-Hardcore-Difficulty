@@ -1877,6 +1877,7 @@ function CharacterTweakData:_init_taser(presets)
 			melee_dmg = 10,
 			melee_retry_delay = {1, 2},
 			tase_distance = 1500,
+			tase_sphere_cast_radius = 30,
 			aim_delay_tase = {0, 0},
 			range = {
 				close = 1000,
@@ -9398,6 +9399,10 @@ function CharacterTweakData:character_map()
 				"civ_male_guest_gala_2",
 				"civ_male_camera_crew_1"
 			}
+		},
+		slu = {
+			path = "units/pd2_dlc_slu/characters/",
+			list = {"npc_vlad", "npc_sophia"}
 		}
 	}
 	return char_map
