@@ -1,3 +1,6 @@
+V.3.7.7
+- Updated codes due to Payday 2 update 133
+
 V.3.7.6
 - Lowered spawn limit for Taser (Causing game to freeze when 2 or more tasers aiming at 1 target)
 
