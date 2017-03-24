@@ -2189,6 +2189,7 @@ function CharacterTweakData:_init_spa_vip(presets)
 	self.spa_vip.is_escort = true
 	self.spa_vip.escort_idle_talk = false
 	self.spa_vip.escort_scared_dist = 100
+	self.spa_vip.suppression.panic_chance_mul = 0
 end
 function CharacterTweakData:_init_spa_vip_hurt(presets)
 	self.spa_vip_hurt = deep_clone(self.civilian)
@@ -9387,7 +9388,8 @@ function CharacterTweakData:character_map()
 				"ene_sniper_3",
 				"npc_spa",
 				"npc_spa_2",
-				"npc_spa_3"
+				"npc_spa_3",
+				"npc_gage"
 			}
 		},
 		fish = {
