@@ -2210,7 +2210,7 @@ function CharacterTweakData:_init_russian(presets)
 		secondary = Idstring("units/payday2/weapons/wpn_npc_beretta92/wpn_npc_beretta92")
 	}
 	self.russian.detection = presets.detection.gang_member
-	self.russian.move_speed = presets.move_speed.fast
+	self.russian.move_speed = presets.move_speed.very_fast
 	self.russian.crouch_move = false
 	self.russian.speech_prefix = "rb2"
 	self.russian.weapon_voice = "1"
@@ -2229,7 +2229,7 @@ function CharacterTweakData:_init_german(presets)
 		primary = Idstring("units/payday2/weapons/wpn_npc_mp5/wpn_npc_mp5")
 	}
 	self.german.detection = presets.detection.gang_member
-	self.german.move_speed = presets.move_speed.fast
+	self.german.move_speed = presets.move_speed.very_fast
 	self.german.crouch_move = false
 	self.german.speech_prefix = "rb2"
 	self.german.weapon_voice = "2"
@@ -2249,7 +2249,7 @@ function CharacterTweakData:_init_spanish(presets)
 		secondary = Idstring("units/payday2/weapons/wpn_npc_mac11/wpn_npc_mac11")
 	}
 	self.spanish.detection = presets.detection.gang_member
-	self.spanish.move_speed = presets.move_speed.fast
+	self.spanish.move_speed = presets.move_speed.very_fast
 	self.spanish.crouch_move = false
 	self.spanish.speech_prefix = "rb2"
 	self.spanish.weapon_voice = "3"
@@ -2269,7 +2269,7 @@ function CharacterTweakData:_init_american(presets)
 		secondary = Idstring("units/payday2/weapons/wpn_npc_c45/wpn_npc_c45")
 	}
 	self.american.detection = presets.detection.gang_member
-	self.american.move_speed = presets.move_speed.fast
+	self.american.move_speed = presets.move_speed.very_fast
 	self.american.crouch_move = false
 	self.american.speech_prefix = "rb2"
 	self.american.weapon_voice = "3"
@@ -2289,7 +2289,7 @@ function CharacterTweakData:_init_jowi(presets)
 		secondary = Idstring("units/payday2/weapons/wpn_npc_c45/wpn_npc_c45")
 	}
 	self.jowi.detection = presets.detection.gang_member
-	self.jowi.move_speed = presets.move_speed.fast
+	self.jowi.move_speed = presets.move_speed.very_fast
 	self.jowi.crouch_move = false
 	self.jowi.speech_prefix = "rb2"
 	self.jowi.weapon_voice = "3"
@@ -2309,7 +2309,7 @@ function CharacterTweakData:_init_old_hoxton(presets)
 		secondary = Idstring("units/payday2/weapons/wpn_npc_mac11/wpn_npc_mac11")
 	}
 	self.old_hoxton.detection = presets.detection.gang_member
-	self.old_hoxton.move_speed = presets.move_speed.fast
+	self.old_hoxton.move_speed = presets.move_speed.very_fast
 	self.old_hoxton.crouch_move = false
 	self.old_hoxton.speech_prefix = "rb2"
 	self.old_hoxton.weapon_voice = "3"
@@ -2329,7 +2329,7 @@ function CharacterTweakData:_init_clover(presets)
 		secondary = Idstring("units/payday2/weapons/wpn_npc_mac11/wpn_npc_mac11")
 	}
 	self.female_1.detection = presets.detection.gang_member
-	self.female_1.move_speed = presets.move_speed.fast
+	self.female_1.move_speed = presets.move_speed.very_fast
 	self.female_1.crouch_move = false
 	self.female_1.speech_prefix = "rb7"
 	self.female_1.weapon_voice = "3"
@@ -2349,7 +2349,7 @@ function CharacterTweakData:_init_dragan(presets)
 		secondary = Idstring("units/payday2/weapons/wpn_npc_c45/wpn_npc_c45")
 	}
 	self.dragan.detection = presets.detection.gang_member
-	self.dragan.move_speed = presets.move_speed.fast
+	self.dragan.move_speed = presets.move_speed.very_fast
 	self.dragan.crouch_move = false
 	self.dragan.speech_prefix = "rb8"
 	self.dragan.weapon_voice = "3"
@@ -2369,7 +2369,7 @@ function CharacterTweakData:_init_jacket(presets)
 		secondary = Idstring("units/payday2/weapons/wpn_npc_c45/wpn_npc_c45")
 	}
 	self.jacket.detection = presets.detection.gang_member
-	self.jacket.move_speed = presets.move_speed.fast
+	self.jacket.move_speed = presets.move_speed.very_fast
 	self.jacket.crouch_move = false
 	self.jacket.speech_prefix = "rb9"
 	self.jacket.weapon_voice = "3"
@@ -2389,7 +2389,7 @@ function CharacterTweakData:_init_bonnie(presets)
 		secondary = Idstring("units/payday2/weapons/wpn_npc_mac11/wpn_npc_mac11")
 	}
 	self.bonnie.detection = presets.detection.gang_member
-	self.bonnie.move_speed = presets.move_speed.fast
+	self.bonnie.move_speed = presets.move_speed.very_fast
 	self.bonnie.crouch_move = false
 	self.bonnie.speech_prefix = "rb10"
 	self.bonnie.weapon_voice = "3"
@@ -2409,7 +2409,7 @@ function CharacterTweakData:_init_sokol(presets)
 		secondary = Idstring("units/payday2/weapons/wpn_npc_mac11/wpn_npc_mac11")
 	}
 	self.sokol.detection = presets.detection.gang_member
-	self.sokol.move_speed = presets.move_speed.fast
+	self.sokol.move_speed = presets.move_speed.very_fast
 	self.sokol.crouch_move = false
 	self.sokol.speech_prefix = "rb11"
 	self.sokol.weapon_voice = "3"
@@ -2429,7 +2429,7 @@ function CharacterTweakData:_init_dragon(presets)
 		secondary = Idstring("units/payday2/weapons/wpn_npc_mac11/wpn_npc_mac11")
 	}
 	self.dragon.detection = presets.detection.gang_member
-	self.dragon.move_speed = presets.move_speed.fast
+	self.dragon.move_speed = presets.move_speed.very_fast
 	self.dragon.crouch_move = false
 	self.dragon.speech_prefix = "rb12"
 	self.dragon.weapon_voice = "3"
@@ -2449,7 +2449,7 @@ function CharacterTweakData:_init_bodhi(presets)
 		secondary = Idstring("units/payday2/weapons/wpn_npc_c45/wpn_npc_c45")
 	}
 	self.bodhi.detection = presets.detection.gang_member
-	self.bodhi.move_speed = presets.move_speed.fast
+	self.bodhi.move_speed = presets.move_speed.very_fast
 	self.bodhi.crouch_move = false
 	self.bodhi.speech_prefix = "rb13"
 	self.bodhi.weapon_voice = "3"
@@ -2469,7 +2469,7 @@ function CharacterTweakData:_init_jimmy(presets)
 		secondary = Idstring("units/payday2/weapons/wpn_npc_c45/wpn_npc_c45")
 	}
 	self.jimmy.detection = presets.detection.gang_member
-	self.jimmy.move_speed = presets.move_speed.fast
+	self.jimmy.move_speed = presets.move_speed.very_fast
 	self.jimmy.crouch_move = false
 	self.jimmy.speech_prefix = "rb14"
 	self.jimmy.weapon_voice = "3"
@@ -2489,7 +2489,7 @@ function CharacterTweakData:_init_sydney(presets)
 		secondary = Idstring("units/payday2/weapons/wpn_npc_mac11/wpn_npc_mac11")
 	}
 	self.sydney.detection = presets.detection.gang_member
-	self.sydney.move_speed = presets.move_speed.fast
+	self.sydney.move_speed = presets.move_speed.very_fast
 	self.sydney.crouch_move = false
 	self.sydney.speech_prefix = "rb15"
 	self.sydney.weapon_voice = "3"
@@ -2509,7 +2509,7 @@ function CharacterTweakData:_init_wild(presets)
 		secondary = Idstring("units/payday2/weapons/wpn_npc_mac11/wpn_npc_mac11")
 	}
 	self.wild.detection = presets.detection.gang_member
-	self.wild.move_speed = presets.move_speed.fast
+	self.wild.move_speed = presets.move_speed.very_fast
 	self.wild.crouch_move = false
 	self.wild.speech_prefix = "rb16"
 	self.wild.weapon_voice = "3"
@@ -2529,7 +2529,7 @@ function CharacterTweakData:_init_chico(presets)
 		secondary = Idstring("units/payday2/weapons/wpn_npc_mac11/wpn_npc_mac11")
 	}
 	self.chico.detection = presets.detection.gang_member
-	self.chico.move_speed = presets.move_speed.fast
+	self.chico.move_speed = presets.move_speed.very_fast
 	self.chico.crouch_move = false
 	self.chico.speech_prefix = "rb17"
 	self.chico.weapon_voice = "3"
@@ -5950,37 +5950,25 @@ function CharacterTweakData:_presets(tweak_data)
 		{
 			r = 300,
 			acc = {1, 1},
-			dmg_mul = 3.5,
+			dmg_mul = 5,
 			recoil = {0.25, 0.45},
 			mode = {
-				1,
-				0,
-				0,
-				0
-			}
-		},
-		{
-			r = 2000,
-			acc = {0.95, 0.95},
-			dmg_mul = 1,
-			recoil = {0.25, 2},
-			mode = {
-				1,
-				0,
-				0,
-				0
+				0.1,
+				0.3,
+				4,
+				7
 			}
 		},
 		{
 			r = 10000,
 			acc = {0.9, 0.9},
-			dmg_mul = 1,
+			dmg_mul = 2.5,
 			recoil = {2, 3},
 			mode = {
-				1,
-				0,
-				0,
-				0
+				0.1,
+				0.3,
+				4,
+				7
 			}
 		}
 	}
@@ -6013,27 +6001,15 @@ function CharacterTweakData:_presets(tweak_data)
 			}
 		},
 		{
-			r = 2000,
-			acc = {0.95, 0.95},
-			dmg_mul = 3,
-			recoil = {0.25, 2},
-			mode = {
-				2,
-				2,
-				5,
-				8
-			}
-		},
-		{
 			r = 10000,
 			acc = {0.9, 0.9},
-			dmg_mul = 2,
+			dmg_mul = 2.5,
 			recoil = {2, 3},
 			mode = {
-				2,
-				1,
-				1,
-				0.01
+				0.1,
+				0.3,
+				4,
+				7
 			}
 		}
 	}
@@ -6051,37 +6027,25 @@ function CharacterTweakData:_presets(tweak_data)
 		{
 			r = 300,
 			acc = {1, 1},
-			dmg_mul = 3.5,
-			recoil = {2, 2},
+			dmg_mul = 5,
+			recoil = {0.25, 0.45},
 			mode = {
-				1,
-				0,
-				0,
-				0
+				0.1,
+				0.3,
+				4,
+				7
 			}
 		},
 		{
-			r = 1000,
-			acc = {0.95, 0.95},
-			dmg_mul = 1,
-			recoil = {2, 2},
-			mode = {
-				1,
-				0,
-				0,
-				0
-			}
-		},
-		{
-			r = 4000,
+			r = 10000,
 			acc = {0.9, 0.9},
 			dmg_mul = 0.1,
-			recoil = {2, 4},
+			recoil = {2, 3},
 			mode = {
-				1,
-				0,
-				0,
-				0
+				0.1,
+				0.3,
+				4,
+				7
 			}
 		}
 	}
@@ -7444,9 +7408,94 @@ function CharacterTweakData:_set_normal()
 	self.chavez_boss.HEALTH_INIT = 100
 	self.presets.gang_member_damage.REGENERATE_TIME = 1.5
 	self.presets.gang_member_damage.REGENERATE_TIME_AWAY = 0.2
-	self.presets.gang_member_damage.HEALTH_INIT = 125
+	self.presets.gang_member_damage.HEALTH_INIT = 200
 	self:_set_characters_weapon_preset("normal")
+	self.presets.weapon.gang_member.beretta92.FALLOFF = {
+		{
+			r = 300,
+			acc = {1, 1},
+			dmg_mul = 2,
+			recoil = {0.25, 0.45},
+			mode = {
+				0.1,
+				0.3,
+				4,
+				7
+			}
+		},
+		{
+			r = 10000,
+			acc = {1, 1},
+			dmg_mul = 1,
+			recoil = {2, 3},
+			mode = {
+				0.1,
+				0.3,
+				4,
+				7
+			}
+		}
+	}
+	self.presets.weapon.gang_member.m4.FALLOFF = {
+		{
+			r = 300,
+			acc = {1, 1},
+			dmg_mul = 2,
+			recoil = {0.25, 0.45},
+			mode = {
+				0.1,
+				0.3,
+				4,
+				7
+			}
+		},
+		{
+			r = 10000,
+			acc = {1, 1},
+			dmg_mul = 1,
+			recoil = {2, 3},
+			mode = {
+				0.1,
+				0.3,
+				4,
+				7
+			}
+		}
+	}
+	self.presets.weapon.gang_member.r870.FALLOFF = {
+		{
+			r = 300,
+			acc = {1, 1},
+			dmg_mul = 2,
+			recoil = {0.25, 0.45},
+			mode = {
+				0.1,
+				0.3,
+				4,
+				7
+			}
+		},
+		{
+			r = 10000,
+			acc = {1, 1},
+			dmg_mul = 1,
+			recoil = {2, 3},
+			mode = {
+				0.1,
+				0.3,
+				4,
+				7
+			}
+		}
+	}
+	self.presets.weapon.gang_member.mp5 = self.presets.weapon.gang_member.m4
+	self.presets.weapon.gang_member.c45 = self.presets.weapon.gang_member.beretta92
+	self.presets.weapon.gang_member.raging_bull = self.presets.weapon.gang_member.beretta92
+	self.presets.weapon.gang_member.ak47 = self.presets.weapon.gang_member.m4
+	self.presets.weapon.gang_member.mossberg = self.presets.weapon.gang_member.r870
+	self.presets.weapon.gang_member.mac11 = self.presets.weapon.gang_member.mp5
 	self.flashbang_multiplier = 1
+	self.concussion_multiplier = 1
 end
 function CharacterTweakData:_set_hard()
 	self:_multiply_all_hp(1, 1)
@@ -7525,7 +7574,91 @@ function CharacterTweakData:_set_hard()
 	self.presets.gang_member_damage.REGENERATE_TIME = 2
 	self.presets.gang_member_damage.REGENERATE_TIME_AWAY = 0.4
 	self:_set_characters_weapon_preset("normal")
-	self.presets.gang_member_damage.HEALTH_INIT = 160
+	self.presets.gang_member_damage.HEALTH_INIT = 200
+	self.presets.weapon.gang_member.beretta92.FALLOFF = {
+		{
+			r = 300,
+			acc = {1, 1},
+			dmg_mul = 2,
+			recoil = {0.25, 0.45},
+			mode = {
+				0.1,
+				0.3,
+				4,
+				7
+			}
+		},
+		{
+			r = 10000,
+			acc = {1, 1},
+			dmg_mul = 1,
+			recoil = {2, 3},
+			mode = {
+				0.1,
+				0.3,
+				4,
+				7
+			}
+		}
+	}
+	self.presets.weapon.gang_member.m4.FALLOFF = {
+		{
+			r = 300,
+			acc = {1, 1},
+			dmg_mul = 2,
+			recoil = {0.25, 0.45},
+			mode = {
+				0.1,
+				0.3,
+				4,
+				7
+			}
+		},
+		{
+			r = 10000,
+			acc = {1, 1},
+			dmg_mul = 1,
+			recoil = {2, 3},
+			mode = {
+				0.1,
+				0.3,
+				4,
+				7
+			}
+		}
+	}
+	self.presets.weapon.gang_member.r870.FALLOFF = {
+		{
+			r = 300,
+			acc = {1, 1},
+			dmg_mul = 2,
+			recoil = {0.25, 0.45},
+			mode = {
+				0.1,
+				0.3,
+				4,
+				7
+			}
+		},
+		{
+			r = 10000,
+			acc = {1, 1},
+			dmg_mul = 1,
+			recoil = {2, 3},
+			mode = {
+				0.1,
+				0.3,
+				4,
+				7
+			}
+		}
+	}
+	self.presets.weapon.gang_member.mp5 = self.presets.weapon.gang_member.m4
+	self.presets.weapon.gang_member.c45 = self.presets.weapon.gang_member.beretta92
+	self.presets.weapon.gang_member.raging_bull = self.presets.weapon.gang_member.beretta92
+	self.presets.weapon.gang_member.ak47 = self.presets.weapon.gang_member.m4
+	self.presets.weapon.gang_member.mossberg = self.presets.weapon.gang_member.r870
+	self.presets.weapon.gang_member.mac11 = self.presets.weapon.gang_member.mp5
 	self.flashbang_multiplier = 1.25
 	self.concussion_multiplier = 1
 	self.spooc.spooc_attack_timeout = {8, 10}
@@ -7656,7 +7789,91 @@ function CharacterTweakData:_set_overkill()
 	}
 	self.presets.gang_member_damage.REGENERATE_TIME = 2
 	self.presets.gang_member_damage.REGENERATE_TIME_AWAY = 0.6
-	self.presets.gang_member_damage.HEALTH_INIT = 200
+	self.presets.gang_member_damage.HEALTH_INIT = 300
+	self.presets.weapon.gang_member.beretta92.FALLOFF = {
+		{
+			r = 300,
+			acc = {1, 1},
+			dmg_mul = 3.5,
+			recoil = {0.25, 0.45},
+			mode = {
+				0.1,
+				0.3,
+				4,
+				7
+			}
+		},
+		{
+			r = 10000,
+			acc = {1, 1},
+			dmg_mul = 1.6,
+			recoil = {2, 3},
+			mode = {
+				0.1,
+				0.3,
+				4,
+				7
+			}
+		}
+	}
+	self.presets.weapon.gang_member.m4.FALLOFF = {
+		{
+			r = 300,
+			acc = {1, 1},
+			dmg_mul = 3.5,
+			recoil = {0.25, 0.45},
+			mode = {
+				0.1,
+				0.3,
+				4,
+				7
+			}
+		},
+		{
+			r = 10000,
+			acc = {1, 1},
+			dmg_mul = 1.6,
+			recoil = {2, 3},
+			mode = {
+				0.1,
+				0.3,
+				4,
+				7
+			}
+		}
+	}
+	self.presets.weapon.gang_member.r870.FALLOFF = {
+		{
+			r = 300,
+			acc = {1, 1},
+			dmg_mul = 3.5,
+			recoil = {0.25, 0.45},
+			mode = {
+				0.1,
+				0.3,
+				4,
+				7
+			}
+		},
+		{
+			r = 10000,
+			acc = {1, 1},
+			dmg_mul = 1.6,
+			recoil = {2, 3},
+			mode = {
+				0.1,
+				0.3,
+				4,
+				7
+			}
+		}
+	}
+	self.presets.weapon.gang_member.mp5 = self.presets.weapon.gang_member.m4
+	self.presets.weapon.gang_member.c45 = self.presets.weapon.gang_member.beretta92
+	self.presets.weapon.gang_member.raging_bull = self.presets.weapon.gang_member.beretta92
+	self.presets.weapon.gang_member.ak47 = self.presets.weapon.gang_member.m4
+	self.presets.weapon.gang_member.mossberg = self.presets.weapon.gang_member.r870
+	self.presets.weapon.gang_member.mac11 = self.presets.weapon.gang_member.mp5
 	self:_set_characters_weapon_preset("good")
 	self:_set_characters_weapon_preset("good")
 	self.spooc.spooc_attack_timeout = {6, 8}
@@ -7794,7 +8011,7 @@ function CharacterTweakData:_set_overkill_145()
 	self:_multiply_weapon_delay(self.presets.weapon.gang_member, 0)
 	self.presets.gang_member_damage.REGENERATE_TIME = 2
 	self.presets.gang_member_damage.REGENERATE_TIME_AWAY = 0.6
-	self.presets.gang_member_damage.HEALTH_INIT = 250
+	self.presets.gang_member_damage.HEALTH_INIT = 400
 	self:_set_characters_weapon_preset("expert")
 	self.spooc.spooc_attack_timeout = {3.5, 5}
 	self.sniper.weapon.m4.FALLOFF = {
@@ -7856,7 +8073,91 @@ function CharacterTweakData:_set_easy_wish()
 	self:_multiply_weapon_delay(self.presets.weapon.gang_member, 0)
 	self.presets.gang_member_damage.REGENERATE_TIME = 1.8
 	self.presets.gang_member_damage.REGENERATE_TIME_AWAY = 0.6
-	self.presets.gang_member_damage.HEALTH_INIT = 300
+	self.presets.gang_member_damage.HEALTH_INIT = 400
+	self.presets.weapon.gang_member.beretta92.FALLOFF = {
+		{
+			r = 300,
+			acc = {1, 1},
+			dmg_mul = 10,
+			recoil = {0.25, 0.45},
+			mode = {
+				0.1,
+				0.3,
+				4,
+				7
+			}
+		},
+		{
+			r = 10000,
+			acc = {1, 1},
+			dmg_mul = 5,
+			recoil = {2, 3},
+			mode = {
+				0.1,
+				0.3,
+				4,
+				7
+			}
+		}
+	}
+	self.presets.weapon.gang_member.m4.FALLOFF = {
+		{
+			r = 300,
+			acc = {1, 1},
+			dmg_mul = 10,
+			recoil = {0.25, 0.45},
+			mode = {
+				0.1,
+				0.3,
+				4,
+				7
+			}
+		},
+		{
+			r = 10000,
+			acc = {1, 1},
+			dmg_mul = 5,
+			recoil = {2, 3},
+			mode = {
+				0.1,
+				0.3,
+				4,
+				7
+			}
+		}
+	}
+	self.presets.weapon.gang_member.r870.FALLOFF = {
+		{
+			r = 300,
+			acc = {1, 1},
+			dmg_mul = 10,
+			recoil = {0.25, 0.45},
+			mode = {
+				0.1,
+				0.3,
+				4,
+				7
+			}
+		},
+		{
+			r = 10000,
+			acc = {1, 1},
+			dmg_mul = 5,
+			recoil = {2, 3},
+			mode = {
+				0.1,
+				0.3,
+				4,
+				7
+			}
+		}
+	}
+	self.presets.weapon.gang_member.mp5 = self.presets.weapon.gang_member.m4
+	self.presets.weapon.gang_member.c45 = self.presets.weapon.gang_member.beretta92
+	self.presets.weapon.gang_member.raging_bull = self.presets.weapon.gang_member.beretta92
+	self.presets.weapon.gang_member.ak47 = self.presets.weapon.gang_member.m4
+	self.presets.weapon.gang_member.mossberg = self.presets.weapon.gang_member.r870
+	self.presets.weapon.gang_member.mac11 = self.presets.weapon.gang_member.mp5
 	self:_set_characters_weapon_preset("expert")
 	self.spooc.spooc_attack_timeout = {3, 4}
 	self.sniper.weapon.m4.FALLOFF = {
@@ -8003,7 +8304,91 @@ function CharacterTweakData:_set_overkill_290()
 	self:_multiply_weapon_delay(self.presets.weapon.gang_member, 0)
 	self.presets.gang_member_damage.REGENERATE_TIME = 1.8
 	self.presets.gang_member_damage.REGENERATE_TIME_AWAY = 0.6
-	self.presets.gang_member_damage.HEALTH_INIT = 600
+	self.presets.gang_member_damage.HEALTH_INIT = 800
+	self.presets.weapon.gang_member.beretta92.FALLOFF = {
+		{
+			r = 300,
+			acc = {1, 1},
+			dmg_mul = 15,
+			recoil = {0.25, 0.45},
+			mode = {
+				0.1,
+				0.3,
+				4,
+				7
+			}
+		},
+		{
+			r = 10000,
+			acc = {1, 1},
+			dmg_mul = 7.5,
+			recoil = {2, 3},
+			mode = {
+				0.1,
+				0.3,
+				4,
+				7
+			}
+		}
+	}
+	self.presets.weapon.gang_member.m4.FALLOFF = {
+		{
+			r = 300,
+			acc = {1, 1},
+			dmg_mul = 15,
+			recoil = {0.25, 0.45},
+			mode = {
+				0.1,
+				0.3,
+				4,
+				7
+			}
+		},
+		{
+			r = 10000,
+			acc = {1, 1},
+			dmg_mul = 7.5,
+			recoil = {2, 3},
+			mode = {
+				0.1,
+				0.3,
+				4,
+				7
+			}
+		}
+	}
+	self.presets.weapon.gang_member.r870.FALLOFF = {
+		{
+			r = 300,
+			acc = {1, 1},
+			dmg_mul = 15,
+			recoil = {0.25, 0.45},
+			mode = {
+				0.1,
+				0.3,
+				4,
+				7
+			}
+		},
+		{
+			r = 10000,
+			acc = {1, 1},
+			dmg_mul = 7.5,
+			recoil = {2, 3},
+			mode = {
+				0.1,
+				0.3,
+				4,
+				7
+			}
+		}
+	}
+	self.presets.weapon.gang_member.mp5 = self.presets.weapon.gang_member.m4
+	self.presets.weapon.gang_member.c45 = self.presets.weapon.gang_member.beretta92
+	self.presets.weapon.gang_member.raging_bull = self.presets.weapon.gang_member.beretta92
+	self.presets.weapon.gang_member.ak47 = self.presets.weapon.gang_member.m4
+	self.presets.weapon.gang_member.mossberg = self.presets.weapon.gang_member.r870
+	self.presets.weapon.gang_member.mac11 = self.presets.weapon.gang_member.mp5
 	self:_set_characters_weapon_preset("deathwish")
 	self.spooc.spooc_attack_timeout = {3, 4}
 	self.sniper.weapon.m4.FALLOFF = {
@@ -8466,7 +8851,91 @@ function CharacterTweakData:_set_sm_wish()
 	self:_multiply_weapon_delay(self.presets.weapon.gang_member, 0)
 	self.presets.gang_member_damage.REGENERATE_TIME = 1.8
 	self.presets.gang_member_damage.REGENERATE_TIME_AWAY = 0.6
-	self.presets.gang_member_damage.HEALTH_INIT = 300
+	self.presets.gang_member_damage.HEALTH_INIT = 800
+	self.presets.weapon.gang_member.beretta92.FALLOFF = {
+		{
+			r = 300,
+			acc = {1, 1},
+			dmg_mul = 15,
+			recoil = {0.25, 0.45},
+			mode = {
+				0.1,
+				0.3,
+				4,
+				7
+			}
+		},
+		{
+			r = 10000,
+			acc = {1, 1},
+			dmg_mul = 7.5,
+			recoil = {2, 3},
+			mode = {
+				0.1,
+				0.3,
+				4,
+				7
+			}
+		}
+	}
+	self.presets.weapon.gang_member.m4.FALLOFF = {
+		{
+			r = 300,
+			acc = {1, 1},
+			dmg_mul = 15,
+			recoil = {0.25, 0.45},
+			mode = {
+				0.1,
+				0.3,
+				4,
+				7
+			}
+		},
+		{
+			r = 10000,
+			acc = {1, 1},
+			dmg_mul = 7.5,
+			recoil = {2, 3},
+			mode = {
+				0.1,
+				0.3,
+				4,
+				7
+			}
+		}
+	}
+	self.presets.weapon.gang_member.r870.FALLOFF = {
+		{
+			r = 300,
+			acc = {1, 1},
+			dmg_mul = 15,
+			recoil = {0.25, 0.45},
+			mode = {
+				0.1,
+				0.3,
+				4,
+				7
+			}
+		},
+		{
+			r = 10000,
+			acc = {1, 1},
+			dmg_mul = 7.5,
+			recoil = {2, 3},
+			mode = {
+				0.1,
+				0.3,
+				4,
+				7
+			}
+		}
+	}
+	self.presets.weapon.gang_member.mp5 = self.presets.weapon.gang_member.m4
+	self.presets.weapon.gang_member.c45 = self.presets.weapon.gang_member.beretta92
+	self.presets.weapon.gang_member.raging_bull = self.presets.weapon.gang_member.beretta92
+	self.presets.weapon.gang_member.ak47 = self.presets.weapon.gang_member.m4
+	self.presets.weapon.gang_member.mossberg = self.presets.weapon.gang_member.r870
+	self.presets.weapon.gang_member.mac11 = self.presets.weapon.gang_member.mp5
 	self:_set_characters_weapon_preset("expert")
 	self.spooc.spooc_attack_timeout = {3, 4}
 	self.sniper.weapon.m4.FALLOFF = {
