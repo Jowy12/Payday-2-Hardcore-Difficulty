@@ -2159,6 +2159,10 @@ function CharacterTweakData:_init_escort_undercover(presets)
 	self.escort_undercover.escort_scared_dist = 200
 	self.escort_undercover.is_escort = true
 	self.escort_undercover.escort_idle_talk = true
+	self.escort_chinese_prisoner = deep_clone(self.escort_undercover)
+	self.escort_chinese_prisoner.move_speed = presets.move_speed.slow
+	self.escort_chinese_prisoner.no_run_start = false
+	self.escort_chinese_prisoner.no_run_stop = false
 end
 function CharacterTweakData:_init_old_hoxton_mission(presets)
 	self.old_hoxton_mission = deep_clone(presets.base)
@@ -9814,6 +9818,19 @@ function CharacterTweakData:character_map()
 			list = {
 				"npc_chavez",
 				"npc_jamaican"
+			}
+		},
+		glace = {
+			path = "units/pd2_dlc_glace/characters/",
+			list = {
+				"npc_chinese_prisoner",
+				"npc_prisoner_1",
+				"npc_prisoner_2",
+				"npc_prisoner_3",
+				"npc_prisoner_4",
+				"npc_prisoner_5",
+				"npc_prisoner_6",
+				"npc_yakuza_prisoner"
 			}
 		},
 		moon = {
