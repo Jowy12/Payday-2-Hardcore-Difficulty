@@ -330,7 +330,7 @@ end
 function CharacterTweakData:_init_heavy_swat(presets)
 	self.heavy_swat = deep_clone(presets.base)
 	self.heavy_swat.experience = {}
-	self.heavy_swat.weapon = presets.weapon.deathwish
+	self.heavy_swat.weapon = presets.weapon.normal
 	self.heavy_swat.detection = presets.detection.normal
 	self.heavy_swat.HEALTH_INIT = 16
 	self.heavy_swat.headshot_dmg_mul = 2
@@ -1140,7 +1140,7 @@ function CharacterTweakData:_init_drug_lord_boss(presets)
 	}
 	self:_process_weapon_usage_table(self.drug_lord_boss.weapon)
 	self.drug_lord_boss.detection = presets.detection.normal
-	self.drug_lord_boss.HEALTH_INIT = 900
+	self.drug_lord_boss.HEALTH_INIT = 350
 	self.drug_lord_boss.headshot_dmg_mul = 2
 	self.drug_lord_boss.damage.explosion_damage_mul = 1
 	self.drug_lord_boss.move_speed = presets.move_speed.normal
@@ -1260,7 +1260,7 @@ function CharacterTweakData:_init_drug_lord_boss_stealth(presets)
 	}
 	self:_process_weapon_usage_table(self.drug_lord_boss.weapon)
 	self.drug_lord_boss_stealth.detection = presets.detection.normal
-	self.drug_lord_boss_stealth.HEALTH_INIT = 100
+	self.drug_lord_boss_stealth.HEALTH_INIT = 50
 	self.drug_lord_boss_stealth.headshot_dmg_mul = 2
 	self.drug_lord_boss_stealth.damage.explosion_damage_mul = 1
 	self.drug_lord_boss_stealth.move_speed = presets.move_speed.normal
@@ -7086,7 +7086,6 @@ function CharacterTweakData:_set_easy()
 	self.presets.gang_member_damage.REGENERATE_TIME_AWAY = 0.2
 	self:_set_characters_weapon_preset("normal")
 	self.flashbang_multiplier = 1
-	self.concussion_multiplier = 1
 end
 function CharacterTweakData:_set_normal()
 	self:_multiply_all_hp(1, 1)
