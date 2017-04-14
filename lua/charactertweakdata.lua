@@ -330,7 +330,7 @@ end
 function CharacterTweakData:_init_heavy_swat(presets)
 	self.heavy_swat = deep_clone(presets.base)
 	self.heavy_swat.experience = {}
-	self.heavy_swat.weapon = presets.weapon.normal
+	self.heavy_swat.weapon = presets.weapon.deathwish
 	self.heavy_swat.detection = presets.detection.normal
 	self.heavy_swat.HEALTH_INIT = 16
 	self.heavy_swat.headshot_dmg_mul = 2
