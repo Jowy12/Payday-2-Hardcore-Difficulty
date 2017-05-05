@@ -119,6 +119,7 @@ function CharacterTweakData:init(tweak_data)
 	self:_init_biker_boss(presets)
 	self:_init_chavez_boss(presets)
 	self:_init_chico(presets)
+	self:_init_max(presets)
 	self:_init_bolivians(presets)
 	self:_init_drug_lord_boss(presets)
 	self:_init_drug_lord_boss_stealth(presets)
@@ -2539,6 +2540,26 @@ function CharacterTweakData:_init_chico(presets)
 	self.chico.weapon_voice = "3"
 	self.chico.access = "teamAI1"
 	self.chico.arrest = {
+		timeout = 240,
+		aggression_timeout = 6,
+		arrest_timeout = 240
+	}
+end
+function CharacterTweakData:_init_max(presets)
+	self.max = {}
+	self.max.damage = presets.gang_member_damage
+	self.max.weapon = deep_clone(presets.weapon.gang_member)
+	self.max.weapon.weapons_of_choice = {
+		primary = Idstring("units/payday2/weapons/wpn_npc_m4/wpn_npc_m4"),
+		secondary = Idstring("units/payday2/weapons/wpn_npc_mac11/wpn_npc_mac11")
+	}
+	self.max.detection = presets.detection.gang_member
+	self.max.move_speed = presets.move_speed.very_fast
+	self.max.crouch_move = false
+	self.max.speech_prefix = "rb18"
+	self.max.weapon_voice = "3"
+	self.max.access = "teamAI1"
+	self.max.arrest = {
 		timeout = 240,
 		aggression_timeout = 6,
 		arrest_timeout = 240
