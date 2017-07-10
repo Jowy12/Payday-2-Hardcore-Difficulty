@@ -1,58 +1,22 @@
 PlayerTweakData = PlayerTweakData or class()
 function PlayerTweakData:_set_easy()
-	self.damage.DOWNED_TIME_DEC = 20
-	self.damage.DOWNED_TIME_MIN = 1
-	self.suspicion.max_value = 12
-	self.suspicion.range_mul = 1.4
-	self.suspicion.buildup_mul = 1.4
-	self.damage.BLEED_OT_TIME = 10
-	self.damage.LIVES_INIT = 4
-	self.damage.MIN_DAMAGE_INTERVAL = 0.35
-	self.damage.REVIVE_HEALTH_STEPS = {0.1}
+	self.damage.automatic_respawn_time = 150
 end
 function PlayerTweakData:_set_normal()
-	self.damage.DOWNED_TIME_DEC = 20
-	self.damage.DOWNED_TIME_MIN = 1
-	self.suspicion.max_value = 12
-	self.suspicion.range_mul = 1.4
-	self.suspicion.buildup_mul = 1.4
-	self.damage.BLEED_OT_TIME = 10
-	self.damage.LIVES_INIT = 4
-	self.damage.MIN_DAMAGE_INTERVAL = 0.35
-	self.damage.REVIVE_HEALTH_STEPS = {0.1}
+	self.damage.automatic_respawn_time = 120
 end
 function PlayerTweakData:_set_hard()
-	self.damage.DOWNED_TIME_DEC = 20
-	self.damage.DOWNED_TIME_MIN = 1
-	self.suspicion.max_value = 12
-	self.suspicion.range_mul = 1.4
-	self.suspicion.buildup_mul = 1.4
-	self.damage.BLEED_OT_TIME = 10
-	self.damage.LIVES_INIT = 4
-	self.damage.MIN_DAMAGE_INTERVAL = 0.35
-	self.damage.REVIVE_HEALTH_STEPS = {0.1}
+	self.damage.automatic_respawn_time = 220
+	self.damage.DOWNED_TIME_DEC = 7
+	self.damage.DOWNED_TIME_MIN = 5
 end
 function PlayerTweakData:_set_overkill()
-	self.damage.DOWNED_TIME_DEC = 20
-	self.damage.DOWNED_TIME_MIN = 1
-	self.suspicion.max_value = 12
-	self.suspicion.range_mul = 1.4
-	self.suspicion.buildup_mul = 1.4
-	self.damage.BLEED_OT_TIME = 10
-	self.damage.LIVES_INIT = 4
-	self.damage.MIN_DAMAGE_INTERVAL = 0.35
-	self.damage.REVIVE_HEALTH_STEPS = {0.1}
+	self.damage.DOWNED_TIME_DEC = 10
+	self.damage.DOWNED_TIME_MIN = 5
 end
 function PlayerTweakData:_set_overkill_145()
-	self.damage.DOWNED_TIME_DEC = 20
+	self.damage.DOWNED_TIME_DEC = 15
 	self.damage.DOWNED_TIME_MIN = 1
-	self.suspicion.max_value = 12
-	self.suspicion.range_mul = 1.4
-	self.suspicion.buildup_mul = 1.4
-	self.damage.BLEED_OT_TIME = 10
-	self.damage.LIVES_INIT = 4
-	self.damage.MIN_DAMAGE_INTERVAL = 0.35
-	self.damage.REVIVE_HEALTH_STEPS = {0.1}
 end
 function PlayerTweakData:_set_easy_wish()
 	self.damage.DOWNED_TIME_DEC = 20
@@ -95,7 +59,9 @@ end
 function PlayerTweakData:init()
 	local is_console = SystemInfo:platform() ~= Idstring("WIN32")
 	self.arrest = {arrest_timeout = 240, aggression_timeout = 60}
-	self.put_on_mask_time = 0.01
+	self.put_on_mask_time = 0.001
+	self.gravity = -982
+	self.terminal_velocity = -5500
 	self.damage = {}
 	if is_console then
 		self.damage.ARMOR_INIT = 5
@@ -137,9 +103,9 @@ function PlayerTweakData:init()
 	self.damage.INCAPACITATED_TIME = 15
 	self.damage.MIN_DAMAGE_INTERVAL = 0.45
 	self.damage.respawn_time_penalty = 0
-	self.damage.base_respawn_time_penalty = 60
-	self.damage.automatic_assault_ai_trade_time = 120
-	self.damage.automatic_assault_ai_trade_time_max = 180
+	self.damage.base_respawn_time_penalty = 0
+	self.damage.automatic_assault_ai_trade_time = 0
+	self.damage.automatic_assault_ai_trade_time_max = 0
 	self.fall_health_damage = 4
 	self.fall_damage_alert_size = 250
 	self.SUSPICION_OFFSET_LERP = 0.75
