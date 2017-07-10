@@ -1,3 +1,6 @@
+V.3.8.5
+- Updated codes due to Payday 2 update 150
+
 V.3.8.4
 - Updated codes due to Payday 2 update 146
 
