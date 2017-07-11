@@ -2465,14 +2465,14 @@ function GroupAITweakData:_init_task_data(difficulty_index, difficulty)
 	}
 	self.besiege.assault.build_duration = 35
 	self.besiege.assault.sustain_duration_min = {
-		240,
-		240,
-		240
+		360,
+		360,
+		360
 	}
 	self.besiege.assault.sustain_duration_max = {
-		240,
-		240,
-		240
+		360,
+		360,
+		360
 	}
 	self.besiege.assault.sustain_duration_balance_mul = {
 		1,
@@ -3466,7 +3466,7 @@ function GroupAITweakData:_init_task_data(difficulty_index, difficulty)
 		max = 0.5,
 		increase_intervall = 0
 	}
-	self.phalanx.check_spawn_intervall = 200
+	self.phalanx.check_spawn_intervall = 330
 	self.phalanx.chance_increase_intervall = 0
 	if difficulty_index == 4 then
 		self.phalanx.spawn_chance = {
@@ -3474,7 +3474,7 @@ function GroupAITweakData:_init_task_data(difficulty_index, difficulty)
 			increase = 0.5,
 			decrease = 0.5,
 			max = 1,
-			respawn_delay = 200
+			respawn_delay = 660
 		}
 	elseif difficulty_index == 5 then
 		self.phalanx.spawn_chance = {
@@ -3482,7 +3482,7 @@ function GroupAITweakData:_init_task_data(difficulty_index, difficulty)
 			increase = 0.5,
 			decrease = 0.5,
 			max = 1,
-			respawn_delay = 200
+			respawn_delay = 660
 		}
 	elseif difficulty_index == 6 then
 		self.phalanx.spawn_chance = {
@@ -3490,7 +3490,7 @@ function GroupAITweakData:_init_task_data(difficulty_index, difficulty)
 			increase = 0.5,
 			decrease = 0.5,
 			max = 1,
-			respawn_delay = 200
+			respawn_delay = 660
 		}
 	elseif difficulty_index == 7 then
 		self.phalanx.spawn_chance = {
@@ -3498,7 +3498,7 @@ function GroupAITweakData:_init_task_data(difficulty_index, difficulty)
 			increase = 0.5,
 			decrease = 0.5,
 			max = 1,
-			respawn_delay = 200
+			respawn_delay = 660
 		}
 	elseif difficulty_index == 8 then
 		self.phalanx.spawn_chance = {
@@ -3506,7 +3506,7 @@ function GroupAITweakData:_init_task_data(difficulty_index, difficulty)
 			increase = 0.5,
 			decrease = 0.5,
 			max = 1,
-			respawn_delay = 200
+			respawn_delay = 660
 		}
 	else
 		self.phalanx.spawn_chance = {
@@ -3514,7 +3514,7 @@ function GroupAITweakData:_init_task_data(difficulty_index, difficulty)
 			increase = 0.5,
 			decrease = 0.5,
 			max = 1,
-			respawn_delay = 200
+			respawn_delay = 660
 		}
 	end
 	self.safehouse = deep_clone(self.besiege)
