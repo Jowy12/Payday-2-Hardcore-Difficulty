@@ -124,7 +124,7 @@ function GroupAIStateBesiege:_upd_assault_task()
 	if task_data.phase == "anticipation" then
 		nr_wanted = nr_wanted - 5
 	end
-	if self:_count_police_force("assault") >= 65 then
+	if self:_count_police_force("assault") >= 55 then
 		nr_wanted = nr_wanted - 100000000
 	end
 	if nr_wanted > 0 and task_data.phase ~= "fade" then
