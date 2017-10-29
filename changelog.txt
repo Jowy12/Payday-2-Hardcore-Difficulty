@@ -1,3 +1,6 @@
+V.3.8.7
+- Updated codes due to Payday 2 Crimefest 2017
+
 V.3.8.6
 - Updated codes due to Payday 2 update 150.3
 
